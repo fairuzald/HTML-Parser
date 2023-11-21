@@ -4,39 +4,44 @@ import re
 
 class Tokenize:
     def __init__(self, definition_folder):
-        # Read allowed tags from file
+        # Read allowed tags from the specified file
         allowed_tags_file_path = os.path.join(definition_folder, "allowed_tags.txt")
+        self.void_elements = []
         self.allowed_tags = self.read_allowed_tags(allowed_tags_file_path)
 
         # Define void elements
-        self.void_elements = []
 
     def read_allowed_tags(self, file_path):
+        # Initialize dictionaries to store allowed tags and void elements
         allowed_tags = {}
-        void_elements = []
+        void_element = []
 
         try:
+            # Read the file containing allowed tags
             with open(file_path, "r") as file:
                 for line in file:
+                    # Split the line into parts based on the ';' delimiter
                     parts = line.strip().split(';')
                     tag = parts[0]
+                    
+                    # Check if the tag is a 'void' element
                     if tag == 'void':
                         tag = parts[1]
-                        void_elements.append(parts[1])
-                    attributes = parts[1:]
-
-                    if attributes and attributes[0].lower() == 'void':
-                        void_elements.append(attributes[1])
-                        allowed_tags[tag] = []
+                        void_element.append(parts[1])
+                        attributes = parts[2:]
                     else:
-                        allowed_tags[tag] = attributes
+                        attributes = parts[1:]
+
+                    # Check if the tag has attributes and if the first attribute is 'void'
+                    
+                    allowed_tags[tag] = attributes
 
         except FileNotFoundError:
+            # Handle the case where the file is not found
             print(f"Error: File '{file_path}' not found.")
             sys.exit(1)
 
-        # Set void elements in the class
-        self.void_elements = void_elements
+        self.void_elements = void_element
 
         return allowed_tags
 
@@ -45,9 +50,8 @@ class Tokenize:
         return bool(re.match(r'^[a-zA-Z0-9]+$', tag_name)) and tag_name.lower() in self.allowed_tags
     
     def is_valid_attribute(self, tag_name, attribute_name):
-        # Check if tag_name contains only alphanumeric characters and is not empty
+        # Check if attribute_name contains only alphanumeric characters and is in the allowed attributes for the tag
         return bool(re.match(r'^[a-zA-Z0-9]+$', attribute_name)) and attribute_name.lower() in self.allowed_tags[tag_name]
-    
     
     def normalize_spaces(self, tag):
         # Replace multiple spaces between attributes with a single space
@@ -55,18 +59,18 @@ class Tokenize:
         return tag
     
     def get_content_inside_quotes(s):
+        # Return the content inside quotes if the string is enclosed in double quotes
         if s.startswith('"') and s.endswith('"'):
             return s[1:-1]
         else:
             return None
 
-    
     def tokenize(self, html_code):
-        # Remove comments
+        # Remove comments and unnecessary spaces within quotes
         html_code_cleaned = re.sub(r'"([^"]*)"', lambda m: m.group(0).replace(" ", "").replace("=","").replace("<","").replace(">",""), html_code)
         html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code_cleaned)
 
-        # Tokenize HTML code with non-greedy regex
+        # Tokenize HTML code with a non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
 
@@ -75,65 +79,73 @@ class Tokenize:
         stack = []
         for tag in tags:
             if tag.startswith("</"):
+                # Closing tag encountered
                 tag_name = tag.replace("</", "").replace(">", "")
                 if stack and tag_name == stack[-1]:
                     result.append(f"</{stack.pop()}>")
                 elif len(stack) == 0:
+                    # If the stack is empty, there is a closing tag without a corresponding opening tag
                     return []
                 
             elif tag.startswith("<"):
+                # Opening tag encountered
                 tag_name = tag.replace("<", "").replace(">", "").split(" ")
-                tags = tag_name[0]
+                name_tag = tag_name[0]
                 attributes_full = tag_name[1:]
-                print(attributes_full)
 
-                if self.is_valid_tag(tags):
-                    if tag_name not in self.void_elements:
-                        stack.append(tags)
-                    result.append(f"<{tags}")
+                if self.is_valid_tag(name_tag):
+                    if name_tag not in self.void_elements:
+                        # Add non-void opening name_tag to the stack
+                        stack.append(name_tag)
+                    result.append(f"<{name_tag}")
                     
                     for item in attributes_full:
-                        split_item = item.split('=')
+                        if '=' in item:
+                            split_item = item.split('=')
 
-                        if len(split_item) > 1:
-                            attribute_name = split_item[0]
-                            isQuoteOpen = split_item[1].startswith('"')
-                            isQuoteClose = split_item[1].endswith('"')
-                            attribute_value = split_item[1].replace('"', '')
-                            isValid = self.is_valid_attribute(tags, attribute_name)
-                            if (not isValid):
-                                return []
-                            result.append(attribute_name)
-                            result.append("=")
-                            if(isQuoteOpen):
-                                result.append('"')
-                            if (
-    (tag_name == "img" and attribute_name == "src") or
-    ((tag_name == "input" or tag_name == "button") and attribute_name == "type") or
-    (tag_name == "form" and attribute_name == "method")
-):
-                                result.append(attribute_value)
-                            if(len(split_item[1])>1 and isQuoteOpen  and isQuoteClose):
-                                result.append('"')
-                            
-                        # pake mesin kata untuk mendapatkan letak petik lallu append ke result jika ketemu
-                        
-                        
+                            if len(split_item) > 1:
+                                # Attribute with a value encountered
+                                attribute_name = split_item[0]
+                                isQuoteOpen = split_item[1].startswith('"')
+                                isQuoteClose = split_item[1].endswith('"')
+                                attribute_value = split_item[1].replace('"', '')
+                                isValid = self.is_valid_attribute(name_tag, attribute_name)
+                                
+                                if (not isValid):
+                                    # Invalid attribute encountered
+                                    return []
+                                
+                                # Append attribute name and value to the result
+                                result.append(attribute_name)
+                                result.append("=")
+                                if(isQuoteOpen):
+                                    result.append('"')
+                                if ((name_tag == "img" and attribute_name == "src") or((name_tag == "input" or name_tag == "button") and attribute_name == "type") or(name_tag == "form" and attribute_name == "method")):
+                                    result.append(attribute_value)
+                                if(len(split_item[1])>1 and isQuoteOpen  and isQuoteClose):
+                                    result.append('"')
+                        else:
+                            return []
+                    
+                    result.append(">")  
                 else:
+                    # Invalid opening tag encountered
                     return []
-        
-        # Check if all opened tags are closed
         if stack:
+            # Unclosed name_tag exist
             return []
+        
         return result
 
 def main():
     if len(sys.argv) != 2:
+        # Check if the correct number of command-line arguments is provided
         print("Usage: python script.py input_file.html")
         sys.exit(1)
 
     input_file = sys.argv[1]
     with open(input_file, "r") as file:
+        # Read the HTML code from the input file
         html_code = file.read()
 
     definition_folder = "rules"  # Change this path if necessary
@@ -142,4 +154,5 @@ def main():
     print(tokens)
 
 if __name__ == "__main__":
+    # Execute the main function if the script is run as the main program
     main()
