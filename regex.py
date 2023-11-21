@@ -20,7 +20,7 @@ class Tokenize:
                 for line in file:
                     parts = line.strip().split(';')
                     tag = parts[0]
-                    if(tag == 'void'):
+                    if tag == 'void':
                         tag = parts[1]
                         void_elements.append(parts[1])
                     attributes = parts[1:]
@@ -40,38 +40,38 @@ class Tokenize:
 
         return allowed_tags
 
-
-
     def is_valid_tag(self, tag_name):
-        return tag_name.lower() in self.allowed_tags
+        # Check if tag_name contains only alphanumeric characters and is not empty
+        return bool(re.match(r'^[a-zA-Z0-9]+$', tag_name)) and tag_name.lower() in self.allowed_tags
 
     def tokenize(self, html_code):
         # Remove comments
-        html_code = re.sub(r'<!--(.*?)-->', '', html_code, flags=re.DOTALL)
+        html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code)
 
-        # Tokenize HTML code
-        tags = re.findall(r'<\s*([a-zA-Z0-9]+)\s*[^>]*>|</\s*([a-zA-Z0-9]+)\s*>', html_code)
+# Tokenize HTML code with non-greedy regex
+        tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
+        tags = [tag for tag in tags if tag != "<>"]
 
         # Filter and return tags with attributes based on constraints
         result = []
         stack = []
-        for tag_open, tag_close in tags:
-            if tag_open:
-                tag_name = tag_open.lower()
+        for tag in tags:
+            if tag.startswith("</"):
+                tag_name = tag.replace("<", "").replace(">", "")
+                if stack and tag_name == stack[-1]:
+                    result.append(f"</{stack.pop()}>")
+                elif len(stack) == 0:
+                    return []
+                
+            elif tag.startswith("<"):
+                tag_name = tag.replace("<", "").replace(">", "")
                 if self.is_valid_tag(tag_name):
                     if tag_name not in self.void_elements:
                         stack.append(tag_name)
-                    result.append(f"<{tag_name}>")
+                    result.append(f"<{tag_name}")
                 else:
                     return []
-            elif tag_close:
-                tag_name = tag_close.lower()
-                if stack and tag_name == stack[-1]:
-                    result.append(f"</{stack.pop()}>")
-
         # Check if all opened tags are closed
-        if stack:
-            result = []
 
         return result
 
