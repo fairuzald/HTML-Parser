@@ -54,21 +54,29 @@ class Tokenize:
         tag = re.sub(r'\s+', ' ', tag)
         return tag
     
+    def get_content_inside_quotes(s):
+        if s.startswith('"') and s.endswith('"'):
+            return s[1:-1]
+        else:
+            return None
+
     
     def tokenize(self, html_code):
         # Remove comments
-        html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code)
+        html_code_cleaned = re.sub(r'"([^"]*)"', lambda m: m.group(0).replace(" ", "").replace("=","").replace("<","").replace(">",""), html_code)
+        html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code_cleaned)
 
         # Tokenize HTML code with non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
+        print(tags)
 
         # Filter and return tags with attributes based on constraints
         result = []
         stack = []
         for tag in tags:
             if tag.startswith("</"):
-                tag_name = tag.replace("<", "").replace(">", "").split(" ")[0]
+                tag_name = tag.replace("</", "").replace(">", "")
                 if stack and tag_name == stack[-1]:
                     result.append(f"</{stack.pop()}>")
                 elif len(stack) == 0:
@@ -78,11 +86,12 @@ class Tokenize:
                 tag_name = tag.replace("<", "").replace(">", "").split(" ")
                 tags = tag_name[0]
                 attributes_full = tag_name[1:]
+                print(attributes_full)
 
                 if self.is_valid_tag(tags):
                     if tag_name not in self.void_elements:
-                        stack.append(tag_name)
-                    result.append(f"<{tag_name}")
+                        stack.append(tags)
+                    result.append(f"<{tags}")
                     
                     for item in attributes_full:
                         # Memisahkan string berdasarkan tanda sama dengan (=)
@@ -90,15 +99,19 @@ class Tokenize:
 
                         # Mengambil bagian sebelum tanda sama dengan (=) dan memasukkannya ke dalam array
                         if len(split_item) > 1:
-                            isValid = self.is_valid_attribute(tags, split_item[0])
-                        
-                            if(not isValid):
+                            attribute_name = split_item[0]
+                            isValid = self.is_valid_attribute(tags, attribute_name)
+                            
+                            
+                            if (not isValid):
                                 return []
                         
                 else:
                     return []
+        
         # Check if all opened tags are closed
-
+        if stack:
+            return []
         return result
 
 def main():
