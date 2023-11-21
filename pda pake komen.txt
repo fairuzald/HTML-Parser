@@ -6,9 +6,9 @@ Z
 F
 F
 # BUKA TAG HTML
-Q <html Z Ohtml HTMLZ
+Q <html Z Ohtml HTMLZ           ---> satu satunya start state
 Ohtml > HTMLZ Nhtml HTMLZ
-Nhtml </html> HTMLZ F Z
+Nhtml </html> HTMLZ F Z         ---> satu satunya final state
 
 # CLASS Dalem HTML
 Ohtml class HTMLZ Aclass CLASSHTMLZ
