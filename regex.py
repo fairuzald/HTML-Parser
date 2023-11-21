@@ -4,23 +4,43 @@ import re
 
 class Tokenize:
     def __init__(self, definition_folder):
-        # Read global attributes from file
-        global_attributes_file = os.path.join(definition_folder, "global_attributes.txt")
-        with open(global_attributes_file, "r") as file:
-            self.global_attributes = [line.strip() for line in file.readlines()]
-
         # Read allowed tags from file
-        allowed_tags_file = os.path.join(definition_folder, "allowed_tags.txt")
-        with open(allowed_tags_file, "r") as file:
-            self.allowed_tags = {}
-            for line in file.readlines():
-                parts = line.strip().split()
-                tag = parts[0]
-                attributes = parts[1:]
-                self.allowed_tags[tag] = attributes
+        allowed_tags_file_path = os.path.join(definition_folder, "allowed_tags.txt")
+        self.allowed_tags = self.read_allowed_tags(allowed_tags_file_path)
 
         # Define void elements
-        self.void_elements = ["img", "br", "hr"]
+        self.void_elements = []
+
+    def read_allowed_tags(self, file_path):
+        allowed_tags = {}
+        void_elements = []
+
+        try:
+            with open(file_path, "r") as file:
+                for line in file:
+                    parts = line.strip().split(';')
+                    tag = parts[0]
+                    if(tag == 'void'):
+                        tag = parts[1]
+                        void_elements.append(parts[1])
+                    attributes = parts[1:]
+
+                    if attributes and attributes[0].lower() == 'void':
+                        void_elements.append(attributes[1])
+                        allowed_tags[tag] = []
+                    else:
+                        allowed_tags[tag] = attributes
+
+        except FileNotFoundError:
+            print(f"Error: File '{file_path}' not found.")
+            sys.exit(1)
+
+        # Set void elements in the class
+        self.void_elements = void_elements
+
+        return allowed_tags
+
+
 
     def is_valid_tag(self, tag_name):
         return tag_name.lower() in self.allowed_tags
@@ -42,6 +62,8 @@ class Tokenize:
                     if tag_name not in self.void_elements:
                         stack.append(tag_name)
                     result.append(f"<{tag_name}>")
+                else:
+                    return []
             elif tag_close:
                 tag_name = tag_close.lower()
                 if stack and tag_name == stack[-1]:
