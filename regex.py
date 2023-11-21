@@ -69,7 +69,6 @@ class Tokenize:
         # Tokenize HTML code with non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
-        print(tags)
 
         # Filter and return tags with attributes based on constraints
         result = []
@@ -94,17 +93,31 @@ class Tokenize:
                     result.append(f"<{tags}")
                     
                     for item in attributes_full:
-                        # Memisahkan string berdasarkan tanda sama dengan (=)
                         split_item = item.split('=')
 
-                        # Mengambil bagian sebelum tanda sama dengan (=) dan memasukkannya ke dalam array
                         if len(split_item) > 1:
                             attribute_name = split_item[0]
+                            isQuoteOpen = split_item[1].startswith('"')
+                            isQuoteClose = split_item[1].endswith('"')
+                            attribute_value = split_item[1].replace('"', '')
                             isValid = self.is_valid_attribute(tags, attribute_name)
-                            
-                            
                             if (not isValid):
                                 return []
+                            result.append(attribute_name)
+                            result.append("=")
+                            if(isQuoteOpen):
+                                result.append('"')
+                            if (
+    (tag_name == "img" and attribute_name == "src") or
+    ((tag_name == "input" or tag_name == "button") and attribute_name == "type") or
+    (tag_name == "form" and attribute_name == "method")
+):
+                                result.append(attribute_value)
+                            if(len(split_item[1])>1 and isQuoteOpen  and isQuoteClose):
+                                result.append('"')
+                            
+                        # pake mesin kata untuk mendapatkan letak petik lallu append ke result jika ketemu
+                        
                         
                 else:
                     return []
