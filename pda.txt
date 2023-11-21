@@ -1,14 +1,54 @@
-Q P F
-a
+Q Ohtml Aclass Eclass Fclass Ohead Aid Eid Fid Astyle Estyle Fstyle
+<html 
 Z Y
 Q
 Z
 F
 F
-Q a Z Q YZ
-Q a Y Q YY
-Q e Z P Z
-Q e Y P Y 
-P a Z P e 
-P a Y P e
-P e Z F e
+# BUKA TAG HTML
+Q <html Z Ohtml HTMLZ
+Ohtml > HTMLZ Ohtml HTMLZ
+Ohtml </html> HTMLZ F Z
+
+# CLASS Dalem HTML
+Ohtml class HTMLZ Aclass CLASSHTMLZ
+Aclass = CLASSHTMLZ Eclass =CLASSHTMLZ
+Eclass " =CLASSHTMLZ Fclass "=CLASSHTMLZ  
+Fclass " "=CLASSHTMLZ Ohtml HTMLZ
+
+# ID Dalem HTML
+Ohtml id HTMLZ Aid IDHTMLZ
+Aid = IDHTMLZ Eid =IDHTMLZ
+Eid " =IDHTMLZ Fid "=IDHTMLZ  
+Fid " "=IDTMLZ Ohtml HTMLZ
+
+# STYLE Dalem HTML
+Ohtml class HTMLZ Astyle STYLEHTMLZ
+Astyle = STYLEHTMLZ Estyle =STYLEHTMLZ
+Estyle " =STYLEHTMLZ Fstyle "=STYLEHTMLZ  
+Fstyle " "=STYLEHTMLZ Ohtml HTMLZ
+
+# BUKA TAG HEAD
+Ohtml <head HTMLZ Ohead HEADHTMLZ
+Ohead > HEADHTMLZ Ohead HEADHTMLZ
+Ohead </html> HEADHTMLZ Ohead HTMLZ
+
+# CLASS Dalem HEAD
+Ohtml class HEADHTMLZ Aclass CLASSHEADHTMLZ
+Aclass = CLASSHEADHTMLZ Eclass =CLASSHEADHTMLZ
+Eclass " =CLASSHEADHTMLZ Fclass "=CLASSHEADHTMLZ  
+Fclass " "=CLASSHEADHTMLZ Ohead HEADHTMLZ
+
+# ID Dalem HEAD
+Ohtml id HEADHTMLZ Aid IDHEADHTMLZ
+Aid = IDHEADHTMLZ Eid =IDHEADHTMLZ
+Eid " =IDHEADHTMLZ Fid "=IDHEADHTMLZ  
+Fid " "=IDHEADHTMLZ Ohead HEADHTMLZ
+
+# STYLE Dalem HEAD
+Ohtml class HEADHTMLZ Astyle STYLEHEADHTMLZ
+Astyle = STYLEHEADHTMLZ Estyle = STYLEHEADHTMLZ
+Estyle " = STYLEHEADHTMLZ Fstyle "= STYLEHEADHTMLZ  
+Fstyle " "= STYLEHEADHTMLZ Ohead HEADHTMLZ
+
+# BUKA tag Title di dalam Head
