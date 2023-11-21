@@ -43,32 +43,58 @@ class Tokenize:
     def is_valid_tag(self, tag_name):
         # Check if tag_name contains only alphanumeric characters and is not empty
         return bool(re.match(r'^[a-zA-Z0-9]+$', tag_name)) and tag_name.lower() in self.allowed_tags
-
+    
+    def is_valid_attribute(self, tag_name, attribute_name):
+        # Check if tag_name contains only alphanumeric characters and is not empty
+        return bool(re.match(r'^[a-zA-Z0-9]+$', attribute_name)) and attribute_name.lower() in self.allowed_tags[tag_name]
+    
+    
+    def normalize_spaces(self, tag):
+        # Replace multiple spaces between attributes with a single space
+        tag = re.sub(r'\s+', ' ', tag)
+        return tag
+    
+    
     def tokenize(self, html_code):
         # Remove comments
         html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code)
 
-# Tokenize HTML code with non-greedy regex
+        # Tokenize HTML code with non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
-        tags = [tag for tag in tags if tag != "<>"]
+        tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
 
         # Filter and return tags with attributes based on constraints
         result = []
         stack = []
         for tag in tags:
             if tag.startswith("</"):
-                tag_name = tag.replace("<", "").replace(">", "")
+                tag_name = tag.replace("<", "").replace(">", "").split(" ")[0]
                 if stack and tag_name == stack[-1]:
                     result.append(f"</{stack.pop()}>")
                 elif len(stack) == 0:
                     return []
                 
             elif tag.startswith("<"):
-                tag_name = tag.replace("<", "").replace(">", "")
-                if self.is_valid_tag(tag_name):
+                tag_name = tag.replace("<", "").replace(">", "").split(" ")
+                tags = tag_name[0]
+                attributes_full = tag_name[1:]
+
+                if self.is_valid_tag(tags):
                     if tag_name not in self.void_elements:
                         stack.append(tag_name)
                     result.append(f"<{tag_name}")
+                    
+                    for item in attributes_full:
+                        # Memisahkan string berdasarkan tanda sama dengan (=)
+                        split_item = item.split('=')
+
+                        # Mengambil bagian sebelum tanda sama dengan (=) dan memasukkannya ke dalam array
+                        if len(split_item) > 1:
+                            isValid = self.is_valid_attribute(tags, split_item[0])
+                        
+                            if(not isValid):
+                                return []
+                        
                 else:
                     return []
         # Check if all opened tags are closed
