@@ -2,6 +2,7 @@ import os
 import sys
 import re
 
+
 class Tokenize:
     def __init__(self, definition_folder):
         # Read allowed tags from the specified file
@@ -21,11 +22,11 @@ class Tokenize:
             with open(file_path, "r") as file:
                 for line in file:
                     # Split the line into parts based on the ';' delimiter
-                    parts = line.strip().split(';')
+                    parts = line.strip().split(";")
                     tag = parts[0]
-                    
+
                     # Check if the tag is a 'void' element
-                    if tag == 'void':
+                    if tag == "void":
                         tag = parts[1]
                         void_element.append(parts[1])
                         attributes = parts[2:]
@@ -33,7 +34,7 @@ class Tokenize:
                         attributes = parts[1:]
 
                     # Check if the tag has attributes and if the first attribute is 'void'
-                    
+
                     allowed_tags[tag] = attributes
 
         except FileNotFoundError:
@@ -47,17 +48,23 @@ class Tokenize:
 
     def is_valid_tag(self, tag_name):
         # Check if tag_name contains only alphanumeric characters and is not empty
-        return bool(re.match(r'^[a-zA-Z0-9]+$', tag_name)) and tag_name.lower() in self.allowed_tags
-    
+        return (
+            bool(re.match(r"^[a-zA-Z0-9]+$", tag_name))
+            and tag_name.lower() in self.allowed_tags
+        )
+
     def is_valid_attribute(self, tag_name, attribute_name):
         # Check if attribute_name contains only alphanumeric characters and is in the allowed attributes for the tag
-        return bool(re.match(r'^[a-zA-Z0-9]+$', attribute_name)) and attribute_name.lower() in self.allowed_tags[tag_name]
-    
+        return (
+            bool(re.match(r"^[a-zA-Z0-9]+$", attribute_name))
+            and attribute_name.lower() in self.allowed_tags[tag_name]
+        )
+
     def normalize_spaces(self, tag):
         # Replace multiple spaces between attributes with a single space
-        tag = re.sub(r'\s+', ' ', tag)
+        tag = re.sub(r"\s+", " ", tag)
         return tag
-    
+
     def get_content_inside_quotes(s):
         # Return the content inside quotes if the string is enclosed in double quotes
         if s.startswith('"') and s.endswith('"'):
@@ -88,7 +95,7 @@ class Tokenize:
                 elif len(stack) == 0:
                     # If the stack is empty, there is a closing tag without a corresponding opening tag
                     return []
-                
+
             elif tag.startswith("<"):
                 # Opening tag encountered
                 tag_name = tag.replace("<", "").replace(">", "").split(" ")
@@ -100,61 +107,43 @@ class Tokenize:
                         # Add non-void opening name_tag to the stack
                         stack.append(name_tag)
                     result.append(f"<{name_tag}")
-                    
+
                     for item in attributes_full:
-                        if '=' in item:
-                            split_item = item.split('=')
+                        if "=" in item:
+                            split_item = item.split("=")
 
                             if len(split_item) > 1:
                                 # Attribute with a value encountered
                                 attribute_name = split_item[0]
                                 isQuoteOpen = split_item[1].startswith('"')
                                 isQuoteClose = split_item[1].endswith('"')
-                                attribute_value = split_item[1].replace('"', '')
-                                isValid = self.is_valid_attribute(name_tag, attribute_name)
-                                
-                                if (not isValid):
+                                attribute_value = split_item[1].replace('"', "")
+                                isValid = self.is_valid_attribute(
+                                    name_tag, attribute_name
+                                )
+
+                                if not isValid:
                                     # Invalid attribute encountered
                                     return []
-                                
+
                                 # Append attribute name and value to the result
                                 if(not isQuoteOpen and not isQuoteClose):
                                     result.append(f'{attribute_name}=')
                                 else:
                                     result.append(f'{attribute_name}="')
-                                if ((name_tag == "img" and attribute_name == "src") or((name_tag == "input" or name_tag == "button") and attribute_name == "type") or(name_tag == "form" and attribute_name == "method")):
+                                if (((name_tag == "input" or name_tag == "button") and attribute_name == "type") or(name_tag == "form" and attribute_name == "method")):
                                     result.append(attribute_value)
                                 if(len(split_item[1])>1 and isQuoteOpen and isQuoteClose):
                                     result.append('"')
                         else:
                             return []
-                    
-                    result.append(">")  
+
+                    result.append(">")
                 else:
                     # Invalid opening tag encountered
                     return []
         if stack:
             # Unclosed name_tag exist
             return []
-        
+
         return result
-
-def main():
-    if len(sys.argv) != 2:
-        # Check if the correct number of command-line arguments is provided
-        print("Usage: python script.py input_file.html")
-        sys.exit(1)
-
-    input_file = sys.argv[1]
-    with open(input_file, "r") as file:
-        # Read the HTML code from the input file
-        html_code = file.read()
-
-    definition_folder = "rules"  # Change this path if necessary
-    tokenizer = Tokenize(definition_folder)
-    tokens = tokenizer.tokenize(html_code)
-    print(tokens)
-
-if __name__ == "__main__":
-    # Execute the main function if the script is run as the main program
-    main()

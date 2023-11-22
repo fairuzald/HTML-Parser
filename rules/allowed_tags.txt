@@ -2,7 +2,7 @@ html;id;class;style
 head;id;class;style
 body;id;class;style
 title;id;class;style
-link;rel;href;id;class;style
+void;link;rel;href;id;class;style
 script;src;id;class;style
 h1;id;class;style
 h2;id;class;style
