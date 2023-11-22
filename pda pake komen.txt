@@ -1079,7 +1079,30 @@ Fidthtrtablediv " ID Othtrtablediv e
 Othtrtablediv style=" TH Fstylethtrtablediv STYLE
 Fstylethtrtablediv " STYLE Othtrtablediv e
 
-# transisi paling sakti
+# transisi keluar div ke body
+Ndiv <link BODY Olinkbody LINK
+Ndiv <script BODY Oscriptbody SCRIPT
+Ndiv <h1 BODY Oh1body H1
+Ndiv <h2 BODY Oh2body H2
+Ndiv <h3 BODY Oh3body H3
+Ndiv <h4 BODY Oh4body H4
+Ndiv <h5 BODY Oh5body H5
+Ndiv <h6 BODY Oh6body H6
+Ndiv <p BODY Opbody P
+Ndiv <br BODY Obrbody BR
+Ndiv <em BODY Oembody EM
+Ndiv <b BODY Obbody B
+Ndiv <abbr BODY Oabbrbody ABBR
+Ndiv <strong BODY Ostrongbody STRONG
+Ndiv <small BODY Osmallbody SMALL
+Ndiv <hr BODY Ohrbody HR
+Ndiv <div BODY Odivbody DIV
+Ndiv <a BODY Oabody A
+Ndiv <img BODY Oimgbody IMG
+Ndiv <button BODY Obuttonbody BUTTON
+Ndiv <form BODY Oformbody FORM
+Ndiv <input BODY Oinputbody INPUT
+Ndiv <table BODY Otablebody TABLE
 Ndiv </body> BODY Vhtml e
 
 # handle formatting elements (b)
