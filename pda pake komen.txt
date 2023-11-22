@@ -182,7 +182,7 @@ Fsrcscriptbody " SRC Oscriptbody e
 # BUKA tag h1 di dalam body
 Nbody <h1 BODY Oh1body H1
 Oh1body > H1 Nh1body idem
-Nh1body </h1> NH1 Nbody e
+Nh1body </h1> H1 Nbody e
 
 # CLASS Dalem h1
 Oh1body class=" BODY Fclassh1body CLASS
@@ -199,6 +199,7 @@ Fstyleh1body " STYLE Oh1body e
 # BUKA tag h2 di dalam body
 Nbody <h2 BODY Oh2body H2
 Oh2body > H2 Nh2body idem
+Nh2body </h2> H2 Nbody e
 
 # CLASS Dalem h2
 Oh2body class=" BODY Fclassh2body CLASS
@@ -215,6 +216,7 @@ Fstyleh2body " STYLE Oh2body e
 # BUKA tag h3 di dalam body
 Nbody <h3 BODY Oh3body H3
 Oh3body > H3 Nh3body idem
+Nh3body </h3> H3 Nbody e
 
 # CLASS Dalem h3
 Oh3body class=" BODY Fclassh3body CLASS
@@ -231,6 +233,7 @@ Fstyleh3body " STYLE Oh3body e
 # BUKA tag h4 di dalam body
 Nbody <h4 BODY Oh4body H4
 Oh4body > H4 Nh4body idem
+Nh4body </h4> H4 Nbody e
 
 # CLASS Dalem h4
 Oh4body class=" BODY Fclassh4body CLASS
@@ -247,6 +250,7 @@ Fstyleh4body " STYLE Oh4body e
 # BUKA tag h5 di dalam body
 Nbody <h5 BODY Oh5body H5
 Oh5body > H5 Nh5body idem
+Nh5body </h5> H5 Nbody e
 
 # CLASS Dalem h5
 Oh5body class=" BODY Fclassh5body CLASS
@@ -263,6 +267,7 @@ Fstyleh5body " STYLE Oh5body e
 # BUKA tag h6 di dalam body
 Nbody <h6 BODY Oh6body H6
 Oh6body > H6 Nh6body idem
+Nh6body </h6> H6 Nbody e
 
 # CLASS Dalem h6
 Oh6body class=" BODY Fclassh6body CLASS
@@ -282,32 +287,31 @@ Opbody > P Npbody idem
 Npbody </p> P Nbody e
 
 # CLASS Dalem p
-Opbody class=" BODY Fclasspbody CLASS
+Opbody class=" P Fclasspbody CLASS
 Fclasspbody " CLASS Opbody e
 
 # ID Dalem p
-Opbody id=" BODY Fidpbody ID
+Opbody id=" P Fidpbody ID
 Fidpbody " ID Opbody e
 
 # STYLE Dalem p
-Opbody style=" BODY Fstylepbody STYLE
+Opbody style=" P Fstylepbody STYLE
 Fstylepbody " STYLE Opbody e
 
 # BUKA tag br di dalam body
 Nbody <br BODY Obrbody BR
-Obrbody > BR Nbrbody idem
-Nbrbody </br> BR Nbody e
+Obrbody > BR Nbody e
 
 # CLASS Dalem br
-Obrbody class=" BODY Fclassbrbody CLASS
+Obrbody class=" BR Fclassbrbody CLASS
 Fclassbrbody " CLASS Obrbody e
 
 # ID Dalem br
-Obrbody id=" BODY Fidbrbody ID
+Obrbody id=" BR Fidbrbody ID
 Fidbrbody " ID Obrbody e
 
 # STYLE Dalem br
-Obrbody style=" BODY Fstylebrbody STYLE
+Obrbody style=" BR Fstylebrbody STYLE
 Fstylebrbody " STYLE Obrbody e
 
 # BUKA tag em di dalam body
@@ -315,100 +319,40 @@ Nbody <em BODY Oembody EM
 Oembody > EM Nembody idem
 Nembody </em> EM Nbody e
 
-# CLASS Dalem em
-Oembody class=" BODY Fclassembody CLASS
-Fclassembody " CLASS Oembody e
-
-# ID Dalem em
-Oembody id=" BODY Fidembody ID
-Fidembody " ID Oembody e
-
-# STYLE Dalem em
-Oembody style=" BODY Fstyleembody STYLE
-Fstyleembody " STYLE Oembody e
-
 # BUKA tag b di dalam body
 Nbody <b BODY Obbody B
 Obbody > B Nbbody idem
 Nbbody </b> B Nbody e
-
-# CLASS Dalem b
-Obbody class=" BODY Fclassbbody CLASS
-Fclassbbody " CLASS Obbody e
-
-# ID Dalem b
-Obbody id=" BODY Fidbbody ID
-Fidbbody " ID Obbody e
-
-# STYLE Dalem b
-Obbody style=" BODY Fstylebbody STYLE
-Fstylebbody " STYLE Obbody e
 
 # BUKA tag abbr di dalam body
 Nbody <abbr BODY Oabbrbody ABBR
 Oabbrbody > ABBR Nabbrbody idem
 Nabbrbody </abbr> ABBR Nbody e
 
-# CLASS Dalem abbr
-Oabbrbody class=" BODY Fclassabbrbody CLASS
-Fclassabbrbody " CLASS Oabbrbody e
-
-# ID Dalem abbr
-Oabbrbody id=" BODY Fidabbrbody ID
-Fidabbrbody " ID Oabbrbody e
-
-# STYLE Dalem abbr
-Oabbrbody style=" BODY Fstyleabbrbody STYLE
-Fstyleabbrbody " STYLE Oabbrbody e
-
 # BUKA tag strong di dalam body
 Nbody <strong BODY Ostrongbody STRONG
 Ostrongbody > STRONG Nstrongbody idem
 Nstrongbody </strong> STRONG Nbody e
-
-# CLASS Dalem strong
-Ostrongbody class=" BODY Fclassstrongbody CLASS
-Fclassstrongbody " CLASS Ostrongbody e
-
-# ID Dalem strong
-Ostrongbody id=" BODY Fidstrongbody ID
-Fidstrongbody " ID Ostrongbody e
-
-# STYLE Dalem strong
-Ostrongbody style=" BODY Fstylestrongbody STYLE
-Fstylestrongbody " STYLE Ostrongbody e
 
 # BUKA tag small di dalam body
 Nbody <small BODY Osmallbody SMALL
 Osmallbody > SMALL Nsmallbody idem
 Nsmallbody </small> SMALL Nbody e
 
-# CLASS Dalem small
-Osmallbody class=" BODY Fclasssmallbody CLASS
-Fclasssmallbody " CLASS Osmallbody e
-
-# ID Dalem small
-Osmallbody id=" BODY Fidsmallbody ID
-Fidsmallbody " ID Osmallbody e
-
-# STYLE Dalem small
-Osmallbody style=" BODY Fstylesmallbody STYLE
-Fstylesmallbody " STYLE Osmallbody e
-
 # BUKA tag hr di dalam body
 Nbody <hr BODY Ohrbody HR
 Ohrbody > HR Nbody e
 
 # CLASS Dalem hr
-Ohrbody class=" BODY Fclasshrbody CLASS
+Ohrbody class=" HR Fclasshrbody CLASS
 Fclasshrbody " CLASS Ohrbody e
 
 # ID Dalem hr
-Ohrbody id=" BODY Fidhrbody ID
+Ohrbody id=" HR Fidhrbody ID
 Fidhrbody " ID Ohrbody e
 
 # STYLE Dalem hr
-Ohrbody style=" BODY Fstylehrbody STYLE
+Ohrbody style=" HR Fstylehrbody STYLE
 Fstylehrbody " STYLE Ohrbody e
 
 # BUKA tag div di dalam body
@@ -417,15 +361,15 @@ Odivbody > DIV Ndivbody idem
 Ndivbody </div> DIV Nbody e
 
 # CLASS Dalem div
-Odivbody class=" BODY Fclassdivbody CLASS
+Odivbody class=" DIV Fclassdivbody CLASS
 Fclassdivbody " CLASS Odivbody e
 
 # ID Dalem div
-Odivbody id=" BODY Fiddivbody ID
+Odivbody id=" DIV Fiddivbody ID
 Fiddivbody " ID Odivbody e
 
 # STYLE Dalem div
-Odivbody style=" BODY Fstyledivbody STYLE
+Odivbody style=" DIV Fstyledivbody STYLE
 Fstyledivbody " STYLE Odivbody e
 
 # BUKA tag a di dalam body 
@@ -434,19 +378,19 @@ Oabody > A Nabody idem
 Nabody </a> A Nbody e
 
 # CLASS Dalem a
-Oabody class=" BODY Fclassabody CLASS
+Oabody class=" A Fclassabody CLASS
 Fclassabody " CLASS Oabody e
 
 # ID Dalem a
-Oabody id=" BODY Fidabody ID
+Oabody id=" A Fidabody ID
 Fidabody " ID Oabody e
 
 # STYLE Dalem a
-Oabody style=" BODY Fstyleabody STYLE
+Oabody style=" A Fstyleabody STYLE
 Fstyleabody " STYLE Oabody e
 
 # HREF Dalem a
-Oabody href=" BODY Fhrefabody HREF
+Oabody href=" A Fhrefabody HREF
 Fhrefabody " HREF Oabody e
 
 # BUKA tag img di dalam body
@@ -455,281 +399,206 @@ Vimgbody > IMG Nimgbody idem
 
 # CLASS Dalem img
 Oimgbody class=" IMG Fclassimgbody CLASS
-
+Vimgbody class=" IMG FVclassimgbody CLASS
+Fclassimgbody " CLASS Oimgbody e 
+FVclassimgbody " CLASS Vimgbody e
 
 # ID Dalem img
-Oimg id IMGBODYHTMLZ Aid IDIMGBODYHTMLZ
-Vimg id VIMGBODYHTMLZ Aid IDVIMGBODYHTMLZ
-Aid = IDIMGBODYHTMLZ Eid =IDIMGBODYHTMLZ
-Aid = IDVIMGBODYHTMLZ Eid =IDVIMGBODYHTMLZ
-Eid " =IDIMGBODYHTMLZ Fid "=IDIMGBODYHTMLZ
-Eid " =IDVIMGBODYHTMLZ Fid "=IDVIMGBODYHTMLZ
-Fid " "=IDIMGBODYHTMLZ Oimg IMGBODYHTMLZ
-Fid " "=IDVIMGBODYHTMLZ Vimg VIMGBODYHTMLZ
+Oimgbody id=" IMG Fidimgbody ID
+Vimgbody id=" IMG FVidimgbody ID
+Fidimgbody " ID Oimgbody e
+FVidimgbody " ID Vimgbody e
 
 # STYLE Dalem img
-Oimg style IMGBODYHTMLZ Astyle STYLEIMGBODYHTMLZ
-Vimg style VIMGBODYHTMLZ Astyle STYLEVIMGBODYHTMLZ
-Astyle = STYLEIMGBODYHTMLZ Estyle =STYLEIMGBODYHTMLZ
-Astyle = STYLEVIMGBODYHTMLZ Estyle =STYLEVIMGBODYHTMLZ
-Estyle " =STYLEIMGBODYHTMLZ Fstyle "=STYLEIMGBODYHTMLZ
-Estyle " =STYLEVIMGBODYHTMLZ Fstyle "=STYLEVIMGBODYHTMLZ
-Fstyle " "=STYLEIMGBODYHTMLZ Oimg IMGBODYHTMLZ
-Fstyle " "=STYLEVIMGBODYHTMLZ Vimg VIMGBODYHTMLZ
+Oimgbody style=" IMG Fstyleimgbody STYLE
+Vimgbody style=" IMG FVstyleimgbody STYLE
+Fstyleimgbody " STYLE Oimgbody e
+FVstyleimgbody " STYLE Vimgbody e
 
 # SRC Dalem img
-Oimg src IMGBODYHTMLZ Asrc SRCIMGBODYHTMLZ
-Asrc = SRCIMGBODYHTMLZ Esrc =SRCIMGBODYHTMLZ
-Esrc " =SRCIMGBODYHTMLZ Fsrc "=SRCIMGBODYHTMLZ
-Fsrc " "=SRCIMGBODYHTMLZ Vimg VIMGBODYHTMLZ
+Oimgbody src=" IMG Fsrcimgbody SRC
+Fsrcimgbody " SRC Vimgbody e
 
 # ALT Dalem img
-Oimg alt IMGBODYHTMLZ Aalt ALTIMGBODYHTMLZ
-Vimg alt VIMGBODYHTMLZ Aalt ALTVIMGBODYHTMLZ
-Aalt = ALTIMGBODYHTMLZ Ealt =ALTIMGBODYHTMLZ
-Aalt = ALTVIMGBODYHTMLZ Ealt =ALTVIMGBODYHTMLZ
-Ealt " =ALTIMGBODYHTMLZ Falt "=ALTIMGBODYHTMLZ
-Ealt " =ALTVIMGBODYHTMLZ Falt "=ALTVIMGBODYHTMLZ
-Falt " "=ALTIMGBODYHTMLZ Oimg IMGBODYHTMLZ
-Falt " "=ALTVIMGBODYHTMLZ Vimg VIMGBODYHTMLZ
+Oimgbody alt=" IMG Faltimgbody ALT
+Vimgbody alt=" IMG FValtimgbody ALT
+Faltimgbody " ALT Oimgbody e
+FValtimgbody " ALT Vimgbody e
 
 # BUKA tag button di dalam body
-Nbody <button BODYHTMLZ Obutton BUTTONBODYHTMLZ
-Obutton > BUTTONBODYHTMLZ Nbutton BUTTONBODYHTMLZ
-Nbutton </button> BUTTONBODYHTMLZ Nbody BODYHTMLZ
+Nbody <button BODY Obuttonbody BUTTON
+Obuttonbody > BUTTON Nbuttonbody idem
+Nbuttonbody </button> BUTTON Nbody e
 
 # CLASS Dalem button
-Obutton class BUTTONBODYHTMLZ Aclass CLASSBUTTONBODYHTMLZ
-Aclass = CLASSBUTTONBODYHTMLZ Eclass =CLASSBUTTONBODYHTMLZ
-Eclass " =CLASSBUTTONBODYHTMLZ Fclass "=CLASSBUTTONBODYHTMLZ
-Fclass " "=CLASSBUTTONBODYHTMLZ Obutton BUTTONBODYHTMLZ
+Obuttonbody class=" BUTTON Fclassbuttonbody CLASS
+Fclassbuttonbody " CLASS Obuttonbody e
 
 # ID Dalem button
-Obutton id BUTTONBODYHTMLZ Aid IDBUTTONBODYHTMLZ
-Aid = IDBUTTONBODYHTMLZ Eid =IDBUTTONBODYHTMLZ
-Eid " =IDBUTTONBODYHTMLZ Fid "=IDBUTTONBODYHTMLZ
-Fid " "=IDBUTTONBODYHTMLZ Obutton BUTTONBODYHTMLZ
+Obuttonbody id=" BUTTON Fidbuttonbody ID
+Fidbuttonbody " ID Obuttonbody e
 
 # STYLE Dalem button
-Obutton style BUTTONBODYHTMLZ Astyle STYLEBUTTONBODYHTMLZ
-Astyle = STYLEBUTTONBODYHTMLZ Estyle =STYLEBUTTONBODYHTMLZ
-Estyle " =STYLEBUTTONBODYHTMLZ Fstyle "=STYLEBUTTONBODYHTMLZ
-Fstyle " "=STYLEBUTTONBODYHTMLZ Obutton BUTTONBODYHTMLZ
+Obuttonbody style=" BUTTON Fstylebuttonbody STYLE
+Fstylebuttonbody " STYLE Obuttonbody e
 
 # TYPE Dalem button
-Obutton type BUTTONBODYHTMLZ Atype TYPEBUTTONBODYHTMLZ
-Atype = TYPEBUTTONBODYHTMLZ Etype =TYPEBUTTONBODYHTMLZ
-Etype " =TYPEBUTTONBODYHTMLZ Gtype "=TYPEBUTTONBODYHTMLZ
-Gtype submit "=TYPEBUTTONBODYHTMLZ Ftype "=TYPEBUTTONBODYHTMLZ
-Gtype reset "=TYPEBUTTONBODYHTMLZ Ftype "=TYPEBUTTONBODYHTMLZ
-Gtype button "=TYPEBUTTONBODYHTMLZ Ftype "=TYPEBUTTONBODYHTMLZ
-Ftype " "=TYPEBUTTONBODYHTMLZ Obutton BUTTONBODYHTMLZ
+Obbuttonbody type=" BUTTON Gtypebuttonbody TYPE
+Gtypebuttonbody submit TYPE Obuttonbody e
+Gtypebuttonbody reset TYPE Obuttonbody e
+Gtypebuttonbody button TYPE Obuttonbody e
+Ftypebuttonbody " TYPE Obuttonbody e
 
 # BUKA tag form di dalam body
-Nbody <form BODYHTMLZ Oform FORMBODYHTMLZ
-Oform > FORMBODYHTMLZ Nform FORMBODYHTMLZ
-Nform </form> FORMBODYHTMLZ Nbody BODYHTMLZ
+Nbody <form BODY Oformbody FORM
+Oformbody > FORM Nformbody idem
+Nformbody </form> FORM Nbody e
 
 # CLASS Dalem form
-Oform class FORMBODYHTMLZ Aclass CLASSFORMBODYHTMLZ
-Aclass = CLASSFORMBODYHTMLZ Eclass =CLASSFORMBODYHTMLZ
-Eclass " =CLASSFORMBODYHTMLZ Fclass "=CLASSFORMBODYHTMLZ
-Fclass " "=CLASSFORMBODYHTMLZ Oform FORMBODYHTMLZ
+Oformbody class=" FORM Fclassformbody CLASS
+Fclassformbody " CLASS Oformbody e
 
 # ID Dalem form
-Oform id FORMBODYHTMLZ Aid IDFORMBODYHTMLZ
-Aid = IDFORMBODYHTMLZ Eid =IDFORMBODYHTMLZ
-Eid " =IDFORMBODYHTMLZ Fid "=IDFORMBODYHTMLZ
-Fid " "=IDFORMBODYHTMLZ Oform FORMBODYHTMLZ
+Oformbody id=" FORM Fidformbody ID
+Fidformbody " ID Oformbody e
 
 # STYLE Dalem form
-Oform style FORMBODYHTMLZ Astyle STYLEFORMBODYHTMLZ
-Astyle = STYLEFORMBODYHTMLZ Estyle =STYLEFORMBODYHTMLZ
-Estyle " =STYLEFORMBODYHTMLZ Fstyle "=STYLEFORMBODYHTMLZ
-Fstyle " "=STYLEFORMBODYHTMLZ Oform FORMBODYHTMLZ
+Oformbody style=" FORM Fstyleformbody STYLE
+Fstyleformbody " STYLE Oformbody e
 
 # ACTION Dalem form
-Oform action FORMBODYHTMLZ Aaction ACTIONFORMBODYHTMLZ
-Aaction = ACTIONFORMBODYHTMLZ Eaction =ACTIONFORMBODYHTMLZ
-Eaction " =ACTIONFORMBODYHTMLZ Faction "=ACTIONFORMBODYHTMLZ
-Faction " "=ACTIONFORMBODYHTMLZ Oform FORMBODYHTMLZ
+Oformbody action=" FORM Factionformbody ACTION
+Factionformbody " ACTION Oformbody e
 
 # METHOD Dalem form
-Oform method FORMBODYHTMLZ Amethod METHODFORMBODYHTMLZ
-Amethod = METHODFORMBODYHTMLZ Emethod =METHODFORMBODYHTMLZ
-Emethod " =METHODFORMBODYHTMLZ Gmethod "=METHODFORMBODYHTMLZ
-Gmethod GET "=METHODFORMBODYHTMLZ Fmethod "=METHODFORMBODYHTMLZ
-Gmethod POST "=METHODFORMBODYHTMLZ Fmethod "=METHODFORMBODYHTMLZ
-Fmethod " "=METHODFORMBODYHTMLZ Oform FORMBODYHTMLZ
+Oformbody method=" FORM Gmethodformbody METHOD
+Gmethodformbody GET METHOD Oformbody e
+Gmethodformbody POST METHOD Oformbody e
+Fmethodformbody " METHOD Oformbody e
 
 # BUKA tag input di dalam body
-Nbody <input BODYHTMLZ Oinput INPUTBODYHTMLZ
-Oinput > INPUTBODYHTMLZ Nbody INPUTBODYHTMLZ
-Oinput /> INPUTBODYHTMLZ Nbody BODYHTMLZ
+Nbody <input BODY Oinputbody INPUT
+Oinputbody > INPUT Nbody e
 
 # CLASS Dalem input
-Oinput class INPUTBODYHTMLZ Aclass CLASSINPUTBODYHTMLZ
-Aclass = CLASSINPUTBODYHTMLZ Eclass =CLASSINPUTBODYHTMLZ
-Eclass " =CLASSINPUTBODYHTMLZ Fclass "=CLASSINPUTBODYHTMLZ
-Fclass " "=CLASSINPUTBODYHTMLZ Oinput INPUTBODYHTMLZ
+Oinputbody class=" INPUT Fclassinputbody CLASS
+Fclassinputbody " CLASS Oinputbody e
 
 # ID Dalem input
-Oinput id INPUTBODYHTMLZ Aid IDINPUTBODYHTMLZ
-Aid = IDINPUTBODYHTMLZ Eid =IDINPUTBODYHTMLZ
-Eid " =IDINPUTBODYHTMLZ Fid "=IDINPUTBODYHTMLZ
-Fid " "=IDINPUTBODYHTMLZ Oinput INPUTBODYHTMLZ
+Oinputbody id=" INPUT Fidinputbody ID
+Fidinputbody " ID Oinputbody e
 
 # STYLE Dalem input
-Oinput style INPUTBODYHTMLZ Astyle STYLEINPUTBODYHTMLZ
-Astyle = STYLEINPUTBODYHTMLZ Estyle =STYLEINPUTBODYHTMLZ
-Estyle " =STYLEINPUTBODYHTMLZ Fstyle "=STYLEINPUTBODYHTMLZ
-Fstyle " "=STYLEINPUTBODYHTMLZ Oinput INPUTBODYHTMLZ
+Oinputbody style=" INPUT Fstyleinputbody STYLE
+Fstyleinputbody " STYLE Oinputbody e
 
 # TYPE Dalem input
-Oinput type INPUTBODYHTMLZ Atype TYPEINPUTBODYHTMLZ
-Atype = TYPEINPUTBODYHTMLZ Etype =TYPEINPUTBODYHTMLZ
-Etype " =TYPEINPUTBODYHTMLZ Gtype "=TYPEINPUTBODYHTMLZ
-Gtype text "=TYPEINPUTBODYHTMLZ Ftype "=TYPEINPUTBODYHTMLZ
-Gtype password "=TYPEINPUTBODYHTMLZ Ftype "=TYPEINPUTBODYHTMLZ
-Gtype email "=TYPEINPUTBODYHTMLZ Ftype "=TYPEINPUTBODYHTMLZ
-Gtype number "=TYPEINPUTBODYHTMLZ Ftype "=TYPEINPUTBODYHTMLZ
-Gtype checkbox "=TYPEINPUTBODYHTMLZ Ftype "=TYPEINPUTBODYHTMLZ
-Ftype " "=TYPEINPUTBODYHTMLZ Oinput INPUTBODYHTMLZ
+Oinputbody type=" INPUT Gtypeinputbody TYPE
+Gtypeinputbody text TYPE Finputbody e
+Gtypeinputbody password TYPE Finputbody e
+Gtypeinputbody checkbox TYPE Finputbody e
+Gtypeinputbody number TYPE Finputbody e
+Gtypeinputbody email TYPE Finputbody e
+Finputbody " TYPE Oinputbody e
 
 # BUKA tag table di dalam body
-Nbody <table BODYHTMLZ Otable TABLEBODYHTMLZ
-Otable > TABLEBODYHTMLZ Ntable TABLEBODYHTMLZ
-Ntable </table> TABLEBODYHTMLZ Nbody BODYHTMLZ
+Nbody <table BODY Otablebody TABLE
+Otablebody > TABLE Ntablebody idem
+Ntablebody </table> TABLE Nbody e
 
 # CLASS Dalem table
-Otable class TABLEBODYHTMLZ Aclass CLASSTABLEBODYHTMLZ
-Aclass = CLASSTABLEBODYHTMLZ Eclass =CLASSTABLEBODYHTMLZ
-Eclass " =CLASSTABLEBODYHTMLZ Fclass "=CLASSTABLEBODYHTMLZ
-Fclass " "=CLASSTABLEBODYHTMLZ Otable TABLEBODYHTMLZ
+Otablebody class=" TABLE Fclasstablebody CLASS
+Fclasstablebody " CLASS Otablebody e
 
 # ID Dalem table
-Otable id TABLEBODYHTMLZ Aid IDTABLEBODYHTMLZ
-Aid = IDTABLEBODYHTMLZ Eid =IDTABLEBODYHTMLZ
-Eid " =IDTABLEBODYHTMLZ Fid "=IDTABLEBODYHTMLZ
-Fid " "=IDTABLEBODYHTMLZ Otable TABLEBODYHTMLZ
+Otablebody id=" TABLE Fidtablebody ID
+Fidtablebody " ID Otablebody e
 
 # STYLE Dalem table
-Otable style TABLEBODYHTMLZ Astyle STYLETABLEBODYHTMLZ
-Astyle = STYLETABLEBODYHTMLZ Estyle =STYLETABLEBODYHTMLZ
-Estyle " =STYLETABLEBODYHTMLZ Fstyle "=STYLETABLEBODYHTMLZ
-Fstyle " "=STYLETABLEBODYHTMLZ Otable TABLEBODYHTMLZ
+Otablebody style=" TABLE Fstyletablebody STYLE
+Fstyletablebody " STYLE Otablebody e
 
 # BUKA tag tr di dalam table
-Ntable <tr TABLEBODYHTMLZ Otr TRTABLEBODYHTMLZ
-Otr > TRTABLEBODYHTMLZ Ntr TRTABLEBODYHTMLZ
-Ntr </tr> TRTABLEBODYHTMLZ Ntable TABLEBODYHTMLZ
+Ntablebody <tr TABLE Otrtablebody TR
+Otrtablebody > TR Ntrtablebody idem
+Ntrtablebody </tr> TR Ntablebody e
 
 # CLASS Dalem tr
-Otr class TRTABLEBODYHTMLZ Aclass CLASSTRTABLEBODYHTMLZ
-Aclass = CLASSTRTABLEBODYHTMLZ Eclass =CLASSTRTABLEBODYHTMLZ
-Eclass " =CLASSTRTABLEBODYHTMLZ Fclass "=CLASSTRTABLEBODYHTMLZ
-Fclass " "=CLASSTRTABLEBODYHTMLZ Otr TRTABLEBODYHTMLZ
+Otrtablebody class=" TR Fclasstrtablebody CLASS
+Fclasstrtablebody " CLASS Otrtablebody e
 
 # ID Dalem tr
-Otr id TRTABLEBODYHTMLZ Aid IDTRTABLEBODYHTMLZ
-Aid = IDTRTABLEBODYHTMLZ Eid =IDTRTABLEBODYHTMLZ
-Eid " =IDTRTABLEBODYHTMLZ Fid "=IDTRTABLEBODYHTMLZ
-Fid " "=IDTRTABLEBODYHTMLZ Otr TRTABLEBODYHTMLZ
+Otrtablebody id=" TR Fidtrtablebody ID
+Fidtrtablebody " ID Otrtablebody e
 
 # STYLE Dalem tr
-Otr style TRTABLEBODYHTMLZ Astyle STYLETRTABLEBODYHTMLZ
-Astyle = STYLETRTABLEBODYHTMLZ Estyle =STYLETRTABLEBODYHTMLZ
-Estyle " =STYLETRTABLEBODYHTMLZ Fstyle "=STYLETRTABLEBODYHTMLZ
-Fstyle " "=STYLETRTABLEBODYHTMLZ Otr TRTABLEBODYHTMLZ
+Otrtablebody style=" TR Fstyletrtablebody STYLE
+Fstyletrtablebody " STYLE Otrtablebody e
 
 # BUKA tag td di dalam table
-Ntable <td TABLEBODYHTMLZ Otd TDTABLEBODYHTMLZ
-Otd > TDTABLEBODYHTMLZ Ntd TDTABLEBODYHTMLZ
-Ntd </td> TDTABLEBODYHTMLZ Ntable TABLEBODYHTMLZ
+Ntablebody <td TABLE Otdtablebody TD
+Otdtablebody > TD Ntdtablebody idem
+Ntdtablebody </td> TD Ntablebody e
 
 # CLASS Dalem td
-Otd class TDTABLEBODYHTMLZ Aclass CLASSTDTABLEBODYHTMLZ
-Aclass = CLASSTDTABLEBODYHTMLZ Eclass =CLASSTDTABLEBODYHTMLZ
-Eclass " =CLASSTDTABLEBODYHTMLZ Fclass "=CLASSTDTABLEBODYHTMLZ
-Fclass " "=CLASSTDTABLEBODYHTMLZ Otd TDTABLEBODYHTMLZ
+Otdtablebody class=" TD Fclasstdtablebody CLASS
+Fclasstdtablebody " CLASS Otdtablebody e
 
 # ID Dalem td
-Otd id TDTABLEBODYHTMLZ Aid IDTDTABLEBODYHTMLZ
-Aid = IDTDTABLEBODYHTMLZ Eid =IDTDTABLEBODYHTMLZ
-Eid " =IDTDTABLEBODYHTMLZ Fid "=IDTDTABLEBODYHTMLZ
-Fid " "=IDTDTABLEBODYHTMLZ Otd TDTABLEBODYHTMLZ
+Otdtablebody id=" TD Fidtdtablebody ID
+Fidtdtablebody " ID Otdtablebody e
 
 # STYLE Dalem td
-Otd style TDTABLEBODYHTMLZ Astyle STYLETDTABLEBODYHTMLZ
-Astyle = STYLETDTABLEBODYHTMLZ Estyle =STYLETDTABLEBODYHTMLZ
-Estyle " =STYLETDTABLEBODYHTMLZ Fstyle "=STYLETDTABLEBODYHTMLZ
-Fstyle " "=STYLETDTABLEBODYHTMLZ Otd TDTABLEBODYHTMLZ
+Otdtablebody style=" TD Fstyletdtablebody STYLE
+Fstyletdtablebody " STYLE Otdtablebody e
 
 # BUKA tag th di dalam table
-Ntable <th TABLEBODYHTMLZ Oth THTABLEBODYHTMLZ
-Oth > THTABLEBODYHTMLZ Nth THTABLEBODYHTMLZ
-Nth </th> THTABLEBODYHTMLZ Ntable TABLEBODYHTMLZ
+Ntablebody <th TABLE Othtablebody TH
+Othtablebody > TH Nthtablebody idem
+Nthtablebody </th> TH Ntablebody e
 
 # CLASS Dalem th
-Oth class THTABLEBODYHTMLZ Aclass CLASSTHTABLEBODYHTMLZ
-Aclass = CLASSTHTABLEBODYHTMLZ Eclass =CLASSTHTABLEBODYHTMLZ
-Eclass " =CLASSTHTABLEBODYHTMLZ Fclass "=CLASSTHTABLEBODYHTMLZ
-Fclass " "=CLASSTHTABLEBODYHTMLZ Oth THTABLEBODYHTMLZ
+Othtablebody class=" TH Fclassthtablebody CLASS
+Fclassthtablebody " CLASS Othtablebody e
 
 # ID Dalem th
-Oth id THTABLEBODYHTMLZ Aid IDTHTABLEBODYHTMLZ
-Aid = IDTHTABLEBODYHTMLZ Eid =IDTHTABLEBODYHTMLZ
-Eid " =IDTHTABLEBODYHTMLZ Fid "=IDTHTABLEBODYHTMLZ
-Fid " "=IDTHTABLEBODYHTMLZ Oth THTABLEBODYHTMLZ
+Othtablebody id=" TH Fidthtablebody ID
+Fidthtablebody " ID Othtablebody e
 
 # STYLE Dalem th
-Oth style THTABLEBODYHTMLZ Astyle STYLETHTABLEBODYHTMLZ
-Astyle = STYLETHTABLEBODYHTMLZ Estyle =STYLETHTABLEBODYHTMLZ
-Estyle " =STYLETHTABLEBODYHTMLZ Fstyle "=STYLETHTABLEBODYHTMLZ
-Fstyle " "=STYLETHTABLEBODYHTMLZ Oth THTABLEBODYHTMLZ
+Othtablebody style=" TH Fstylethtablebody STYLE
+Fstylethtablebody " STYLE Othtablebody e
 
 # BUKA tag td di dalam tr 
-Ntr <td TRTABLEBODYHTMLZ Otd TDTRTABLEBODYHTMLZ
-Otd > TDTRTABLEBODYHTMLZ Ntd TDTRTABLEBODYHTMLZ
-Ntd </td> TDTRTABLEBODYHTMLZ Ntr TRTABLEBODYHTMLZ
+Ntr <td TR Otdtr TD
+Otdtr > TD Ntdtr idem
+Ntdtr </td> TD Ntr e
 
 # CLASS Dalem td
-Otd class TDTRTABLEBODYHTMLZ Aclass CLASSTDTRTABLEBODYHTMLZ
-Aclass = CLASSTDTRTABLEBODYHTMLZ Eclass =CLASSTDTRTABLEBODYHTMLZ
-Eclass " =CLASSTDTRTABLEBODYHTMLZ Fclass "=CLASSTDTRTABLEBODYHTMLZ
-Fclass " "=CLASSTDTRTABLEBODYHTMLZ Otd TDTRTABLEBODYHTMLZ
+Otdtr class=" TD Fclasstdtr CLASS
+Fclasstdtr " CLASS Otdtr e
 
 # ID Dalem td
-Otd id TDTRTABLEBODYHTMLZ Aid IDTDTRTABLEBODYHTMLZ
-Aid = IDTDTRTABLEBODYHTMLZ Eid =IDTDTRTABLEBODYHTMLZ
-Eid " =IDTDTRTABLEBODYHTMLZ Fid "=IDTDTRTABLEBODYHTMLZ
-Fid " "=IDTDTRTABLEBODYHTMLZ Otd TDTRTABLEBODYHTMLZ
+Otdtr id=" TD Fidtdtr ID
+Fidtdtr " ID Otdtr e
 
 # STYLE Dalem td
-Otd style TDTRTABLEBODYHTMLZ Astyle STYLETDTRTABLEBODYHTMLZ
-Astyle = STYLETDTRTABLEBODYHTMLZ Estyle =STYLETDTRTABLEBODYHTMLZ
-Estyle " =STYLETDTRTABLEBODYHTMLZ Fstyle "=STYLETDTRTABLEBODYHTMLZ
-Fstyle " "=STYLETDTRTABLEBODYHTMLZ Otd TDTRTABLEBODYHTMLZ
+Otdtr style=" TD Fstyletdtr STYLE
+Fstyletdtr " STYLE Otdtr e
 
 # BUKA tag th di dalam tr
-Ntr <th TRTABLEBODYHTMLZ Oth THTRTABLEBODYHTMLZ
-Oth > THTRTABLEBODYHTMLZ Nth THTRTABLEBODYHTMLZ
-Nth </th> THTRTABLEBODYHTMLZ Ntr TRTABLEBODYHTMLZ
+Ntr <th TR Othtr TH
+Othtr > TH Nthtr idem
+Nthtr </th> TH Ntr e
 
 # CLASS Dalem th
-Oth class THTRTABLEBODYHTMLZ Aclass CLASSTHTRTABLEBODYHTMLZ
-Aclass = CLASSTHTRTABLEBODYHTMLZ Eclass =CLASSTHTRTABLEBODYHTMLZ
-Eclass " =CLASSTHTRTABLEBODYHTMLZ Fclass "=CLASSTHTRTABLEBODYHTMLZ
-Fclass " "=CLASSTHTRTABLEBODYHTMLZ Oth THTRTABLEBODYHTMLZ
+Othtr class=" TH Fclassthtr CLASS
+Fclassthtr " CLASS Othtr e
 
 # ID Dalem th
-Oth id THTRTABLEBODYHTMLZ Aid IDTHTRTABLEBODYHTMLZ
-Aid = IDTHTRTABLEBODYHTMLZ Eid =IDTHTRTABLEBODYHTMLZ
-Eid " =IDTHTRTABLEBODYHTMLZ Fid "=IDTHTRTABLEBODYHTMLZ
-Fid " "=IDTHTRTABLEBODYHTMLZ Oth THTRTABLEBODYHTMLZ
+Othtr id=" TH Fidthtr ID
+Fidthtr " ID Othtr e
 
 # STYLE Dalem th
-Oth style THTRTABLEBODYHTMLZ Astyle STYLETHTRTABLEBODYHTMLZ
-Astyle = STYLETHTRTABLEBODYHTMLZ Estyle =STYLETHTRTABLEBODYHTMLZ
-Estyle " =STYLETHTRTABLEBODYHTMLZ Fstyle "=STYLETHTRTABLEBODYHTMLZ
-Fstyle " "=STYLETHTRTABLEBODYHTMLZ Oth THTRTABLEBODYHTMLZ
+Othtr style=" TH Fstylethtr STYLE
+Fstylethtr " STYLE Othtr e
