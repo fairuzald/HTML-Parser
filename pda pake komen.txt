@@ -8,7 +8,7 @@ F
 # BUKA TAG HTML
 Q <html Z Ohtml HTMLZ           ---> satu satunya start state
 Ohtml > HTMLZ Nhtml HTMLZ
-Nhtml </html> HTMLZ F Z         ---> satu satunya final state
+Vhtml </html> HTMLZ F Z         ---> satu satunya final state
 
 # CLASS Dalem HTML
 Ohtml class HTMLZ Aclass CLASSHTMLZ
@@ -31,7 +31,7 @@ Fstyle " "=STYLEHTMLZ Ohtml HTMLZ
 # BUKA TAG HEAD
 Nhtml <head HTMLZ Ohead HEADHTMLZ
 Ohead > HEADHTMLZ Nhead HEADHTMLZ
-Nhead </head> HEADHTMLZ Nhtml HTMLZ   ["<html", "class", "=", """ , """, ">"] 
+Nhead </head> HEADHTMLZ Whtml HTMLZ   ["<html", "class", "=", """ , """, ">"] 
 
 # CLASS Dalem HEAD
 Ohead class HEADHTMLZ Aclass CLASSHEADHTMLZ
@@ -155,9 +155,9 @@ Esrc " =SRCSCRIPTHEADHTMLZ Fsrc "=SRCSCRIPTHEADHTMLZ
 Fsrc " "=SRCSCRIPTHEADHTMLZ Oscript SCRIPTHEADHTMLZ
 
 # BUKA tag body di dalam HTML
-Nhtml <body HTMLZ Obody BODYHTMLZ
+Whtml <body HTMLZ Obody BODYHTMLZ
 Obody > BODYHTMLZ Nbody BODYHTMLZ
-Nbody </body> BODYHTMLZ Nhtml HTMLZ
+Nbody </body> BODYHTMLZ Vhtml HTMLZ
 
 # CLASS Dalem body
 Obody class BODYHTMLZ Aclass CLASSBODYHTMLZ
