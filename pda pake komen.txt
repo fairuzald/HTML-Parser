@@ -23,9 +23,9 @@ Ohtml style=" HTML Astylehtml STYLE
 Fstylehtml " STYLE Ohtml e
 
 # BUKA TAG HEAD
-Nhtml <head HTMLZ Ohead HEADHTMLZ
-Ohead > HEADHTMLZ Nhead HEADHTMLZ
-Nhead </head> HEADHTMLZ Whtml HTMLZ   ["<html", "class", "=", """ , """, ">"] 
+Nhtml <head HTML Ohead HEAD
+Ohead > HEAD Nhead idem
+Nhead </head> HEAD Whtml e
 
 # CLASS Dalem HEAD
 Ohead class=" HEAD Fclasshead CLASS
@@ -40,93 +40,74 @@ Ohead style=" HEAD Fstylehead STYLE
 Fstylehead " STYLE Ohead e
 
 # BUKA tag Title di dalam Head
-Nhead <title HEAD Otitle TITLE
-Otitle > TITLE Ntitle idem
-Ntitle </title> TITLE Nhead e
+Nhead <title HEAD Otitlehead TITLE
+Otitlehead > TITLE Ntitlehead idem
+Ntitlehead </title> TITLE Nhead e
 
 # CLASS Dalem Title
-Otitle class=" TITLE Aclasstitle CLASS
-Fclasstitle " CLASS Otitle e
+Otitlehead class=" TITLE Fclasstitle CLASS
+Fclasstitle " CLASS Otitlehead e
 
 # ID Dalem Title
-Otitle id=" TITLE Aidtitle ID
-Fidtitle " ID Otitle e
+Otitlehead id=" TITLE Fidtitle ID
+Fidtitle " ID Otitlehead e
 
 # STYLE Dalem Title
-Otitle style=" TITLE Astyletitle STYLE
-Fstyletitle " STYLE Otitle e
+Otitlehead style=" TITLE Fstyletitlehead STYLE
+Fstyletitlehead " STYLE Otitlehead e
 
 # BUKA tag link di dalam Head
-Nhead <link HEAD Olink LINK
-Olink > LINK Nlink idem
-Vlink </link> LINK Nhead e
+Nhead <link HEAD Olinkhead LINK
+Vlinkhead > LINK Nhead e
 
 # CLASS Dalem link
-Olink class=" LINK Fclass CLASS
-Vlink class=" VLINK FVclass CLASS 
-Fclass " CLASS Olink e
-FVclass " CLASS Vlink e
+Olinkhead class=" LINK Fclasshead CLASS
+Vlinkhead class=" VLINK FVclasshead CLASS 
+Fclasshead " CLASS Olinkhead e
+FVclasshead " CLASS Vlinkhead e
 
 # ID Dalem link
-Olink id=" LINK Fid ID
-Vlink id=" LINK FVid ID
-Fid " ID Olink em
-FVclass 
+Olinkhead id=" LINK Fidhead ID
+Vlinkhead id=" LINK FVidhead ID
+Fidhead " ID Olinkhead e
+FVidhead " ID Vlinkhead e 
 
 # STYLE Dalem link
-Olink style LINKHEADHTMLZ Astyle STYLELINKHEADHTMLZ
-Vlink style VLINKHEADHTMLZ Astyle STYLEVLINKHEADHTMLZ
-Astyle = STYLELINKHEADHTMLZ Estyle =STYLELINKHEADHTMLZ
-Astyle = STYLEVLINKHEADHTMLZ Estyle =STYLEVLINKHEADHTMLZ
-Estyle " =STYLELINKHEADHTMLZ Fstyle "=STYLELINKHEADHTMLZ
-Estyle " =STYLEVLINKHEADHTMLZ Fstyle "=STYLEVLINKHEADHTMLZ
-Fstyle " "=STYLELINKHEADHTMLZ Olink LINKHEADHTMLZ
-Fstyle " "=STYLEVLINKHEADHTMLZ Vlink VLINKHEADHTMLZ
+Olinkhead style=" LINK Fstylehead STYLE
+Vlinkhead style=" LINK FVstylehead STYLE
+Fstylehead " STYLE Olinkhead e
+FVstylehead " STYLE Vlinkhead e 
 
 # REL Dalem link
-Olink rel LINKHEADHTMLZ Arel RELLINKHEADHTMLZ
-Arel = RELLINKHEADHTMLZ Erel =RELLINKHEADHTMLZ
-Erel " =RELLINKHEADHTMLZ Frel "=RELLINKHEADHTMLZ
-Frel " "=RELLINKHEADHTMLZ Vlink VLINKHEADHTMLZ
+Olinkhead rel=" LINK Frelhead REL
+Frelhead " REL Vlinkhead e
 
 # HREF Dalem link
-Olink href LINKHEADHTMLZ Ahref HREFLINKHEADHTMLZ
-Vlink href VLINKHEADHTMLZ Ahref HREFVLINKHEADHTMLZ
-Ahref = HREFLINKHEADHTMLZ Ehref =HREFLINKHEADHTMLZ
-Ahref = HREFVLINKHEADHTMLZ Ehref =HREFVLINKHEADHTMLZ
-Ehref " =HREFLINKHEADHTMLZ Fhref "=HREFLINKHEADHTMLZ
-Ehref " =HREFVLINKHEADHTMLZ Fhref "=HREFVLINKHEADHTMLZ
-Fhref " "=HREFLINKHEADHTMLZ Olink LINKHEADHTMLZ
-Fhref " "=HREFVLINKHEADHTMLZ Vlink VLINKHEADHTMLZ
+Olinkhead href=" LINK Fhrefhead HREF
+Vlinkhead href=" LINK FVhrefhead HREF
+Fhrefhead " HREF Olinkhead e
+FVhrefhead " HREF Vlinkhead e
 
 # BUKA tag script di dalam Head
-Nhead <script HEADHTMLZ Oscript SCRIPTHEADHTMLZ
-Oscript > SCRIPTHEADHTMLZ Nscript SCRIPTHEADHTMLZ
-Nscript </script> SCRIPTHEADHTMLZ Nhead HEADHTMLZ
+Nhead <script HEAD Oscripthead SCRIPT
+Oscripthead > SCRIPT Nscripthead idem
+Nscripthead </script> SCRIPT Nhead e
 
 # CLASS Dalem script
-Oscript class SCRIPTHEADHTMLZ Aclass CLASSSCRIPTHEADHTMLZ
-Aclass = CLASSSCRIPTHEADHTMLZ Eclass =CLASSSCRIPTHEADHTMLZ
-Eclass " =CLASSSCRIPTHEADHTMLZ Fclass "=CLASSSCRIPTHEADHTMLZ
-Fclass " "=CLASSSCRIPTHEADHTMLZ Oscript SCRIPTHEADHTMLZ
+Oscripthead class=" SCRIPT Fclasshead CLASS
+Fclasshead " CLASS Oscripthead e
 
 # ID Dalem script
-Oscript id SCRIPTHEADHTMLZ Aid IDSCRIPTHEADHTMLZ
-Aid = IDSCRIPTHEADHTMLZ Eid =IDSCRIPTHEADHTMLZ
-Eid " =IDSCRIPTHEADHTMLZ Fid "=IDSCRIPTHEADHTMLZ
-Fid " "=IDSCRIPTHEADHTMLZ Oscript SCRIPTHEADHTMLZ
+Oscripthead id=" SCRIPT Fidhead ID
+Fidhead " ID Oscripthead e
 
 # STYLE Dalem script
-Oscript style SCRIPTHEADHTMLZ Astyle STYLESCRIPTHEADHTMLZ
-Astyle = STYLESCRIPTHEADHTMLZ Estyle =STYLESCRIPTHEADHTMLZ
-Estyle " =STYLESCRIPTHEADHTMLZ Fstyle "=STYLESCRIPTHEADHTMLZ
-Fstyle " "=STYLESCRIPTHEADHTMLZ Oscript SCRIPTHEADHTMLZ
+Oscripthead style=" SCRIPT Fstylehead STYLE
+Fstylehead " STYLE Oscripthead e
 
 # SRC Dalem script
-Oscript src SCRIPTHEADHTMLZ Asrc SRCSCRIPTHEADHTMLZ
-Asrc = SRCSCRIPTHEADHTMLZ Esrc =SRCSCRIPTHEADHTMLZ
-Esrc " =SRCSCRIPTHEADHTMLZ Fsrc "=SRCSCRIPTHEADHTMLZ
-Fsrc " "=SRCSCRIPTHEADHTMLZ Oscript SCRIPTHEADHTMLZ
+Oscripthead src=" SCRIPT Fsrchead SRC
+Fsrchead " SRC Oscripthead e
 
 # BUKA tag body di dalam HTML
 Whtml <body HTML Obody BODY
@@ -134,81 +115,56 @@ Obody > BODY Nbody idem
 Nbody </body> BODY Vhtml e
 
 # CLASS Dalem body
-Obody class=" BODYHTMLZ Fclass CLASSBODYHTMLZ
-Fclass " "=CLASSBODYHTMLZ Obody BODYHTMLZ
+Obody class=" BODY Fclassbody CLASS
+Fclassbody " CLASS Obody e
 
 # ID Dalem body
-Obody id BODYHTMLZ Aid IDBODYHTMLZ
-Aid = IDBODYHTMLZ Eid =IDBODYHTMLZ
-Eid " =IDBODYHTMLZ Fid "=IDBODYHTMLZ
-Fid " "=IDBODYHTMLZ Obody BODYHTMLZ
+Obody id=" BODY Fidbody ID
+Fidbody " ID Obody e
 
 # STYLE Dalem body
-Obody style BODYHTMLZ Astyle STYLEBODYHTMLZ
-Astyle = STYLEBODYHTMLZ Estyle =STYLEBODYHTMLZ
-Estyle " =STYLEBODYHTMLZ Fstyle "=STYLEBODYHTMLZ
-Fstyle " "=STYLEBODYHTMLZ Obody BODYHTMLZ
+Obody style=" BODY Fstylebody STYLE
+Fstylebody " STYLE Obody e
 
 # BUKA tag link di dalam body
-Nbody <link BODYHTMLZ Olink LINKBODYHTMLZ
-Vlink > VLINKBODYHTMLZ Nbody BODYHTMLZ
+Nbody <link BODY Olinkbody LINK
+Vlinkbody > LINK Nbody e
 
 # CLASS Dalem link
-Olink class LINKBODYHTMLZ Aclass CLASSLINKBODYHTMLZ
-Vlink class VLINKBODYHTMLZ Aclass CLASSVLINKBODYHTMLZ
-Aclass = CLASSLINKBODYHTMLZ Eclass =CLASSLINKBODYHTMLZ
-Aclass = CLASSVLINKBODYHTMLZ Eclass =CLASSVLINKBODYHTMLZ
-Eclass " =CLASSLINKBODYHTMLZ Fclass "=CLASSLINKBODYHTMLZ
-Eclass " =CLASSVLINKBODYHTMLZ Fclass "=CLASSVLINKBODYHTMLZ
-Fclass " "=CLASSLINKBODYHTMLZ Olink LINKBODYHTMLZ
-Fclass " "=CLASSVLINKBODYHTMLZ Vlink VLINKBODYHTMLZ
+Olinkbody class=" LINK Fclasslinkbody CLASS
+Vlinkbody class=" LINK FVclasslinkbody CLASS
+Fclasslinkbody " CLASS Olinkbody e
+FVclasslinkbody " CLASS Vlinkbody e
 
 # ID Dalem link
-Olink id LINKBODYHTMLZ Aid IDLINKBODYHTMLZ
-Vlink id VLINKBODYHTMLZ Aid IDVLINKBODYHTMLZ
-Aid = IDLINKBODYHTMLZ Eid =IDLINKBODYHTMLZ
-Aid = IDVLINKBODYHTMLZ Eid =IDVLINKBODYHTMLZ
-Eid " =IDLINKBODYHTMLZ Fid "=IDLINKBODYHTMLZ
-Eid " =IDVLINKBODYHTMLZ Fid "=IDVLINKBODYHTMLZ
-Fid " "=IDLINKBODYHTMLZ Olink LINKBODYHTMLZ
-Fid " "=IDVLINKBODYHTMLZ Vlink VLINKBODYHTMLZ
+Olinkbody id=" LINK Fidlinkbody ID
+Vlinkbody id=" LINK FVidlinkbody ID
+Fidlinkbody " ID Olinkbody e
+FVidlinkbody " ID Vlinkbody e
 
 # STYLE Dalem link
-Olink style LINKBODYHTMLZ Astyle STYLELINKBODYHTMLZ
-Vlink style VLINKBODYHTMLZ Astyle STYLEVLINKBODYHTMLZ
-Astyle = STYLELINKBODYHTMLZ Estyle =STYLELINKBODYHTMLZ
-Astyle = STYLEVLINKBODYHTMLZ Estyle =STYLEVLINKBODYHTMLZ
-Estyle " =STYLELINKBODYHTMLZ Fstyle "=STYLELINKBODYHTMLZ
-Estyle " =STYLEVLINKBODYHTMLZ Fstyle "=STYLEVLINKBODYHTMLZ
-Fstyle " "=STYLELINKBODYHTMLZ Olink LINKBODYHTMLZ
-Fstyle " "=STYLEVLINKBODYHTMLZ Vlink VLINKBODYHTMLZ
+Olinkbody style=" LINK Fstylelinkbody STYLE
+Vlinkbody style=" LINK FVstylelinkbody STYLE
+Fstylelinkbody " STYLE Olinkbody e
+FVstylelinkbody " STYLE Vlinkbody e
 
 # REL Dalem link
-Olink rel LINKBODYHTMLZ Arel RELLINKBODYHTMLZ
-Arel = RELLINKBODYHTMLZ Erel =RELLINKBODYHTMLZ
-Erel " =RELLINKBODYHTMLZ Frel "=RELLINKBODYHTMLZ
-Frel " "=RELLINKBODYHTMLZ Vlink VLINKBODYHTMLZ
+Olinkbody rel=" LINK Frelbody REL
+Frelbody " REL Vlinkbody e
 
 # HREF Dalem link
-Olink href LINKBODYHTMLZ Ahref HREFLINKBODYHTMLZ
-Vlink href VLINKBODYHTMLZ Ahref HREFVLINKBODYHTMLZ
-Ahref = HREFLINKBODYHTMLZ Ehref =HREFLINKBODYHTMLZ
-Ahref = HREFVLINKBODYHTMLZ Ehref =HREFVLINKBODYHTMLZ
-Ehref " =HREFLINKBODYHTMLZ Fhref "=HREFLINKBODYHTMLZ
-Ehref " =HREFVLINKBODYHTMLZ Fhref "=HREFVLINKBODYHTMLZ
-Fhref " "=HREFLINKBODYHTMLZ Olink LINKBODYHTMLZ
-Fhref " "=HREFVLINKBODYHTMLZ Vlink VLINKBODYHTMLZ
+Olinkbody href=" LINK Fhreflinkbody HREF
+Vlinkbody href=" LINK FVhreflinkbody HREF
+Fhreflinkbody " HREF Olinkbody e
+FVhreflinkbody " HREF Vlinkbody e
 
 # BUKA tag script di dalam body
-Nbody <script BODYHTMLZ Oscript SCRIPTBODYHTMLZ
-Oscript > SCRIPTBODYHTMLZ Nscript SCRIPTBODYHTMLZ
-Nscript </script> SCRIPTBODYHTMLZ Nbody BODYHTMLZ
+Nbody <script BODY Oscriptbody SCRIPTBODY
+Oscriptbody > SCRIPT Nscriptbody SCRIPT
+Nscriptbody </script> SCRIPT Nbody e
 
 # CLASS Dalem script
-Oscript class SCRIPTBODYHTMLZ Aclass CLASSSCRIPTBODYHTMLZ
-Aclass = CLASSSCRIPTBODYHTMLZ Eclass =CLASSSCRIPTBODYHTMLZ
-Eclass " =CLASSSCRIPTBODYHTMLZ Fclass "=CLASSSCRIPTBODYHTMLZ
-Fclass " "=CLASSSCRIPTBODYHTMLZ Oscript SCRIPTBODYHTMLZ
+Oscriptbody class="
 
 # ID Dalem script
 Oscript id SCRIPTBODYHTMLZ Aid IDSCRIPTBODYHTMLZ
@@ -455,7 +411,7 @@ Fid " "=IDBBODYHTMLZ Ob BBODYHTMLZ
 Ob style BBODYHTMLZ Astyle STYLEBBODYHTMLZ
 Astyle = STYLEBBODYHTMLZ Estyle =STYLEBBODYHTMLZ
 Estyle " =STYLEBBODYHTMLZ Fstyle "=STYLEBBODYHTMLZ
-Fstyle " "=STYLEBBODYHTMLZ Ob
+Fstyle " "=STYLEBBODYHTMLZ Ob "=STYLEBBODYHTMLZ
 
 # BUKA tag abbr di dalam body
 Nbody <abbr BODYHTMLZ Oabbr ABBRBODYHTMLZ
