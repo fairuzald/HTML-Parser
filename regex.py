@@ -74,20 +74,14 @@ class Tokenize:
 
     def tokenize(self, html_code):
         # Remove comments and unnecessary spaces within quotes
-        html_code_cleaned = re.sub(
-            r'"([^"]*)"',
-            lambda m: m.group(0)
-            .replace(" ", "")
-            .replace("=", "")
-            .replace("<", "")
-            .replace(">", ""),
-            html_code,
-        )
-        html_code_cleaned = re.sub(r"\s+(?=>)", "", html_code_cleaned)
+        html_code_cleaned = re.sub(r'"([^"]*)"', lambda m: m.group(0).replace(" ", "").replace("=","").replace("<","").replace(">",""), html_code)
+        html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code_cleaned)
+        html_code_cleaned = re.sub(r"\s*=\s*", "=", html_code_cleaned)
 
         # Tokenize HTML code with a non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
+        print(tags)
 
         # Filter and return tags with attributes based on constraints
         result = []
@@ -133,22 +127,13 @@ class Tokenize:
                                     return []
 
                                 # Append attribute name and value to the result
-                                result.append(attribute_name)
-                                result.append("=")
-                                if isQuoteOpen:
-                                    result.append('"')
-                                if (
-                                    (name_tag == "input" or name_tag == "button")
-                                    and attribute_name == "type"
-                                ) or (
-                                    name_tag == "form" and attribute_name == "method"
-                                ):
+                                if(not isQuoteOpen and not isQuoteClose):
+                                    result.append(f'{attribute_name}=')
+                                else:
+                                    result.append(f'{attribute_name}="')
+                                if (((name_tag == "input" or name_tag == "button") and attribute_name == "type") or(name_tag == "form" and attribute_name == "method")):
                                     result.append(attribute_value)
-                                if (
-                                    len(split_item[1]) > 1
-                                    and isQuoteOpen
-                                    and isQuoteClose
-                                ):
+                                if(len(split_item[1])>1 and isQuoteOpen and isQuoteClose):
                                     result.append('"')
                         else:
                             return []

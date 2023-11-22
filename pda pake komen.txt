@@ -23,9 +23,9 @@ Ohtml style=" HTML Astylehtml STYLE
 Fstylehtml " STYLE Ohtml e
 
 # BUKA TAG HEAD
-Nhtml <head HTML Ohead HEAD
-Ohead > HEAD Nhead idem
-Nhead </head> HEAD Whtml e   ["<html", "class=", "" , ">"] 
+Nhtml <head HTMLZ Ohead HEADHTMLZ
+Ohead > HEADHTMLZ Nhead HEADHTMLZ
+Nhead </head> HEADHTMLZ Whtml HTMLZ   ["<html", "class", "=", """ , """, ">"] 
 
 # CLASS Dalem HEAD
 Ohead class=" HEAD Fclasshead CLASS
