@@ -23,7 +23,7 @@ a;href;id;class;style
 void;img;src;alt;id;class;style
 button;type;id;class;style
 form;action;method;id;class;style
-input;type;id;class;style
+void;input;type;id;class;style
 table;id;class;style
 tr;id;class;style
 td;id;class;style

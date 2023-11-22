@@ -31,7 +31,7 @@ Fstyle " "=STYLEHTMLZ Ohtml HTMLZ
 # BUKA TAG HEAD
 Nhtml <head HTMLZ Ohead HEADHTMLZ
 Ohead > HEADHTMLZ Nhead HEADHTMLZ
-Nhead </html> HEADHTMLZ Nhtml HTMLZ   ["<html", "class", "=", """ , """, ">"] 
+Nhead </html> HEADHTMLZ Nhtml HTMLZ   ["<html", 'class=', '"', ">"] 
 
 # CLASS Dalem HEAD
 Ohtml class HEADHTMLZ Aclass CLASSHEADHTMLZ
