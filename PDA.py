@@ -33,9 +33,10 @@ class PDA:
                     len(self.stack) > 0 and self.stack[-1] or None,
                 )
             ]
-            if to_push != "e":
-                self.stack.pop()
+            if to_push != "e" and to_push != "idem":
                 self.stack.append(to_push)
+            elif to_push == "idem":
+                pass
             elif self.stack:
                 self.stack.pop()
         else:
@@ -51,7 +52,7 @@ class PDA:
         self.stack = [self.start_stack]
         for token in tokens:
             self.transition(token)
-            print(self.current_state, self.stack)
+            print(token, self.current_state, self.stack)
             if not self.current_state:
                 return False
         return self.in_accept_state()
