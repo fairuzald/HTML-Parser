@@ -12,11 +12,11 @@ h5;id;class;style
 h6;id;class;style
 p;id;class;style
 void;br;id;class;style
-em;id;class;style
-b;id;class;style
-abbr;id;class;style
-strong;id;class;style
-small;id;class;style
+em
+b
+abbr
+strong
+small
 void;hr;id;class;style
 div;id;class;style
 a;href;id;class;style
