@@ -20,7 +20,10 @@ def main():
     tokens = tokenizer.tokenize(html_code)
     print(tokens)
 
-    print(pda.validate(tokens))
+    if pda.validate(tokens):
+        print("Accepted")
+    else:
+        print("Rejected")
 
 
 if __name__ == "__main__":

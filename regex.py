@@ -138,15 +138,10 @@ class Tokenize:
                                 if isQuoteOpen:
                                     result.append('"')
                                 if (
-                                    (name_tag == "img" and attribute_name == "src")
-                                    or (
-                                        (name_tag == "input" or name_tag == "button")
-                                        and attribute_name == "type"
-                                    )
-                                    or (
-                                        name_tag == "form"
-                                        and attribute_name == "method"
-                                    )
+                                    (name_tag == "input" or name_tag == "button")
+                                    and attribute_name == "type"
+                                ) or (
+                                    name_tag == "form" and attribute_name == "method"
                                 ):
                                     result.append(attribute_value)
                                 if (
