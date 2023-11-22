@@ -53,8 +53,8 @@ Otitlehead id=" TITLE Fidtitle ID
 Fidtitle " ID Otitlehead e
 
 # STYLE Dalem Title
-Otitlehead style=" TITLE Fstyletitlehead STYLE
-Fstyletitlehead " STYLE Otitlehead e
+Otitlehead style=" TITLE Fstyletitle STYLE
+Fstyletitle " STYLE Otitlehead e
 
 # BUKA tag link di dalam Head
 Nhead <link HEAD Olinkhead LINK
@@ -1594,3 +1594,125 @@ Oformbody > SMALL Nformbody idem
 Oformdiv > SMALL Nformdiv idem
 Nformbody </small> SMALL Nformbody e
 Nformdiv </small> SMALL Nformdiv e
+
+# handle isi dari tag form
+
+# BUKA tag input di dalam form
+Nformbody <input FORM Oinputformbody INPUT
+Nformdiv <input FORM Oinputformdiv INPUT
+Oinputformbody > INPUT Nformbody e
+Oinputformdiv > INPUT Nformdiv e
+
+# CLASS Dalem input
+Oinputformbody class=" INPUT Fclassinputformbody CLASS
+Oinputformdiv class=" INPUT Fclassinputformdiv CLASS
+Fclassinputformbody " CLASS Oinputformbody e
+Fclassinputformdiv " CLASS Oinputformdiv e
+
+# ID Dalem input
+Oinputformbody id=" INPUT Fidinputformbody ID
+Oinputformdiv id=" INPUT Fidinputformdiv ID
+Fidinputformbody " ID Oinputformbody e
+Fidinputformdiv " ID Oinputformdiv e
+
+# STYLE Dalem input
+Oinputformbody style=" INPUT Fstyleinputformbody STYLE
+Oinputformdiv style=" INPUT Fstyleinputformdiv STYLE
+Fstyleinputformbody " STYLE Oinputformbody e
+Fstyleinputformdiv " STYLE Oinputformdiv e
+
+# TYPE Dalem input
+Oinputformbody type=" INPUT Gtypeinputformbody TYPE
+Oinputformdiv type=" INPUT Gtypeinputformdiv TYPE
+Gtypeinputformbody text TYPE Finputformbody idem
+Gtypeinputformbody password TYPE Finputformbody idem
+Gtypeinputformbody checkbox TYPE Finputformbody idem
+Gtypeinputformbody number TYPE Finputformbody idem
+Gtypeinputformbody email TYPE Finputformbody idem
+Gtypeinputformdiv text TYPE Finputformdiv idem
+Gtypeinputformdiv password TYPE Finputformdiv idem
+Gtypeinputformdiv checkbox TYPE Finputformdiv idem
+Gtypeinputformdiv number TYPE Finputformdiv idem
+Gtypeinputformdiv email TYPE Finputformdiv idem
+Finputformbody " TYPE Oinputformbody e
+Finputformdiv " TYPE Oinputformdiv e
+
+# BUKA tag button di dalam form
+Nformbody <button FORM Obuttonformbody BUTTON
+Nformdiv <button FORM Obuttonformdiv BUTTON
+Obuttonformbody > BUTTON Nbuttonformbody idem
+Obuttonformdiv > BUTTON Nbuttonformdiv idem
+Nbuttonformbody </button> BUTTON Nformbody e
+Nbuttonformdiv </button> BUTTON Nformdiv e
+
+# CLASS Dalem button
+Obuttonformbody class=" BUTTON Fclassbuttonformbody CLASS
+Obuttonformdiv class=" BUTTON Fclassbuttonformdiv CLASS
+Fclassbuttonformbody " CLASS Obuttonformbody e
+Fclassbuttonformdiv " CLASS Obuttonformdiv e
+
+# ID Dalem button
+Obuttonformbody id=" BUTTON Fidbuttonformbody ID
+Obuttonformdiv id=" BUTTON Fidbuttonformdiv ID
+Fidbuttonformbody " ID Obuttonformbody e
+Fidbuttonformdiv " ID Obuttonformdiv e
+
+# STYLE Dalem button
+Obuttonformbody style=" BUTTON Fstylebuttonformbody STYLE
+Obuttonformdiv style=" BUTTON Fstylebuttonformdiv STYLE
+Fstylebuttonformbody " STYLE Obuttonformbody e
+Fstylebuttonformdiv " STYLE Obuttonformdiv e
+
+# TYPE Dalem button
+Obuttonformbody type=" BUTTON Gtypebuttonformbody TYPE
+Obuttonformdiv type=" BUTTON Gtypebuttonformdiv TYPE
+Gtypebuttonformbody submit TYPE Fbuttonformbody idem
+Gtypebuttonformbody reset TYPE Fbuttonformbody idem
+Gtypebuttonformbody button TYPE Fbuttonformbody idem
+Gtypebuttonformdiv submit TYPE Fbuttonformdiv idem
+Gtypebuttonformdiv reset TYPE Fbuttonformdiv idem
+Gtypebuttonformdiv button TYPE Fbuttonformdiv idem
+Fbuttonformbody " TYPE Obuttonformbody e
+Fbuttonformdiv " TYPE Obuttonformdiv e
+
+# handle formatting dalem tag button dalam form
+
+# BUKA tag b di dalam button
+Nbuttonformbody <b BUTTON Obuttonformbody B
+Nbuttonformdiv <b BUTTON Obuttonformdiv B
+Obuttonformbody > B Nbuttonformbody idem
+Obuttonformdiv > B Nbuttonformdiv idem
+Nbuttonformbody </b> B Nbuttonformbody e
+Nbuttonformdiv </b> B Nbuttonformdiv e
+
+# BUKA tag em di dalam button
+Nbuttonformbody <em BUTTON Obuttonformbody EM
+Nbuttonformdiv <em BUTTON Obuttonformdiv EM
+Obuttonformbody > EM Nbuttonformbody idem
+Obuttonformdiv > EM Nbuttonformdiv idem
+Nbuttonformbody </em> EM Nbuttonformbody e
+Nbuttonformdiv </em> EM Nbuttonformdiv e
+
+# BUKA tag abbr di dalam button
+Nbuttonformbody <abbr BUTTON Obuttonformbody ABBR
+Nbuttonformdiv <abbr BUTTON Obuttonformdiv ABBR
+Obuttonformbody > ABBR Nbuttonformbody idem
+Obuttonformdiv > ABBR Nbuttonformdiv idem
+Nbuttonformbody </abbr> ABBR Nbuttonformbody e
+Nbuttonformdiv </abbr> ABBR Nbuttonformdiv e
+
+# BUKA tag strong di dalam button
+Nbuttonformbody <strong BUTTON Obuttonformbody STRONG
+Nbuttonformdiv <strong BUTTON Obuttonformdiv STRONG
+Obuttonformbody > STRONG Nbuttonformbody idem
+Obuttonformdiv > STRONG Nbuttonformdiv idem
+Nbuttonformbody </strong> STRONG Nbuttonformbody e
+Nbuttonformdiv </strong> STRONG Nbuttonformdiv e
+
+# BUKA tag small di dalam button
+Nbuttonformbody <small BUTTON Obuttonformbody SMALL
+Nbuttonformdiv <small BUTTON Obuttonformdiv SMALL
+Obuttonformbody > SMALL Nbuttonformbody idem
+Obuttonformdiv > SMALL Nbuttonformdiv idem
+Nbuttonformbody </small> SMALL Nbuttonformbody e
+Nbuttonformdiv </small> SMALL Nbuttonformdiv e
