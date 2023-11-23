@@ -84,7 +84,6 @@ class Tokenize:
         # Tokenize HTML code with a non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
-        print(tags)
         # Filter and return tags with attributes based on constraints
         result = []
         stack = []
