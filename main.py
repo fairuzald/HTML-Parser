@@ -1,9 +1,7 @@
 from PDA import PDA
 from regex import Tokenize
 
-
 import sys
-
 
 def main():
     if len(sys.argv) != 3:
