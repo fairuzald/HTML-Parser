@@ -570,38 +570,56 @@ Othtablebody style=" TH Fstylethtablebody STYLE
 Fstylethtablebody " STYLE Othtablebody e
 
 # BUKA tag td di dalam tr 
-Ntr <td TR Otdtr TD
-Otdtr > TD Ntdtr idem
-Ntdtr </td> TD Ntr e
+Ntrtablebody <td TR Otdtrtablebody TD
+Ntrtablediv <td TR Otdtrtablediv TD
+Otdtrtablebody > TD Ntdtrtablebody idem
+Ntdtrtablebody </td> TD Ntrtablebody e
+Otdtrtablediv > TD Ntdtrtablediv idem
+Ntdtrtablediv </td> TD Ntrtablediv e
 
 # CLASS Dalem td
-Otdtr class=" TD Fclasstdtr CLASS
-Fclasstdtr " CLASS Otdtr e
+Otdtrtablebody class=" TD Fclasstdtrtablebody CLASS
+Fclasstdtrtablebody " CLASS Otdtrtablebody e
+Otdtrtablediv class=" TD Fclasstdtrtablediv CLASS
+Fclasstdtrtablediv " CLASS Otdtrtablediv e
 
 # ID Dalem td
-Otdtr id=" TD Fidtdtr ID
-Fidtdtr " ID Otdtr e
+Otdtrtablebody id=" TD Fidtdtrtablebody ID
+Fidtdtrtablebody " ID Otdtrtablebody e
+Otdtrtablediv id=" TD Fidtdtrtablediv ID
+Fidtdtrtablediv " ID Otdtrtablediv e
 
 # STYLE Dalem td
-Otdtr style=" TD Fstyletdtr STYLE
-Fstyletdtr " STYLE Otdtr e
+Otdtrtablebody style=" TD Fstyletdtrtablebody STYLE
+Fstyletdtrtablebody " STYLE Otdtrtablebody e
+Otdtrtablediv style=" TD Fstyletdtrtablediv STYLE
+Fstyletdtrtablediv " STYLE Otdtrtablediv e
 
 # BUKA tag th di dalam tr
-Ntr <th TR Othtr TH
-Othtr > TH Nthtr idem
-Nthtr </th> TH Ntr e
+Ntrtablebody <th TR Othtrtablebody TH
+Ntrtablediv <th TR Othtrtablediv TH
+Othtrtablebody > TH Nthtrtablebody idem
+Nthtrtablebody </th> TH Ntrtablebody e
+Othtrtablediv > TH Nthtrtablediv idem
+Nthtrtablediv </th> TH Ntrtablediv e
 
 # CLASS Dalem th
-Othtr class=" TH Fclassthtr CLASS
-Fclassthtr " CLASS Othtr e
+Othtrtablebody class=" TH Fclassthtrtablebody CLASS
+Fclassthtrtablebody " CLASS Othtrtablebody e
+Othtrtablediv class=" TH Fclassthtrtablediv CLASS
+Fclassthtrtablediv " CLASS Othtrtablediv e
 
 # ID Dalem th
-Othtr id=" TH Fidthtr ID
-Fidthtr " ID Othtr e
+Othtrtablebody id=" TH Fidthtrtablebody ID
+Fidthtrtablebody " ID Othtrtablebody e
+Othtrtablediv id=" TH Fidthtrtablediv ID
+Fidthtrtablediv " ID Othtrtablediv e
 
 # STYLE Dalem th
-Othtr style=" TH Fstylethtr STYLE
-Fstylethtr " STYLE Othtr e
+Othtrtablebody style=" TH Fstylethtrtablebody STYLE
+Fstylethtrtablebody " STYLE Othtrtablebody e
+Othtrtablediv style=" TH Fstylethtrtablediv STYLE
+Fstylethtrtablediv " STYLE Othtrtablediv e
 
 # BUKA tag link di dalam div
 Ndiv <link DIV Olinkdiv LINK
@@ -1045,40 +1063,6 @@ Fidthtablediv " ID Othtablediv e
 Othtablediv style=" TH Fstylethtablediv STYLE
 Fstylethtablediv " STYLE Othtablediv e
 
-# BUKA tag td di dalam trtablediv
-Ntrtablediv <td TR Otdtrtablediv TD
-Otdtrtablediv > TD Ntdtrtablediv idem
-Ntdtrtablediv </td> TD Ntrtablediv e
-
-# CLASS Dalem td
-Otdtrtablediv class=" TD Fclasstdtrtablediv CLASS
-Fclasstdtrtablediv " CLASS Otdtrtablediv e
-
-# ID Dalem td
-Otdtrtablediv id=" TD Fidtdtrtablediv ID
-Fidtdtrtablediv " ID Otdtrtablediv e
-
-# STYLE Dalem td
-Otdtrtablediv style=" TD Fstyletdtrtablediv STYLE
-Fstyletdtrtablediv " STYLE Otdtrtablediv e
-
-# BUKA tag th di dalam trtablediv
-Ntrtablediv <th TR Othtrtablediv TH
-Othtrtablediv > TH Nthtrtablediv idem
-Nthtrtablediv </th> TH Ntrtablediv e
-
-# CLASS Dalem th
-Othtrtablediv class=" TH Fclassthtrtablediv CLASS
-Fclassthtrtablediv " CLASS Othtrtablediv e
-
-# ID Dalem th
-Othtrtablediv id=" TH Fidthtrtablediv ID
-Fidthtrtablediv " ID Othtrtablediv e
-
-# STYLE Dalem th
-Othtrtablediv style=" TH Fstylethtrtablediv STYLE
-Fstylethtrtablediv " STYLE Othtrtablediv e
-
 # transisi keluar div ke body
 Ndiv <link BODY Olinkbody LINK
 Ndiv <script BODY Oscriptbody SCRIPT
@@ -1181,18 +1165,30 @@ Nadiv </b> B Nadiv e
 
 # BUKA tag b di dalam td
 Ntdtablebody <b TD Otdtablebody B
+Ntdtablediv <b TD Otdtablediv B
+Ntdtrtablebody <b TD Otdtrtablebody B
 Ntdtrtablediv <b TD Otdtrtablediv B
 Otdtablebody > B Ntdtablebody idem
+Otdtablediv > B Ntdtablediv idem
+Otdtrtablebody > B Ntdtrtablebody idem
 Otdtrtablediv > B Ntdtrtablediv idem
 Ntdtablebody </b> B Ntdtablebody e
+Ntdtablediv </b> B Ntdtablediv e
+Ntdtrtablebody </b> B Ntdtrtablebody e
 Ntdtrtablediv </b> B Ntdtrtablediv e
 
 # BUKA tag b di dalam th
 Nthtablebody <b TH Othtablebody B
+Nthtablediv <b TH Othtablediv B
+Nthtrtablebody <b TH Othtrtablebody B
 Nthtrtablediv <b TH Othtrtablediv B
 Othtablebody > B Nthtablebody idem
+Othtablediv > B Nthtablediv idem
+Othtrtablebody > B Nthtrtablebody idem
 Othtrtablediv > B Nthtrtablediv idem
 Nthtablebody </b> B Nthtablebody e
+Nthtablediv </b> B Nthtablediv e
+Nthtrtablebody </b> B Nthtrtablebody e
 Nthtrtablediv </b> B Nthtrtablediv e
 
 # BUKA tag b di dalam form
@@ -1279,18 +1275,30 @@ Nadiv </em> EM Nadiv e
 
 # BUKA tag em di dalam td
 Ntdtablebody <em TD Otdtablebody EM
+Ntdtablediv <em TD Otdtablediv EM
+Ntdtrtablebody <em TD Otdtrtablebody EM
 Ntdtrtablediv <em TD Otdtrtablediv EM
 Otdtablebody > EM Ntdtablebody idem
+Otdtablediv > EM Ntdtablediv idem
+Otdtrtablebody > EM Ntdtrtablebody idem
 Otdtrtablediv > EM Ntdtrtablediv idem
 Ntdtablebody </em> EM Ntdtablebody e
+Ntdtablediv </em> EM Ntdtablediv e
+Ntdtrtablebody </em> EM Ntdtrtablebody e
 Ntdtrtablediv </em> EM Ntdtrtablediv e
 
 # BUKA tag em di dalam th
 Nthtablebody <em TH Othtablebody EM
+Nthtablediv <em TH Othtablediv EM
+Nthtrtablebody <em TH Othtrtablebody EM
 Nthtrtablediv <em TH Othtrtablediv EM
 Othtablebody > EM Nthtablebody idem
+Othtablediv > EM Nthtablediv idem
+Othtrtablebody > EM Nthtrtablebody idem
 Othtrtablediv > EM Nthtrtablediv idem
 Nthtablebody </em> EM Nthtablebody e
+Nthtablediv </em> EM Nthtablediv e
+Nthtrtablebody </em> EM Nthtrtablebody e
 Nthtrtablediv </em> EM Nthtrtablediv e
 
 # BUKA tag em di dalam form
@@ -1377,18 +1385,30 @@ Nadiv </abbr> ABBR Nadiv e
 
 # BUKA tag abbr di dalam td
 Ntdtablebody <abbr TD Otdtablebody ABBR
+Ntdtablediv <abbr TD Otdtablediv ABBR
+Ntdtrtablebody <abbr TD Otdtrtablebody ABBR
 Ntdtrtablediv <abbr TD Otdtrtablediv ABBR
 Otdtablebody > ABBR Ntdtablebody idem
+Otdtablediv > ABBR Ntdtablediv idem
+Otdtrtablebody > ABBR Ntdtrtablebody idem
 Otdtrtablediv > ABBR Ntdtrtablediv idem
 Ntdtablebody </abbr> ABBR Ntdtablebody e
+Ntdtablediv </abbr> ABBR Ntdtablediv e
+Ntdtrtablebody </abbr> ABBR Ntdtrtablebody e
 Ntdtrtablediv </abbr> ABBR Ntdtrtablediv e
 
 # BUKA tag abbr di dalam th
 Nthtablebody <abbr TH Othtablebody ABBR
+Nthtablediv <abbr TH Othtablediv ABBR
+Nthtrtablebody <abbr TH Othtrtablebody ABBR
 Nthtrtablediv <abbr TH Othtrtablediv ABBR
 Othtablebody > ABBR Nthtablebody idem
+Othtablediv > ABBR Nthtablediv idem
+Othtrtablebody > ABBR Nthtrtablebody idem
 Othtrtablediv > ABBR Nthtrtablediv idem
 Nthtablebody </abbr> ABBR Nthtablebody e
+Nthtablediv </abbr> ABBR Nthtablediv e
+Nthtrtablebody </abbr> ABBR Nthtrtablebody e
 Nthtrtablediv </abbr> ABBR Nthtrtablediv e
 
 # BUKA tag abbr di dalam form
@@ -1475,18 +1495,30 @@ Nadiv </strong> STRONG Nadiv e
 
 # BUKA tag strong di dalam td
 Ntdtablebody <strong TD Otdtablebody STRONG
+Ntdtablediv <strong TD Otdtablediv STRONG
+Ntdtrtablebody <strong TD Otdtrtablebody STRONG
 Ntdtrtablediv <strong TD Otdtrtablediv STRONG
 Otdtablebody > STRONG Ntdtablebody idem
+Otdtablediv > STRONG Ntdtablediv idem
+Otdtrtablebody > STRONG Ntdtrtablebody idem
 Otdtrtablediv > STRONG Ntdtrtablediv idem
 Ntdtablebody </strong> STRONG Ntdtablebody e
+Ntdtrtablebody </strong> STRONG Ntdtrtablebody e
+Ntdtrtablediv </strong> STRONG Ntdtrtablediv e
 Ntdtrtablediv </strong> STRONG Ntdtrtablediv e
 
 # BUKA tag strong di dalam th
 Nthtablebody <strong TH Othtablebody STRONG
+Nthtablediv <strong TH Othtablediv STRONG
+Nthtrtablebody <strong TH Othtrtablebody STRONG
 Nthtrtablediv <strong TH Othtrtablediv STRONG
 Othtablebody > STRONG Nthtablebody idem
+Othtablediv > STRONG Nthtablediv idem
+Othtrtablebody </strong> STRONG Nthtrtablebody e
 Othtrtablediv > STRONG Nthtrtablediv idem
 Nthtablebody </strong> STRONG Nthtablebody e
+Nthtablediv </strong> STRONG Nthtablediv e
+Nthtrtablebody </strong> STRONG Nthtrtablebody e
 Nthtrtablediv </strong> STRONG Nthtrtablediv e
 
 # BUKA tag strong di dalam form
@@ -1573,18 +1605,30 @@ Nadiv </small> SMALL Nadiv e
 
 # BUKA tag small di dalam td
 Ntdtablebody <small TD Otdtablebody SMALL
+Ntdtablediv <small TD Otdtablediv SMALL
+Ntdtrtablebody <small TD Otdtrtablebody SMALL
 Ntdtrtablediv <small TD Otdtrtablediv SMALL
 Otdtablebody > SMALL Ntdtablebody idem
+Otdtablediv > SMALL Ntdtablediv idem
+Otdtrtablebody > SMALL Ntdtrtablebody idem
 Otdtrtablediv > SMALL Ntdtrtablediv idem
 Ntdtablebody </small> SMALL Ntdtablebody e
+Ntdtablediv </small> SMALL Ntdtablediv e
+Ntdtrtablebody </small> SMALL Ntdtrtablebody e
 Ntdtrtablediv </small> SMALL Ntdtrtablediv e
 
 # BUKA tag small di dalam th
 Nthtablebody <small TH Othtablebody SMALL
+Nthtablediv <small TH Othtablediv SMALL
+Nthtrtablebody <small TH Othtrtablebody SMALL
 Nthtrtablediv <small TH Othtrtablediv SMALL
 Othtablebody > SMALL Nthtablebody idem
+Othtablediv > SMALL Nthtablediv idem
+Othtrtablebody </small> SMALL Nthtrtablebody e
 Othtrtablediv > SMALL Nthtrtablediv idem
 Nthtablebody </small> SMALL Nthtablebody e
+Nthtablediv </small> SMALL Nthtablediv e
+Nthtrtablebody </small> SMALL Nthtrtablebody e
 Nthtrtablediv </small> SMALL Nthtrtablediv e
 
 # BUKA tag small di dalam form
