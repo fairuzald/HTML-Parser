@@ -472,8 +472,8 @@ Factionformbody " ACTION Oformbody e
 
 # METHOD Dalem form
 Oformbody method=" FORM Gmethodformbody METHOD
-Gmethodformbody GET METHOD Oformbody e
-Gmethodformbody POST METHOD Oformbody e
+Gmethodformbody GET METHOD Fmethodformbody idem
+Gmethodformbody POST METHOD Fmethodformbody idem
 Fmethodformbody " METHOD Oformbody e
 
 # BUKA tag input di dalam body
@@ -494,11 +494,11 @@ Fstyleinputbody " STYLE Oinputbody e
 
 # TYPE Dalem input
 Oinputbody type=" INPUT Gtypeinputbody TYPE
-Gtypeinputbody text TYPE Finputbody e
-Gtypeinputbody password TYPE Finputbody e
-Gtypeinputbody checkbox TYPE Finputbody e
-Gtypeinputbody number TYPE Finputbody e
-Gtypeinputbody email TYPE Finputbody e
+Gtypeinputbody text TYPE Finputbody idem
+Gtypeinputbody password TYPE Finputbody idem
+Gtypeinputbody checkbox TYPE Finputbody idem
+Gtypeinputbody number TYPE Finputbody idem
+Gtypeinputbody email TYPE Finputbody idem
 Finputbody " TYPE Oinputbody e
 
 # BUKA tag table di dalam body
@@ -573,14 +573,14 @@ Fstylethtablebody " STYLE Othtablebody e
 Ntrtablebody <td TR Otdtrtablebody TD
 Ntrtablediv <td TR Otdtrtablediv TD
 Otdtrtablebody > TD Ntdtrtablebody idem
-Ntdtrtablebody </td> TD Ntrtablebody e
 Otdtrtablediv > TD Ntdtrtablediv idem
+Ntdtrtablebody </td> TD Ntrtablebody e
 Ntdtrtablediv </td> TD Ntrtablediv e
 
 # CLASS Dalem td
 Otdtrtablebody class=" TD Fclasstdtrtablebody CLASS
-Fclasstdtrtablebody " CLASS Otdtrtablebody e
 Otdtrtablediv class=" TD Fclasstdtrtablediv CLASS
+Fclasstdtrtablebody " CLASS Otdtrtablebody e
 Fclasstdtrtablediv " CLASS Otdtrtablediv e
 
 # ID Dalem td
@@ -1641,6 +1641,598 @@ Nformdiv </small> SMALL Nformdiv e
 
 # handle isi dari tag form
 
+# BUKA tag link di dalam form
+Nformbody <link FORM Olinkformbody LINK
+Nformdiv <link FORM Olinkformdiv LINK
+Vlinkformbody > LINK Nformbody e
+Vlinkformdiv > LINK Nformdiv e
+
+# CLASS Dalem link
+Olinkformbody class=" LINK Fclasslinkformbody CLASS
+Vlinkformbody class=" LINK FVclasslinkformbody CLASS
+Olinkformdiv class=" LINK Fclasslinkformdiv CLASS
+Vlinkformdiv class=" LINK FVclasslinkformdiv CLASS
+Fclasslinkformbody " CLASS Olinkformbody e
+FVclasslinkformbody " CLASS Vlinkformbody e
+Fclasslinkformdiv " CLASS Olinkformdiv e
+FVclasslinkformdiv " CLASS Vlinkformdiv e
+
+# ID Dalem link
+Olinkformbody id=" LINK Fidlinkformbody ID
+Vlinkformbody id=" LINK FVidlinkformbody ID
+Olinkformdiv id=" LINK Fidlinkformdiv ID
+Vlinkformdiv id=" LINK FVidlinkformdiv ID
+Fidlinkformbody " ID Olinkformbody e
+FVidlinkformbody " ID Vlinkformbody e
+Fidlinkformdiv " ID Olinkformdiv e
+FVidlinkformdiv " ID Vlinkformdiv e
+
+# STYLE Dalem link
+Olinkformbody style=" LINK Fstylelinkformbody STYLE
+Vlinkformbody style=" LINK FVstylelinkformbody STYLE
+Olinkformdiv style=" LINK Fstylelinkformdiv STYLE
+Vlinkformdiv style=" LINK FVstylelinkformdiv STYLE
+Fstylelinkformbody " STYLE Olinkformbody e
+FVstylelinkformbody " STYLE Vlinkformbody e
+Fstylelinkformdiv " STYLE Olinkformdiv e
+FVstylelinkformdiv " STYLE Vlinkformdiv e
+
+# REL Dalem link
+Olinkformbody rel=" LINK Frellinkformbody REL
+Olinkformdiv rel=" LINK Frellinkformdiv REL
+Frellinkformbody " REL Vlinkformbody e
+Frellinkformdiv " REL Vlinkformdiv e
+
+# HREF Dalem link
+Olinkformbody href=" LINK Fhreflinkformbody HREF
+Vlinkformbody href=" LINK FVhreflinkformbody HREF
+Olinkformdiv href=" LINK Fhreflinkformdiv HREF
+Vlinkformdiv href=" LINK FVhreflinkformdiv HREF
+Fhreflinkformbody " HREF Olinkformbody e
+FVhreflinkformbody " HREF Vlinkformbody e
+Fhreflinkformdiv " HREF Olinkformdiv e
+FVhreflinkformdiv " HREF Vlinkformdiv e
+
+# BUKA tag script di dalam form
+Nformbody <script FORM Oscriptformbody SCRIPT
+Nformdiv <script FORM Oscriptformdiv SCRIPT
+Oscriptformbody > SCRIPT Nscriptformbody idem
+Oscriptformdiv > SCRIPT Nscriptformdiv idem
+Nscriptformbody </script> SCRIPT Nformbody e
+Nscriptformdiv </script> SCRIPT Nformdiv e
+
+# CLASS Dalem script
+Oscriptformbody class=" SCRIPT Fclassscriptformbody CLASS
+Oscriptformdiv class=" SCRIPT Fclassscriptformdiv CLASS
+Fclassscriptformbody " CLASS Oscriptformbody e
+Fclassscriptformdiv " CLASS Oscriptformdiv e
+
+# ID Dalem script
+Oscriptformbody id=" SCRIPT Fidscriptformbody ID
+Oscriptformdiv id=" SCRIPT Fidscriptformdiv ID
+Fidscriptformbody " ID Oscriptformbody e
+Fidscriptformdiv " ID Oscriptformdiv e
+
+# STYLE Dalem script
+Oscriptformbody style=" SCRIPT Fstylescriptformbody STYLE
+Oscriptformdiv style=" SCRIPT Fstylescriptformdiv STYLE
+Fstylescriptformbody " STYLE Oscriptformbody e
+Fstylescriptformdiv " STYLE Oscriptformdiv e
+
+# SRC Dalem script
+Oscriptformbody src=" SCRIPT Fsrcscriptformbody SRC
+Oscriptformdiv src=" SCRIPT Fsrcscriptformdiv SRC
+Fsrcscriptformbody " SRC Oscriptformbody e
+Fsrcscriptformdiv " SRC Oscriptformdiv e
+
+# BUKA tag h1 di dalam form
+Nformbody <h1 FORM Oh1formbody H1
+Nformdiv <h1 FORM Oh1formdiv H1
+Oh1formbody > H1 Nh1formbody idem
+Oh1formdiv > H1 Nh1formdiv idem
+Nh1formbody </h1> H1 Nformbody e
+Nh1formdiv </h1> H1 Nformdiv e
+
+# CLASS Dalem h1
+Oh1formbody class=" H1 Fclassh1formbody CLASS
+Oh1formdiv class=" H1 Fclassh1formdiv CLASS
+Fclassh1formbody " CLASS Oh1formbody e
+Fclassh1formdiv " CLASS Oh1formdiv e
+
+# ID Dalem h1
+Oh1formbody id=" H1 Fidh1formbody ID
+Oh1formdiv id=" H1 Fidh1formdiv ID
+Fidh1formbody " ID Oh1formbody e
+Fidh1formdiv " ID Oh1formdiv e
+
+# STYLE Dalem h1
+Oh1formbody style=" H1 Fstyleh1formbody STYLE
+Oh1formdiv style=" H1 Fstyleh1formdiv STYLE
+Fstyleh1formbody " STYLE Oh1formbody e
+Fstyleh1formdiv " STYLE Oh1formdiv e
+
+# BUKA tag h2 di dalam form
+Nformbody <h2 FORM Oh2formbody H2
+Nformdiv <h2 FORM Oh2formdiv H2
+Oh2formbody > H2 Nh2formbody idem
+Oh2formdiv > H2 Nh2formdiv idem
+Nh2formbody </h2> H2 Nformbody e
+Nh2formdiv </h2> H2 Nformdiv e
+
+# CLASS Dalem h2
+Oh2formbody class=" H2 Fclassh2formbody CLASS
+Oh2formdiv class=" H2 Fclassh2formdiv CLASS
+Fclassh2formbody " CLASS Oh2formbody e
+Fclassh2formdiv " CLASS Oh2formdiv e
+
+# ID Dalem h2
+Oh2formbody id=" H2 Fidh2formbody ID
+Oh2formdiv id=" H2 Fidh2formdiv ID
+Fidh2formbody " ID Oh2formbody e
+Fidh2formdiv " ID Oh2formdiv e
+
+# STYLE Dalem h2
+Oh2formbody style=" H2 Fstyleh2formbody STYLE
+Oh2formdiv style=" H2 Fstyleh2formdiv STYLE
+Fstyleh2formbody " STYLE Oh2formbody e
+Fstyleh2formdiv " STYLE Oh2formdiv e
+
+# BUKA tag h3 di dalam form
+Nformbody <h3 FORM Oh3formbody H3
+Nformdiv <h3 FORM Oh3formdiv H3
+Oh3formbody > H3 Nh3formbody idem
+Oh3formdiv > H3 Nh3formdiv idem
+Nh3formbody </h3> H3 Nformbody e
+Nh3formdiv </h3> H3 Nformdiv e
+
+# CLASS Dalem h3
+Oh3formbody class=" H3 Fclassh3formbody CLASS
+Oh3formdiv class=" H3 Fclassh3formdiv CLASS
+Fclassh3formbody " CLASS Oh3formbody e
+Fclassh3formdiv " CLASS Oh3formdiv e
+
+# ID Dalem h3
+Oh3formbody id=" H3 Fidh3formbody ID
+Oh3formdiv id=" H3 Fidh3formdiv ID
+Fidh3formbody " ID Oh3formbody e
+Fidh3formdiv " ID Oh3formdiv e
+
+# STYLE Dalem h3
+Oh3formbody style=" H3 Fstyleh3formbody STYLE
+Oh3formdiv style=" H3 Fstyleh3formdiv STYLE
+Fstyleh3formbody " STYLE Oh3formbody e
+Fstyleh3formdiv " STYLE Oh3formdiv e
+
+# BUKA tag h4 di dalam form
+Nformbody <h4 FORM Oh4formbody H4
+Nformdiv <h4 FORM Oh4formdiv H4
+Oh4formbody > H4 Nh4formbody idem
+Oh4formdiv > H4 Nh4formdiv idem
+Nh4formbody </h4> H4 Nformbody e
+Nh4formdiv </h4> H4 Nformdiv e
+
+# CLASS Dalem h4
+Oh4formbody class=" H4 Fclassh4formbody CLASS
+Oh4formdiv class=" H4 Fclassh4formdiv CLASS
+Fclassh4formbody " CLASS Oh4formbody e
+Fclassh4formdiv " CLASS Oh4formdiv e
+
+# ID Dalem h4
+Oh4formbody id=" H4 Fidh4formbody ID
+Oh4formdiv id=" H4 Fidh4formdiv ID
+Fidh4formbody " ID Oh4formbody e
+Fidh4formdiv " ID Oh4formdiv e
+
+# STYLE Dalem h4
+Oh4formbody style=" H4 Fstyleh4formbody STYLE
+Oh4formdiv style=" H4 Fstyleh4formdiv STYLE
+Fstyleh4formbody " STYLE Oh4formbody e
+Fstyleh4formdiv " STYLE Oh4formdiv e
+
+# BUKA tag h5 di dalam form
+Nformbody <h5 FORM Oh5formbody H5
+Nformdiv <h5 FORM Oh5formdiv H5
+Oh5formbody > H5 Nh5formbody idem
+Oh5formdiv > H5 Nh5formdiv idem
+Nh5formbody </h5> H5 Nformbody e
+Nh5formdiv </h5> H5 Nformdiv e
+
+# CLASS Dalem h5
+Oh5formbody class=" H5 Fclassh5formbody CLASS
+Oh5formdiv class=" H5 Fclassh5formdiv CLASS
+Fclassh5formbody " CLASS Oh5formbody e
+Fclassh5formdiv " CLASS Oh5formdiv e
+
+# ID Dalem h5
+Oh5formbody id=" H5 Fidh5formbody ID
+Oh5formdiv id=" H5 Fidh5formdiv ID
+Fidh5formbody " ID Oh5formbody e
+Fidh5formdiv " ID Oh5formdiv e
+
+# STYLE Dalem h5
+Oh5formbody style=" H5 Fstyleh5formbody STYLE
+Oh5formdiv style=" H5 Fstyleh5formdiv STYLE
+Fstyleh5formbody " STYLE Oh5formbody e
+Fstyleh5formdiv " STYLE Oh5formdiv e
+
+# BUKA tag h6 di dalam form
+Nformbody <h6 FORM Oh6formbody H6
+Nformdiv <h6 FORM Oh6formdiv H6
+Oh6formbody > H6 Nh6formbody idem
+Oh6formdiv > H6 Nh6formdiv idem
+Nh6formbody </h6> H6 Nformbody e
+Nh6formdiv </h6> H6 Nformdiv e
+
+# CLASS Dalem h6
+Oh6formbody class=" H6 Fclassh6formbody CLASS
+Oh6formdiv class=" H6 Fclassh6formdiv CLASS
+Fclassh6formbody " CLASS Oh6formbody e
+Fclassh6formdiv " CLASS Oh6formdiv e
+
+# ID Dalem h6
+Oh6formbody id=" H6 Fidh6formbody ID
+Oh6formdiv id=" H6 Fidh6formdiv ID
+Fidh6formbody " ID Oh6formbody e
+Fidh6formdiv " ID Oh6formdiv e
+
+# STYLE Dalem h6
+Oh6formbody style=" H6 Fstyleh6formbody STYLE
+Oh6formdiv style=" H6 Fstyleh6formdiv STYLE
+Fstyleh6formbody " STYLE Oh6formbody e
+Fstyleh6formdiv " STYLE Oh6formdiv e
+
+# BUKA tag p di dalam form
+Nformbody <p FORM Opformbody P
+Nformdiv <p FORM Opformdiv P
+Opformbody > P Npformbody idem
+Opformdiv > P Npformdiv idem
+Npformbody </p> P Nformbody e
+Npformdiv </p> P Nformdiv e
+
+# CLASS Dalem p
+Opformbody class=" P Fclasspformbody CLASS
+Opformdiv class=" P Fclasspformdiv CLASS
+Fclasspformbody " CLASS Opformbody e
+Fclasspformdiv " CLASS Opformdiv e
+
+# ID Dalem p
+Opformbody id=" P Fidpformbody ID
+Opformdiv id=" P Fidpformdiv ID
+Fidpformbody " ID Opformbody e
+Fidpformdiv " ID Opformdiv e
+
+# STYLE Dalem p
+Opformbody style=" P Fstylepformbody STYLE
+Opformdiv style=" P Fstylepformdiv STYLE
+Fstylepformbody " STYLE Opformbody e
+Fstylepformdiv " STYLE Opformdiv e
+
+# BUKA tag br di dalam form
+Nformbody <br FORM Obrformbody BR
+Nformdiv <br FORM Obrformdiv BR
+Obrformbody > BR Nbrformbody e
+Obrformdiv > BR Nbrformdiv e
+
+# CLASS Dalem br
+Obrformbody class=" BR Fclassbrformbody CLASS
+Obrformdiv class=" BR Fclassbrformdiv CLASS
+Fclassbrformbody " CLASS Obrformbody e
+Fclassbrformdiv " CLASS Obrformdiv e
+
+# ID Dalem br
+Obrformbody id=" BR Fidbrformbody ID
+Obrformdiv id=" BR Fidbrformdiv ID
+Fidbrformbody " ID Obrformbody e
+Fidbrformdiv " ID Obrformdiv e
+
+# STYLE Dalem br
+Obrformbody style=" BR Fstylebrformbody STYLE
+Obrformdiv style=" BR Fstylebrformdiv STYLE
+Fstylebrformbody " STYLE Obrformbody e
+Fstylebrformdiv " STYLE Obrformdiv e
+
+# BUKA tag em di dalam form
+Nformbody <em FORM Oemformbody EM
+Nformdiv <em FORM Oemformdiv EM
+Oemformbody > EM Nemformbody idem
+Oemformdiv > EM Nemformdiv idem
+Nemformbody </em> EM Nformbody e
+Nemformdiv </em> EM Nformdiv e
+
+# CLASS Dalem em
+Oemformbody class=" EM Fclassemformbody CLASS
+Oemformdiv class=" EM Fclassemformdiv CLASS
+Fclassemformbody " CLASS Oemformbody e
+Fclassemformdiv " CLASS Oemformdiv e
+
+# ID Dalem em
+Oemformbody id=" EM Fidemformbody ID
+Oemformdiv id=" EM Fidemformdiv ID
+Fidemformbody " ID Oemformbody e
+Fidemformdiv " ID Oemformdiv e
+
+# STYLE Dalem em
+Oemformbody style=" EM Fstyleemformbody STYLE
+Oemformdiv style=" EM Fstyleemformdiv STYLE
+Fstyleemformbody " STYLE Oemformbody e
+Fstyleemformdiv " STYLE Oemformdiv e
+
+# BUKA tag b di dalam form
+Nformbody <b FORM Obformbody B
+Nformdiv <b FORM Obformdiv B
+Obformbody > B Nbformbody idem
+Obformdiv > B Nbformdiv idem
+Nbformbody </b> B Nformbody e
+Nbformdiv </b> B Nformdiv e
+
+# CLASS Dalem b
+Obformbody class=" B Fclassbformbody CLASS
+Obformdiv class=" B Fclassbformdiv CLASS
+Fclassbformbody " CLASS Obformbody e
+Fclassbformdiv " CLASS Obformdiv e
+
+# ID Dalem b
+Obformbody id=" B Fidbformbody ID
+Obformdiv id=" B Fidbformdiv ID
+Fidbformbody " ID Obformbody e
+Fidbformdiv " ID Obformdiv e
+
+# STYLE Dalem b
+Obformbody style=" B Fstylebformbody STYLE
+Obformdiv style=" B Fstylebformdiv STYLE
+Fstylebformbody " STYLE Obformbody e
+Fstylebformdiv " STYLE Obformdiv e
+
+# BUKA tag abbr di dalam form
+Nformbody <abbr FORM Oabbrformbody ABBR
+Nformdiv <abbr FORM Oabbrformdiv ABBR
+Oabbrformbody > ABBR Nabbrformbody idem
+Oabbrformdiv > ABBR Nabbrformdiv idem
+Nabbrformbody </abbr> ABBR Nformbody e
+Nabbrformdiv </abbr> ABBR Nformdiv e
+
+# CLASS Dalem abbr
+Oabbrformbody class=" ABBR Fclassabbrformbody CLASS
+Oabbrformdiv class=" ABBR Fclassabbrformdiv CLASS
+Fclassabbrformbody " CLASS Oabbrformbody e
+Fclassabbrformdiv " CLASS Oabbrformdiv e
+
+# ID Dalem abbr
+Oabbrformbody id=" ABBR Fidabbrformbody ID
+Oabbrformdiv id=" ABBR Fidabbrformdiv ID
+Fidabbrformbody " ID Oabbrformbody e
+Fidabbrformdiv " ID Oabbrformdiv e
+
+# STYLE Dalem abbr
+Oabbrformbody style=" ABBR Fstyleabbrformbody STYLE
+Oabbrformdiv style=" ABBR Fstyleabbrformdiv STYLE
+Fstyleabbrformbody " STYLE Oabbrformbody e
+Fstyleabbrformdiv " STYLE Oabbrformdiv e
+
+# BUKA tag strong di dalam form
+Nformbody <strong FORM Ostrongformbody STRONG
+Nformdiv <strong FORM Ostrongformdiv STRONG
+Ostrongformbody > STRONG Nstrongformbody idem
+Ostrongformdiv > STRONG Nstrongformdiv idem
+Nstrongformbody </strong> STRONG Nformbody e
+Nstrongformdiv </strong> STRONG Nformdiv e
+
+# CLASS Dalem strong
+Ostrongformbody class=" STRONG Fclassstrongformbody CLASS
+Ostrongformdiv class=" STRONG Fclassstrongformdiv CLASS
+Fclassstrongformbody " CLASS Ostrongformbody e
+Fclassstrongformdiv " CLASS Ostrongformdiv e
+
+# ID Dalem strong
+Ostrongformbody id=" STRONG Fidstrongformbody ID
+Ostrongformdiv id=" STRONG Fidstrongformdiv ID
+Fidstrongformbody " ID Ostrongformbody e
+Fidstrongformdiv " ID Ostrongformdiv e
+
+# STYLE Dalem strong
+Ostrongformbody style=" STRONG Fstylestrongformbody STYLE
+Ostrongformdiv style=" STRONG Fstylestrongformdiv STYLE
+Fstylestrongformbody " STYLE Ostrongformbody e
+Fstylestrongformdiv " STYLE Ostrongformdiv e
+
+# BUKA tag small di dalam form
+Nformbody <small FORM Osmallformbody SMALL
+Nformdiv <small FORM Osmallformdiv SMALL
+Osmallformbody > SMALL Nsmallformbody idem
+Osmallformdiv > SMALL Nsmallformdiv idem
+Nsmallformbody </small> SMALL Nformbody e
+Nsmallformdiv </small> SMALL Nformdiv e
+
+# CLASS Dalem small
+Osmallformbody class=" SMALL Fclasssmallformbody CLASS
+Osmallformdiv class=" SMALL Fclasssmallformdiv CLASS
+Fclasssmallformbody " CLASS Osmallformbody e
+Fclasssmallformdiv " CLASS Osmallformdiv e
+
+# ID Dalem small
+Osmallformbody id=" SMALL Fidsmallformbody ID
+Osmallformdiv id=" SMALL Fidsmallformdiv ID
+Fidsmallformbody " ID Osmallformbody e
+Fidsmallformdiv " ID Osmallformdiv e
+
+# STYLE Dalem small
+Osmallformbody style=" SMALL Fstylesmallformbody STYLE
+Osmallformdiv style=" SMALL Fstylesmallformdiv STYLE
+Fstylesmallformbody " STYLE Osmallformbody e
+Fstylesmallformdiv " STYLE Osmallformdiv e
+
+# BUKA tag hr di dalam form
+Nformbody <hr FORM Ohrformbody HR
+Nformdiv <hr FORM Ohrformdiv HR
+Ohrformbody > HR Nformbody e
+Ohrformdiv > HR Nformdiv e
+
+# CLASS Dalem hr
+Ohrformbody class=" HR Fclasshrformbody CLASS
+Ohrformdiv class=" HR Fclasshrformdiv CLASS
+Fclasshrformbody " CLASS Ohrformbody e
+Fclasshrformdiv " CLASS Ohrformdiv e
+
+# ID Dalem hr
+Ohrformbody id=" HR Fidhrformbody ID
+Ohrformdiv id=" HR Fidhrformdiv ID
+Fidhrformbody " ID Ohrformbody e
+Fidhrformdiv " ID Ohrformdiv e
+
+# STYLE Dalem hr
+Ohrformbody style=" HR Fstylehrformbody STYLE
+Ohrformdiv style=" HR Fstylehrformdiv STYLE
+Fstylehrformbody " STYLE Ohrformbody e
+Fstylehrformdiv " STYLE Ohrformdiv e
+
+# BUKA tag div di dalam form
+Nformbody <div FORM Odivformbody DIV
+Nformdiv <div FORM Odivformdiv DIV
+Odivformbody > DIV Ndivformbody idem
+Odivformdiv > DIV Ndivformdiv idem
+Ndivformbody </div> DIV Nformbody e
+Ndivformdiv </div> DIV Nformdiv e
+
+# CLASS Dalem div
+Odivformbody class=" DIV Fclassdivformbody CLASS
+Odivformdiv class=" DIV Fclassdivformdiv CLASS
+Fclassdivformbody " CLASS Odivformbody e
+Fclassdivformdiv " CLASS Odivformdiv e
+
+# ID Dalem div
+Odivformbody id=" DIV Fiddivformbody ID
+Odivformdiv id=" DIV Fiddivformdiv ID
+Fiddivformbody " ID Odivformbody e
+Fiddivformdiv " ID Odivformdiv e
+
+# STYLE Dalem div
+Odivformbody style=" DIV Fstyledivformbody STYLE
+Odivformdiv style=" DIV Fstyledivformdiv STYLE
+Fstyledivformbody " STYLE Odivformbody e
+Fstyledivformdiv " STYLE Odivformdiv e
+
+# BUKA tag a di dalam form
+Nformbody <a FORM Oaformbody A
+Nformdiv <a FORM Oaformdiv A
+Oaformbody > A Naformbody idem
+Oaformdiv > A Naformdiv idem
+Naformbody </a> A Nformbody e
+Naformdiv </a> A Nformdiv e
+
+# CLASS Dalem a
+Oaformbody class=" A Fclassaformbody CLASS
+Oaformdiv class=" A Fclassaformdiv CLASS
+Fclassaformbody " CLASS Oaformbody e
+Fclassaformdiv " CLASS Oaformdiv e
+
+# ID Dalem a
+Oaformbody id=" A Fidaformbody ID
+Oaformdiv id=" A Fidaformdiv ID
+Fidaformbody " ID Oaformbody e
+Fidaformdiv " ID Oaformdiv e
+
+# STYLE Dalem a
+Oaformbody style=" A Fstyleaformbody STYLE
+Oaformdiv style=" A Fstyleaformdiv STYLE
+Fstyleaformbody " STYLE Oaformbody e
+Fstyleaformdiv " STYLE Oaformdiv e
+
+# HREF Dalem a
+Oaformbody href=" A Fhrefaformbody HREF
+Oaformdiv href=" A Fhrefaformdiv HREF
+Fhrefaformbody " HREF Oaformbody e
+Fhrefaformdiv " HREF Oaformdiv e
+
+# BUKA tag img di dalam form
+Nformbody <img FORM Oimgformbody IMG
+Nformdiv <img FORM Oimgformdiv IMG
+Vimgformbody > IMG Nformbody e
+Vimgformdiv > IMG Nformdiv e
+
+# CLASS Dalem img
+Oimgformbody class=" IMG Fclassimgformbody CLASS
+Vimgformbody class=" IMG FVclassimgformbody CLASS
+Oimgformdiv class=" IMG Fclassimgformdiv CLASS
+Vimgformdiv class=" IMG FVclassimgformdiv CLASS
+Fclassimgformbody " CLASS Oimgformbody e
+FVclassimgformbody " CLASS Vimgformbody e
+Fclassimgformdiv " CLASS Oimgformdiv e
+FVclassimgformdiv " CLASS Vimgformdiv e
+
+# ID Dalem img
+Oimgformbody id=" IMG Fidimgformbody ID
+Vimgformbody id=" IMG FVidimgformbody ID
+Oimgformdiv id=" IMG Fidimgformdiv ID
+Vimgformdiv id=" IMG FVidimgformdiv ID
+Fidimgformbody " ID Oimgformbody e
+FVidimgformbody " ID Vimgformbody e
+Fidimgformdiv " ID Oimgformdiv e
+FVidimgformdiv " ID Vimgformdiv e
+
+# STYLE Dalem img
+Oimgformbody style=" IMG Fstyleimgformbody STYLE
+Vimgformbody style=" IMG FVstyleimgformbody STYLE
+Oimgformdiv style=" IMG Fstyleimgformdiv STYLE
+Vimgformdiv style=" IMG FVstyleimgformdiv STYLE
+Fstyleimgformbody " STYLE Oimgformbody e
+FVstyleimgformbody " STYLE Vimgformbody e
+Fstyleimgformdiv " STYLE Oimgformdiv e
+FVstyleimgformdiv " STYLE Vimgformdiv e
+
+# SRC Dalem img
+Oimgformbody src=" IMG Fsrcimgformbody SRC
+Oimgformdiv src=" IMG Fsrcimgformdiv SRC
+Fsrcimgformbody " SRC Vimgformbody e
+Fsrcimgformdiv " SRC Vimgformdiv e
+
+# ALT Dalem img
+Oimgformbody alt=" IMG Faltimgformbody ALT
+Vimgformbody alt=" IMG FValtimgformbody ALT
+Oimgformdiv alt=" IMG Faltimgformdiv ALT
+Vimgformdiv alt=" IMG FValtimgformdiv ALT
+Faltimgformbody " ALT Oimgformbody e
+FValtimgformbody " ALT Vimgformbody e
+Faltimgformdiv " ALT Oimgformdiv e
+FValtimgformdiv " ALT Vimgformdiv e
+
+# BUKA tag button di dalam form
+Nformbody <button FORM Obuttonformbody BUTTON
+Nformdiv <button FORM Obuttonformdiv BUTTON
+Obuttonformbody > BUTTON Nbuttonformbody idem
+Obuttonformdiv > BUTTON Nbuttonformdiv idem
+Nbuttonformbody </button> BUTTON Nformbody e
+Nbuttonformdiv </button> BUTTON Nformdiv e
+
+# CLASS Dalem button
+Obuttonformbody class=" BUTTON Fclassbuttonformbody CLASS
+Obuttonformdiv class=" BUTTON Fclassbuttonformdiv CLASS
+Fclassbuttonformbody " CLASS Obuttonformbody e
+Fclassbuttonformdiv " CLASS Obuttonformdiv e
+
+# ID Dalem button
+Obuttonformbody id=" BUTTON Fidbuttonformbody ID
+Obuttonformdiv id=" BUTTON Fidbuttonformdiv ID
+Fidbuttonformbody " ID Obuttonformbody e
+Fidbuttonformdiv " ID Obuttonformdiv e
+
+# STYLE Dalem button
+Obuttonformbody style=" BUTTON Fstylebuttonformbody STYLE
+Obuttonformdiv style=" BUTTON Fstylebuttonformdiv STYLE
+Fstylebuttonformbody " STYLE Obuttonformbody e
+Fstylebuttonformdiv " STYLE Obuttonformdiv e
+
+# TYPE Dalem button
+Obuttonformbody type=" BUTTON Gtypebuttonformbody TYPE
+Obuttonformdiv type=" BUTTON Gtypebuttonformdiv TYPE
+Gtypebuttonformbody submit TYPE Fbuttonformbody idem
+Gtypebuttonformbody reset TYPE Fbuttonformbody idem
+Gtypebuttonformbody button TYPE Fbuttonformbody idem
+Gtypebuttonformdiv submit TYPE Fbuttonformdiv idem
+Gtypebuttonformdiv reset TYPE Fbuttonformdiv idem
+Gtypebuttonformdiv button TYPE Fbuttonformdiv idem
+Fbuttonformbody " TYPE Obuttonformbody e
+Fbuttonformdiv " TYPE Obuttonformdiv e
+
 # BUKA tag input di dalam form
 Nformbody <input FORM Oinputformbody INPUT
 Nformdiv <input FORM Oinputformdiv INPUT
@@ -1681,45 +2273,220 @@ Gtypeinputformdiv email TYPE Finputformdiv idem
 Finputformbody " TYPE Oinputformbody e
 Finputformdiv " TYPE Oinputformdiv e
 
-# BUKA tag button di dalam form
-Nformbody <button FORM Obuttonformbody BUTTON
-Nformdiv <button FORM Obuttonformdiv BUTTON
-Obuttonformbody > BUTTON Nbuttonformbody idem
-Obuttonformdiv > BUTTON Nbuttonformdiv idem
-Nbuttonformbody </button> BUTTON Nformbody e
-Nbuttonformdiv </button> BUTTON Nformdiv e
+# BUKA tag table di dalam form
+Nformbody <table FORM Otableformbody TABLE
+Nformdiv <table FORM Otableformdiv TABLE
+Otableformbody > TABLE Ntableformbody idem
+Otableformdiv > TABLE Ntableformdiv idem
+Ntableformbody </table> TABLE Nformbody e
+Ntableformdiv </table> TABLE Nformdiv e
 
-# CLASS Dalem button
-Obuttonformbody class=" BUTTON Fclassbuttonformbody CLASS
-Obuttonformdiv class=" BUTTON Fclassbuttonformdiv CLASS
-Fclassbuttonformbody " CLASS Obuttonformbody e
-Fclassbuttonformdiv " CLASS Obuttonformdiv e
+# CLASS Dalem table
+Otableformbody class=" TABLE Fclasstableformbody CLASS
+Otableformdiv class=" TABLE Fclasstableformdiv CLASS
+Fclasstableformbody " CLASS Otableformbody e
+Fclasstableformdiv " CLASS Otableformdiv e
 
-# ID Dalem button
-Obuttonformbody id=" BUTTON Fidbuttonformbody ID
-Obuttonformdiv id=" BUTTON Fidbuttonformdiv ID
-Fidbuttonformbody " ID Obuttonformbody e
-Fidbuttonformdiv " ID Obuttonformdiv e
+# ID Dalem table
+Otableformbody id=" TABLE Fidtableformbody ID
+Otableformdiv id=" TABLE Fidtableformdiv ID
+Fidtableformbody " ID Otableformbody e
+Fidtableformdiv " ID Otableformdiv e
 
-# STYLE Dalem button
-Obuttonformbody style=" BUTTON Fstylebuttonformbody STYLE
-Obuttonformdiv style=" BUTTON Fstylebuttonformdiv STYLE
-Fstylebuttonformbody " STYLE Obuttonformbody e
-Fstylebuttonformdiv " STYLE Obuttonformdiv e
+# STYLE Dalem table
+Otableformbody style=" TABLE Fstyletableformbody STYLE
+Otableformdiv style=" TABLE Fstyletableformdiv STYLE
+Fstyletableformbody " STYLE Otableformbody e
+Fstyletableformdiv " STYLE Otableformdiv e
 
-# TYPE Dalem button
-Obuttonformbody type=" BUTTON Gtypebuttonformbody TYPE
-Obuttonformdiv type=" BUTTON Gtypebuttonformdiv TYPE
-Gtypebuttonformbody submit TYPE Fbuttonformbody idem
-Gtypebuttonformbody reset TYPE Fbuttonformbody idem
-Gtypebuttonformbody button TYPE Fbuttonformbody idem
-Gtypebuttonformdiv submit TYPE Fbuttonformdiv idem
-Gtypebuttonformdiv reset TYPE Fbuttonformdiv idem
-Gtypebuttonformdiv button TYPE Fbuttonformdiv idem
-Fbuttonformbody " TYPE Obuttonformbody e
-Fbuttonformdiv " TYPE Obuttonformdiv e
+# BUKA tag tr di dalam table form
+Ntableformbody <tr FORM Otrtableformbody TR
+Ntableformdiv <tr FORM Otrtableformdiv TR
+Otrtableformbody > TR Ntrtableformbody idem
+Otrtableformdiv > TR Ntrtableformdiv idem
+Ntrtableformbody </tr> TR Ntableformbody e
+
+# CLASS Dalem tr
+Otrtableformbody class=" TR Fclasstrtableformbody CLASS
+Otrtableformdiv class=" TR Fclasstrtableformdiv CLASS
+Fclasstrtableformbody " CLASS Otrtableformbody e
+Fclasstrtableformdiv " CLASS Otrtableformdiv e
+
+# ID Dalem tr
+Otrtableformbody id=" TR Fidtrtableformbody ID
+Otrtableformdiv id=" TR Fidtrtableformdiv ID
+Fidtrtableformbody " ID Otrtableformbody e
+Fidtrtableformdiv " ID Otrtableformdiv e
+
+# STYLE Dalem tr
+Otrtableformbody style=" TR Fstyletrtableformbody STYLE
+Otrtableformdiv style=" TR Fstyletrtableformdiv STYLE
+Fstyletrtableformbody " STYLE Otrtableformbody e
+Fstyletrtableformdiv " STYLE Otrtableformdiv e
+
+# BUKA tag td di dalam table form
+Ntableformbody <td FORM Otdtableformbody TD
+Ntableformdiv <td FORM Otdtableformdiv TD
+Otdtableformbody > TD Ntdtableformbody idem
+Otdtableformdiv > TD Ntdtableformdiv idem
+Ntdtableformbody </td> TD Ntableformbody e
+Ntdtableformdiv </td> TD Ntableformdiv e
+
+# CLASS Dalem td
+Otdtableformbody class=" TD Fclasstdtableformbody CLASS
+Otdtableformdiv class=" TD Fclasstdtableformdiv CLASS
+Fclasstdtableformbody " CLASS Otdtableformbody e
+Fclasstdtableformdiv " CLASS Otdtableformdiv e
+
+# ID Dalem td
+Otdtableformbody id=" TD Fidtdtableformbody ID
+Otdtableformdiv id=" TD Fidtdtableformdiv ID
+Fidtdtableformbody " ID Otdtableformbody e
+Fidtdtableformdiv " ID Otdtableformdiv e
+
+# STYLE Dalem td
+Otdtableformbody style=" TD Fstyletdtableformbody STYLE
+Otdtableformdiv style=" TD Fstyletdtableformdiv STYLE
+Fstyletdtableformbody " STYLE Otdtableformbody e
+Fstyletdtableformdiv " STYLE Otdtableformdiv e
+
+# BUKA tag th di dalam table form
+Ntableformbody <th FORM Othtableformbody TH
+Ntableformdiv <th FORM Othtableformdiv TH
+Othtableformbody > TH Nthtableformbody idem
+Othtableformdiv > TH Nthtableformdiv idem
+Nthtableformbody </th> TH Ntableformbody e
+Nthtableformdiv </th> TH Ntableformdiv e
+
+# CLASS Dalem th
+Othtableformbody class=" TH Fclassthtableformbody CLASS
+Othtableformdiv class=" TH Fclassthtableformdiv CLASS
+Fclassthtableformbody " CLASS Othtableformbody e
+Fclassthtableformdiv " CLASS Othtableformdiv e
+
+# ID Dalem th
+Othtableformbody id=" TH Fidthtableformbody ID
+Othtableformdiv id=" TH Fidthtableformdiv ID
+Fidthtableformbody " ID Othtableformbody e
+Fidthtableformdiv " ID Othtableformdiv e
+
+# STYLE Dalem th
+Othtableformbody style=" TH Fstylethtableformbody STYLE
+Othtableformdiv style=" TH Fstylethtableformdiv STYLE
+Fstylethtableformbody " STYLE Othtableformbody e
+Fstylethtableformdiv " STYLE Othtableformdiv e
+
+# BUKA tag td di dalam tr table form
+Ntrtableformbody <td TR Otdtrtableformbody TD
+Ntrtableformdiv <td TR Otdtrtableformdiv TD
+Otdtrtableformbody > TD Ntdtrtableformbody idem
+Otdtrtableformdiv > TD Ntdtrtableformdiv idem
+Ntdtrtableformbody </td> TD Ntrtableformbody e
+Ntdtrtableformdiv </td> TD Ntrtableformdiv e
+
+# CLASS Dalem td
+Otdtrtableformbody class=" TD Fclasstdtrtableformbody CLASS
+Otdtrtableformdiv class=" TD Fclasstdtrtableformdiv CLASS
+Fclasstdtrtableformbody " CLASS Otdtrtableformbody e
+Fclasstdtrtableformdiv " CLASS Otdtrtableformdiv e
+
+# ID Dalem td
+Otdtrtableformbody id=" TD Fidtdtrtableformbody ID
+Otdtrtableformdiv id=" TD Fidtdtrtableformdiv ID
+Fidtdtrtableformbody " ID Otdtrtableformbody e
+Fidtdtrtableformdiv " ID Otdtrtableformdiv e
+
+# STYLE Dalem td
+Otdtrtableformbody style=" TD Fstyletdtrtableformbody STYLE
+Otdtrtableformdiv style=" TD Fstyletdtrtableformdiv STYLE
+Fstyletdtrtableformbody " STYLE Otdtrtableformbody e
+Fstyletdtrtableformdiv " STYLE Otdtrtableformdiv e
+
+# BUKA tag th di dalam tr table form
+Ntrtableformbody <th TR Othtrtableformbody TH
+Ntrtableformdiv <th TR Othtrtableformdiv TH
+Othtrtableformbody > TH Nthtrtableformbody idem
+Othtrtableformdiv > TH Nthtrtableformdiv idem
+Nthtrtableformbody </th> TH Ntrtableformbody e
+Nthtrtableformdiv </th> TH Ntrtableformdiv e
+
+# CLASS Dalem th
+Othtrtableformbody class=" TH Fclassthtrtableformbody CLASS
+Othtrtableformdiv class=" TH Fclassthtrtableformdiv CLASS
+Fclassthtrtableformbody " CLASS Othtrtableformbody e
+Fclassthtrtableformdiv " CLASS Othtrtableformdiv e
+
+# ID Dalem th
+Othtrtableformbody id=" TH Fidthtrtableformbody ID
+Othtrtableformdiv id=" TH Fidthtrtableformdiv ID
+Fidthtrtableformbody " ID Othtrtableformbody e
+Fidthtrtableformdiv " ID Othtrtableformdiv e
+
+# STYLE Dalem th
+Othtrtableformbody style=" TH Fstylethtrtableformbody STYLE
+Othtrtableformdiv style=" TH Fstylethtrtableformdiv STYLE
+Fstylethtrtableformbody " STYLE Othtrtableformbody e
+Fstylethtrtableformdiv " STYLE Othtrtableformdiv e
+
 
 # handle formatting dalem tag button dalam form
+# handle formatting elements (b)
+
+# BUKA tag b di dalam h1
+Nh1formbody <b H1 Oh1formbody B
+Nh1formdiv <b H1 Oh1formdiv B
+Oh1formbody > B Nh1formbody idem
+Oh1formdiv > B Nh1formdiv idem
+Nh1formbody </b> B Nh1formbody e
+Nh1formdiv </b> B Nh1formdiv e
+
+# BUKA tag b di dalam h2
+Nh2formbody <b H2 Oh2formbody B
+Nh2formdiv <b H2 Oh2formdiv B
+Oh2formbody > B Nh2formbody idem
+Oh2formdiv > B Nh2formdiv idem
+Nh2formbody </b> B Nh2formbody e
+Nh2formdiv </b> B Nh2formdiv e
+
+# BUKA tag b di dalam h3
+Nh3formbody <b H3 Oh3formbody B
+Nh3formdiv <b H3 Oh3formdiv B
+Oh3formbody > B Nh3formbody idem
+Oh3formdiv > B Nh3formdiv idem
+Nh3formbody </b> B Nh3formbody e
+Nh3formdiv </b> B Nh3formdiv e
+
+# BUKA tag b di dalam h4
+Nh4formbody <b H4 Oh4formbody B
+Nh4formdiv <b H4 Oh4formdiv B
+Oh4formbody > B Nh4formbody idem
+Oh4formdiv > B Nh4formdiv idem
+Nh4formbody </b> B Nh4formbody e
+Nh4formdiv </b> B Nh4formdiv e
+
+# BUKA tag b di dalam h5
+Nh5formbody <b H5 Oh5formbody B
+Nh5formdiv <b H5 Oh5formdiv B
+Oh5formbody > B Nh5formbody idem
+Oh5formdiv > B Nh5formdiv idem
+Nh5formbody </b> B Nh5formbody e
+Nh5formdiv </b> B Nh5formdiv e
+
+# BUKA tag b di dalam h6
+Nh6formbody <b H6 Oh6formbody B
+Nh6formdiv <b H6 Oh6formdiv B
+Oh6formbody > B Nh6formbody idem
+Oh6formdiv > B Nh6formdiv idem
+Nh6formbody </b> B Nh6formbody e
+Nh6formdiv </b> B Nh6formdiv e
+
+# BUKA tag b di dalam p
+Npformbody <b P Opformbody B
+Npformdiv <b P Opformdiv B
+Opformbody > B Npformbody idem
+Opformdiv > B Npformdiv idem
+Npformbody </b> B Npformbody e
+Npformdiv </b> B Npformdiv e
 
 # BUKA tag b di dalam button
 Nbuttonformbody <b BUTTON Obuttonformbody B
@@ -1729,6 +2496,108 @@ Obuttonformdiv > B Nbuttonformdiv idem
 Nbuttonformbody </b> B Nbuttonformbody e
 Nbuttonformdiv </b> B Nbuttonformdiv e
 
+# BUKA tag b di dalam a
+Naformbody <b A Oaformbody B
+Naformdiv <b A Oaformdiv B
+Oaformbody > B Naformbody idem
+Oaformdiv > B Naformdiv idem
+Naformbody </b> B Naformbody e
+Naformdiv </b> B Naformdiv e
+
+# BUKA tag b di dalam td
+Ntdtableformbody <b TD Otdtableformbody B
+Ntdtableformdiv <b TD Otdtableformdiv B
+Ntdtrtableformbody <b TD Otdtrtableformbody B
+Ntdtrtableformdiv <b TD Otdtrtableformdiv B
+Otdtableformbody > B Ntdtableformbody idem
+Otdtableformdiv > B Ntdtableformdiv idem
+Otdtrtableformbody > B Ntdtrtableformbody idem
+Otdtrtableformdiv > B Ntdtrtableformdiv idem
+Ntdtableformbody </b> B Ntdtableformbody e
+Ntdtableformdiv </b> B Ntdtableformdiv e
+Ntdtrtableformbody </b> B Ntdtrtableformbody e
+Ntdtrtableformdiv </b> B Ntdtrtableformdiv e
+
+# BUKA tag b di dalam th
+Nthtableformbody <b TH Othtableformbody B
+Nthtableformdiv <b TH Othtableformdiv B
+Nthtrtableformbody <b TH Othtrtableformbody B
+Nthtrtableformdiv <b TH Othtrtableformdiv B
+Othtableformbody > B Nthtableformbody idem
+Othtableformdiv > B Nthtableformdiv idem
+Othtrtableformbody > B Nthtrtableformbody idem
+Othtrtableformdiv > B Nthtrtableformdiv idem
+Nthtableformbody </b> B Nthtableformbody e
+Nthtableformdiv </b> B Nthtableformdiv e
+Nthtrtableformbody </b> B Nthtrtableformbody e
+Nthtrtableformdiv </b> B Nthtrtableformdiv e
+
+# BUKA tag b di dalam form
+Nformbody <b FORM Oformbody B
+Nformdiv <b FORM Oformdiv B
+Oformbody > B Nformbody idem
+Oformdiv > B Nformdiv idem
+Nformbody </b> B Nformbody e
+Nformdiv </b> B Nformdiv e
+
+# handle formatting elements (em)
+
+# BUKA tag em di dalam h1
+Nh1formbody <em H1 Oh1formbody EM
+Nh1formdiv <em H1 Oh1formdiv EM
+Oh1formbody > EM Nh1formbody idem
+Oh1formdiv > EM Nh1formdiv idem
+Nh1formbody </em> EM Nh1formbody e
+Nh1formdiv </em> EM Nh1formdiv e
+
+# BUKA tag em di dalam h2
+Nh2formbody <em H2 Oh2formbody EM
+Nh2formdiv <em H2 Oh2formdiv EM
+Oh2formbody > EM Nh2formbody idem
+Oh2formdiv > EM Nh2formdiv idem
+Nh2formbody </em> EM Nh2formbody e
+Nh2formdiv </em> EM Nh2formdiv e
+
+# BUKA tag em di dalam h3
+Nh3formbody <em H3 Oh3formbody EM
+Nh3formdiv <em H3 Oh3formdiv EM
+Oh3formbody > EM Nh3formbody idem
+Oh3formdiv > EM Nh3formdiv idem
+Nh3formbody </em> EM Nh3formbody e
+Nh3formdiv </em> EM Nh3formdiv e
+
+# BUKA tag em di dalam h4
+Nh4formbody <em H4 Oh4formbody EM
+Nh4formdiv <em H4 Oh4formdiv EM
+Oh4formbody > EM Nh4formbody idem
+Oh4formdiv > EM Nh4formdiv idem
+Nh4formbody </em> EM Nh4formbody e
+Nh4formdiv </em> EM Nh4formdiv e
+
+# BUKA tag em di dalam h5
+Nh5formbody <em H5 Oh5formbody EM
+Nh5formdiv <em H5 Oh5formdiv EM
+Oh5formbody > EM Nh5formbody idem
+Oh5formdiv > EM Nh5formdiv idem
+Nh5formbody </em> EM Nh5formbody e
+Nh5formdiv </em> EM Nh5formdiv e
+
+# BUKA tag em di dalam h6
+Nh6formbody <em H6 Oh6formbody EM
+Nh6formdiv <em H6 Oh6formdiv EM
+Oh6formbody > EM Nh6formbody idem
+Oh6formdiv > EM Nh6formdiv idem
+Nh6formbody </em> EM Nh6formbody e
+Nh6formdiv </em> EM Nh6formdiv e
+
+# BUKA tag em di dalam p
+Npformbody <em P Opformbody EM
+Npformdiv <em P Opformdiv EM
+Opformbody > EM Npformbody idem
+Opformdiv > EM Npformdiv idem
+Npformbody </em> EM Npformbody e
+Npformdiv </em> EM Npformdiv e
+
 # BUKA tag em di dalam button
 Nbuttonformbody <em BUTTON Obuttonformbody EM
 Nbuttonformdiv <em BUTTON Obuttonformdiv EM
@@ -1736,6 +2605,108 @@ Obuttonformbody > EM Nbuttonformbody idem
 Obuttonformdiv > EM Nbuttonformdiv idem
 Nbuttonformbody </em> EM Nbuttonformbody e
 Nbuttonformdiv </em> EM Nbuttonformdiv e
+
+# BUKA tag em di dalam a
+Naformbody <em A Oaformbody EM
+Naformdiv <em A Oaformdiv EM
+Oaformbody > EM Naformbody idem
+Oaformdiv > EM Naformdiv idem
+Naformbody </em> EM Naformbody e
+Naformdiv </em> EM Naformdiv e
+
+# BUKA tag em di dalam td
+Ntdtableformbody <em TD Otdtableformbody EM
+Ntdtableformdiv <em TD Otdtableformdiv EM
+Ntdtrtableformbody <em TD Otdtrtableformbody EM
+Ntdtrtableformdiv <em TD Otdtrtableformdiv EM
+Otdtableformbody > EM Ntdtableformbody idem
+Otdtableformdiv > EM Ntdtableformdiv idem
+Otdtrtableformbody > EM Ntdtrtableformbody idem
+Otdtrtableformdiv > EM Ntdtrtableformdiv idem
+Ntdtableformbody </em> EM Ntdtableformbody e
+Ntdtableformdiv </em> EM Ntdtableformdiv e
+Ntdtrtableformbody </em> EM Ntdtrtableformbody e
+Ntdtrtableformdiv </em> EM Ntdtrtableformdiv e
+
+# BUKA tag em di dalam th
+Nthtableformbody <em TH Othtableformbody EM
+Nthtableformdiv <em TH Othtableformdiv EM
+Nthtrtableformbody <em TH Othtrtableformbody EM
+Nthtrtableformdiv <em TH Othtrtableformdiv EM
+Othtableformbody > EM Nthtableformbody idem
+Othtableformdiv > EM Nthtableformdiv idem
+Othtrtableformbody > EM Nthtrtableformbody idem
+Othtrtableformdiv > EM Nthtrtableformdiv idem
+Nthtableformbody </em> EM Nthtableformbody e
+Nthtableformdiv </em> EM Nthtableformdiv e
+Nthtrtableformbody </em> EM Nthtrtableformbody e
+Nthtrtableformdiv </em> EM Nthtrtableformdiv e
+
+# BUKA tag em di dalam form
+Nformbody <em FORM Oformbody EM
+Nformdiv <em FORM Oformdiv EM
+Oformbody > EM Nformbody idem
+Oformdiv > EM Nformdiv idem
+Nformbody </em> EM Nformbody e
+Nformdiv </em> EM Nformdiv e
+
+# handle formatting elements (abbr)
+
+# BUKA tag abbr di dalam h1
+Nh1formbody <abbr H1 Oh1formbody ABBR
+Nh1formdiv <abbr H1 Oh1formdiv ABBR
+Oh1formbody > ABBR Nh1formbody idem
+Oh1formdiv > ABBR Nh1formdiv idem
+Nh1formbody </abbr> ABBR Nh1formbody e
+Nh1formdiv </abbr> ABBR Nh1formdiv e
+
+# BUKA tag abbr di dalam h2
+Nh2formbody <abbr H2 Oh2formbody ABBR
+Nh2formdiv <abbr H2 Oh2formdiv ABBR
+Oh2formbody > ABBR Nh2formbody idem
+Oh2formdiv > ABBR Nh2formdiv idem
+Nh2formbody </abbr> ABBR Nh2formbody e
+Nh2formdiv </abbr> ABBR Nh2formdiv e
+
+# BUKA tag abbr di dalam h3
+Nh3formbody <abbr H3 Oh3formbody ABBR
+Nh3formdiv <abbr H3 Oh3formdiv ABBR
+Oh3formbody > ABBR Nh3formbody idem
+Oh3formdiv > ABBR Nh3formdiv idem
+Nh3formbody </abbr> ABBR Nh3formbody e
+Nh3formdiv </abbr> ABBR Nh3formdiv e
+
+# BUKA tag abbr di dalam h4
+Nh4formbody <abbr H4 Oh4formbody ABBR
+Nh4formdiv <abbr H4 Oh4formdiv ABBR
+Oh4formbody > ABBR Nh4formbody idem
+Oh4formdiv > ABBR Nh4formdiv idem
+Nh4formbody </abbr> ABBR Nh4formbody e
+Nh4formdiv </abbr> ABBR Nh4formdiv e
+
+# BUKA tag abbr di dalam h5
+Nh5formbody <abbr H5 Oh5formbody ABBR
+Nh5formdiv <abbr H5 Oh5formdiv ABBR
+Oh5formbody > ABBR Nh5formbody idem
+Oh5formdiv > ABBR Nh5formdiv idem
+Nh5formbody </abbr> ABBR Nh5formbody e
+Nh5formdiv </abbr> ABBR Nh5formdiv e
+
+# BUKA tag abbr di dalam h6
+Nh6formbody <abbr H6 Oh6formbody ABBR
+Nh6formdiv <abbr H6 Oh6formdiv ABBR
+Oh6formbody > ABBR Nh6formbody idem
+Oh6formdiv > ABBR Nh6formdiv idem
+Nh6formbody </abbr> ABBR Nh6formbody e
+Nh6formdiv </abbr> ABBR Nh6formdiv e
+
+# BUKA tag abbr di dalam p
+Npformbody <abbr P Opformbody ABBR
+Npformdiv <abbr P Opformdiv ABBR
+Opformbody > ABBR Npformbody idem
+Opformdiv > ABBR Npformdiv idem
+Npformbody </abbr> ABBR Npformbody e
+Npformdiv </abbr> ABBR Npformdiv e
 
 # BUKA tag abbr di dalam button
 Nbuttonformbody <abbr BUTTON Obuttonformbody ABBR
@@ -1745,6 +2716,108 @@ Obuttonformdiv > ABBR Nbuttonformdiv idem
 Nbuttonformbody </abbr> ABBR Nbuttonformbody e
 Nbuttonformdiv </abbr> ABBR Nbuttonformdiv e
 
+# BUKA tag abbr di dalam a
+Naformbody <abbr A Oaformbody ABBR
+Naformdiv <abbr A Oaformdiv ABBR
+Oaformbody > ABBR Naformbody idem
+Oaformdiv > ABBR Naformdiv idem
+Naformbody </abbr> ABBR Naformbody e
+Naformdiv </abbr> ABBR Naformdiv e
+
+# BUKA tag abbr di dalam td
+Ntdtableformbody <abbr TD Otdtableformbody ABBR
+Ntdtableformdiv <abbr TD Otdtableformdiv ABBR
+Ntdtrtableformbody <abbr TD Otdtrtableformbody ABBR
+Ntdtrtableformdiv <abbr TD Otdtrtableformdiv ABBR
+Otdtableformbody > ABBR Ntdtableformbody idem
+Otdtableformdiv > ABBR Ntdtableformdiv idem
+Otdtrtableformbody > ABBR Ntdtrtableformbody idem
+Otdtrtableformdiv > ABBR Ntdtrtableformdiv idem
+Ntdtableformbody </abbr> ABBR Ntdtableformbody e
+Ntdtableformdiv </abbr> ABBR Ntdtableformdiv e
+Ntdtrtableformbody </abbr> ABBR Ntdtrtableformbody e
+Ntdtrtableformdiv </abbr> ABBR Ntdtrtableformdiv e
+
+# BUKA tag abbr di dalam th
+Nthtableformbody <abbr TH Othtableformbody ABBR
+Nthtableformdiv <abbr TH Othtableformdiv ABBR
+Nthtrtableformbody <abbr TH Othtrtableformbody ABBR
+Nthtrtableformdiv <abbr TH Othtrtableformdiv ABBR
+Othtableformbody > ABBR Nthtableformbody idem
+Othtableformdiv > ABBR Nthtableformdiv idem
+Othtrtableformbody > ABBR Nthtrtableformbody idem
+Othtrtableformdiv > ABBR Nthtrtableformdiv idem
+Nthtableformbody </abbr> ABBR Nthtableformbody e
+Nthtableformdiv </abbr> ABBR Nthtableformdiv e
+Nthtrtableformbody </abbr> ABBR Nthtrtableformbody e
+Nthtrtableformdiv </abbr> ABBR Nthtrtableformdiv e
+
+# BUKA tag abbr di dalam form
+Nformbody <abbr FORM Oformbody ABBR
+Nformdiv <abbr FORM Oformdiv ABBR
+Oformbody > ABBR Nformbody idem
+Oformdiv > ABBR Nformdiv idem
+Nformbody </abbr> ABBR Nformbody e
+Nformdiv </abbr> ABBR Nformdiv e
+
+# handle formatting elements (strong)
+
+# BUKA tag strong di dalam h1
+Nh1formbody <strong H1 Oh1formbody STRONG
+Nh1formdiv <strong H1 Oh1formdiv STRONG
+Oh1formbody > STRONG Nh1formbody idem
+Oh1formdiv > STRONG Nh1formdiv idem
+Nh1formbody </strong> STRONG Nh1formbody e
+Nh1formdiv </strong> STRONG Nh1formdiv e
+
+# BUKA tag strong di dalam h2
+Nh2formbody <strong H2 Oh2formbody STRONG
+Nh2formdiv <strong H2 Oh2formdiv STRONG
+Oh2formbody > STRONG Nh2formbody idem
+Oh2formdiv > STRONG Nh2formdiv idem
+Nh2formbody </strong> STRONG Nh2formbody e
+Nh2formdiv </strong> STRONG Nh2formdiv e
+
+# BUKA tag strong di dalam h3
+Nh3formbody <strong H3 Oh3formbody STRONG
+Nh3formdiv <strong H3 Oh3formdiv STRONG
+Oh3formbody > STRONG Nh3formbody idem
+Oh3formdiv > STRONG Nh3formdiv idem
+Nh3formbody </strong> STRONG Nh3formbody e
+Nh3formdiv </strong> STRONG Nh3formdiv e
+
+# BUKA tag strong di dalam h4
+Nh4formbody <strong H4 Oh4formbody STRONG
+Nh4formdiv <strong H4 Oh4formdiv STRONG
+Oh4formbody > STRONG Nh4formbody idem
+Oh4formdiv > STRONG Nh4formdiv idem
+Nh4formbody </strong> STRONG Nh4formbody e
+Nh4formdiv </strong> STRONG Nh4formdiv e
+
+# BUKA tag strong di dalam h5
+Nh5formbody <strong H5 Oh5formbody STRONG
+Nh5formdiv <strong H5 Oh5formdiv STRONG
+Oh5formbody > STRONG Nh5formbody idem
+Oh5formdiv > STRONG Nh5formdiv idem
+Nh5formbody </strong> STRONG Nh5formbody e
+Nh5formdiv </strong> STRONG Nh5formdiv e
+
+# BUKA tag strong di dalam h6
+Nh6formbody <strong H6 Oh6formbody STRONG
+Nh6formdiv <strong H6 Oh6formdiv STRONG
+Oh6formbody > STRONG Nh6formbody idem
+Oh6formdiv > STRONG Nh6formdiv idem
+Nh6formbody </strong> STRONG Nh6formbody e
+Nh6formdiv </strong> STRONG Nh6formdiv e
+
+# BUKA tag strong di dalam p
+Npformbody <strong P Opformbody STRONG
+Npformdiv <strong P Opformdiv STRONG
+Opformbody > STRONG Npformbody idem
+Opformdiv > STRONG Npformdiv idem
+Npformbody </strong> STRONG Npformbody e
+Npformdiv </strong> STRONG Npformdiv e
+
 # BUKA tag strong di dalam button
 Nbuttonformbody <strong BUTTON Obuttonformbody STRONG
 Nbuttonformdiv <strong BUTTON Obuttonformdiv STRONG
@@ -1753,6 +2826,108 @@ Obuttonformdiv > STRONG Nbuttonformdiv idem
 Nbuttonformbody </strong> STRONG Nbuttonformbody e
 Nbuttonformdiv </strong> STRONG Nbuttonformdiv e
 
+# BUKA tag strong di dalam a
+Naformbody <strong A Oaformbody STRONG
+Naformdiv <strong A Oaformdiv STRONG
+Oaformbody > STRONG Naformbody idem
+Oaformdiv > STRONG Naformdiv idem
+Naformbody </strong> STRONG Naformbody e
+Naformdiv </strong> STRONG Naformdiv e
+
+# BUKA tag strong di dalam td
+Ntdtableformbody <strong TD Otdtableformbody STRONG
+Ntdtableformdiv <strong TD Otdtableformdiv STRONG
+Ntdtrtableformbody <strong TD Otdtrtableformbody STRONG
+Ntdtrtableformdiv <strong TD Otdtrtableformdiv STRONG
+Otdtableformbody > STRONG Ntdtableformbody idem
+Otdtableformdiv > STRONG Ntdtableformdiv idem
+Otdtrtableformbody > STRONG Ntdtrtableformbody idem
+Otdtrtableformdiv > STRONG Ntdtrtableformdiv idem
+Ntdtableformbody </strong> STRONG Ntdtableformbody e
+Ntdtrtableformbody </strong> STRONG Ntdtrtableformbody e
+Ntdtrtableformdiv </strong> STRONG Ntdtrtableformdiv e
+Ntdtrtableformdiv </strong> STRONG Ntdtrtableformdiv e
+
+# BUKA tag strong di dalam th
+Nthtablebody <strong TH Othtablebody STRONG
+Nthtablediv <strong TH Othtablediv STRONG
+Nthtrtablebody <strong TH Othtrtablebody STRONG
+Nthtrtablediv <strong TH Othtrtablediv STRONG
+Othtablebody > STRONG Nthtablebody idem
+Othtablediv > STRONG Nthtablediv idem
+Othtrtablebody > STRONG Nthtrtablebody idem
+Othtrtablediv > STRONG Nthtrtablediv idem
+Nthtablebody </strong> STRONG Nthtablebody e
+Nthtablediv </strong> STRONG Nthtablediv e
+Nthtrtablebody </strong> STRONG Nthtrtablebody e
+Nthtrtablediv </strong> STRONG Nthtrtablediv e
+
+# BUKA tag strong di dalam form
+Nformbody <strong FORM Oformbody STRONG
+Nformdiv <strong FORM Oformdiv STRONG
+Oformbody > STRONG Nformbody idem
+Oformdiv > STRONG Nformdiv idem
+Nformbody </strong> STRONG Nformbody e
+Nformdiv </strong> STRONG Nformdiv e
+
+# handle formatting elements (small)
+
+# BUKA tag small di dalam h1
+Nh1formbody <small H1 Oh1formbody SMALL
+Nh1formdiv <small H1 Oh1formdiv SMALL
+Oh1formbody > SMALL Nh1formbody idem
+Oh1formdiv > SMALL Nh1formdiv idem
+Nh1formbody </small> SMALL Nh1formbody e
+Nh1formdiv </small> SMALL Nh1formdiv e
+
+# BUKA tag small di dalam h2
+Nh2formbody <small H2 Oh2formbody SMALL
+Nh2formdiv <small H2 Oh2formdiv SMALL
+Oh2formbody > SMALL Nh2formbody idem
+Oh2formdiv > SMALL Nh2formdiv idem
+Nh2formbody </small> SMALL Nh2formbody e
+Nh2formdiv </small> SMALL Nh2formdiv e
+
+# BUKA tag small di dalam h3
+Nh3formbody <small H3 Oh3formbody SMALL
+Nh3formdiv <small H3 Oh3formdiv SMALL
+Oh3formbody > SMALL Nh3formbody idem
+Oh3formdiv > SMALL Nh3formdiv idem
+Nh3formbody </small> SMALL Nh3formbody e
+Nh3formdiv </small> SMALL Nh3formdiv e
+
+# BUKA tag small di dalam h4
+Nh4formbody <small H4 Oh4formbody SMALL
+Nh4formdiv <small H4 Oh4formdiv SMALL
+Oh4formbody > SMALL Nh4formbody idem
+Oh4formdiv > SMALL Nh4formdiv idem
+Nh4formbody </small> SMALL Nh4formbody e
+Nh4formdiv </small> SMALL Nh4formdiv e
+
+# BUKA tag small di dalam h5
+Nh5formbody <small H5 Oh5formbody SMALL
+Nh5formdiv <small H5 Oh5formdiv SMALL
+Oh5formbody > SMALL Nh5formbody idem
+Oh5formdiv > SMALL Nh5formdiv idem
+Nh5formbody </small> SMALL Nh5formbody e
+Nh5formdiv </small> SMALL Nh5formdiv e
+
+# BUKA tag small di dalam h6
+Nh6formbody <small H6 Oh6formbody SMALL
+Nh6formdiv <small H6 Oh6formdiv SMALL
+Oh6formbody > SMALL Nh6formbody idem
+Oh6formdiv > SMALL Nh6formdiv idem
+Nh6formbody </small> SMALL Nh6formbody e
+Nh6formdiv </small> SMALL Nh6formdiv e
+
+# BUKA tag small di dalam p
+Npformbody <small P Opformbody SMALL
+Npformdiv <small P Opformdiv SMALL
+Opformbody > SMALL Npformbody idem
+Opformdiv > SMALL Npformdiv idem
+Npformbody </small> SMALL Npformbody e
+Npformdiv </small> SMALL Npformdiv e
+
 # BUKA tag small di dalam button
 Nbuttonformbody <small BUTTON Obuttonformbody SMALL
 Nbuttonformdiv <small BUTTON Obuttonformdiv SMALL
@@ -1760,3 +2935,47 @@ Obuttonformbody > SMALL Nbuttonformbody idem
 Obuttonformdiv > SMALL Nbuttonformdiv idem
 Nbuttonformbody </small> SMALL Nbuttonformbody e
 Nbuttonformdiv </small> SMALL Nbuttonformdiv e
+
+# BUKA tag small di dalam a
+Naformbody <small A Oaformbody SMALL
+Naformdiv <small A Oaformdiv SMALL
+Oaformbody > SMALL Naformbody idem
+Oaformdiv > SMALL Naformdiv idem
+Naformbody </small> SMALL Naformbody e
+Naformdiv </small> SMALL Naformdiv e
+
+# BUKA tag small di dalam td
+Ntdtableformbody <small TD Otdtableformbody SMALL
+Ntdtableformdiv <small TD Otdtableformdiv SMALL
+Ntdtrtableformbody <small TD Otdtrtableformbody SMALL
+Ntdtrtableformdiv <small TD Otdtrtableformdiv SMALL
+Otdtableformbody > SMALL Ntdtableformbody idem
+Otdtableformdiv > SMALL Ntdtableformdiv idem
+Otdtrtableformbody > SMALL Ntdtrtableformbody idem
+Otdtrtableformdiv > SMALL Ntdtrtableformdiv idem
+Ntdtableformbody </small> SMALL Ntdtableformbody e
+Ntdtableformdiv </small> SMALL Ntdtableformdiv e
+Ntdtrtableformbody </small> SMALL Ntdtrtableformbody e
+Ntdtrtableformdiv </small> SMALL Ntdtrtableformdiv e
+
+# BUKA tag small di dalam th
+Nthtableformbody <small TH Othtableformbody SMALL
+Nthtableformdiv <small TH Othtableformdiv SMALL
+Nthtrtableformbody <small TH Othtrtableformbody SMALL
+Nthtrtableformdiv <small TH Othtrtableformdiv SMALL
+Othtableformbody > SMALL Nthtableformbody idem
+Othtableformdiv > SMALL Nthtableformdiv idem
+Othtrtableformbody > SMALL Nthtrtableformbody idem
+Othtrtableformdiv > SMALL Nthtrtableformdiv idem
+Nthtableformbody </small> SMALL Nthtableformbody e
+Nthtableformdiv </small> SMALL Nthtableformdiv e
+Nthtrtableformbody </small> SMALL Nthtrtableformbody e
+Nthtrtableformdiv </small> SMALL Nthtrtableformdiv e
+
+# BUKA tag small di dalam form
+Nformformbody <small FORM Oformformbody SMALL
+Nformformdiv <small FORM Oformformdiv SMALL
+Oformformbody > SMALL Nformformbody idem
+Oformformdiv > SMALL Nformformdiv idem
+Nformformbody </small> SMALL Nformformbody e
+Nformformdiv </small> SMALL Nformformdiv e
