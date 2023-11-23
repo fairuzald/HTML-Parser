@@ -1910,8 +1910,8 @@ Fstylepformdiv " STYLE Opformdiv e
 # BUKA tag br di dalam form
 Nformbody <br FORM Obrformbody BR
 Nformdiv <br FORM Obrformdiv BR
-Obrformbody > BR Nbrformbody e
-Obrformdiv > BR Nbrformdiv e
+Obrformbody > BR Nformbody e
+Obrformdiv > BR Nformdiv e
 
 # CLASS Dalem br
 Obrformbody class=" BR Fclassbrformbody CLASS
@@ -1982,14 +1982,6 @@ Obformbody style=" B Fstylebformbody STYLE
 Obformdiv style=" B Fstylebformdiv STYLE
 Fstylebformbody " STYLE Obformbody e
 Fstylebformdiv " STYLE Obformdiv e
-
-# BUKA tag abbr di dalam form
-Nformbody <abbr FORM Oabbrformbody ABBR
-Nformdiv <abbr FORM Oabbrformdiv ABBR
-Oabbrformbody > ABBR Nabbrformbody idem
-Oabbrformdiv > ABBR Nabbrformdiv idem
-Nabbrformbody </abbr> ABBR Nformbody e
-Nabbrformdiv </abbr> ABBR Nformdiv e
 
 # CLASS Dalem abbr
 Oabbrformbody class=" ABBR Fclassabbrformbody CLASS
@@ -2752,14 +2744,6 @@ Nthtableformdiv </abbr> ABBR Nthtableformdiv e
 Nthtrtableformbody </abbr> ABBR Nthtrtableformbody e
 Nthtrtableformdiv </abbr> ABBR Nthtrtableformdiv e
 
-# BUKA tag abbr di dalam form
-Nformbody <abbr FORM Oformbody ABBR
-Nformdiv <abbr FORM Oformdiv ABBR
-Oformbody > ABBR Nformbody idem
-Oformdiv > ABBR Nformdiv idem
-Nformbody </abbr> ABBR Nformbody e
-Nformdiv </abbr> ABBR Nformdiv e
-
 # handle formatting elements (strong)
 
 # BUKA tag strong di dalam h1
@@ -2862,14 +2846,6 @@ Nthtablediv </strong> STRONG Nthtablediv e
 Nthtrtablebody </strong> STRONG Nthtrtablebody e
 Nthtrtablediv </strong> STRONG Nthtrtablediv e
 
-# BUKA tag strong di dalam form
-Nformbody <strong FORM Oformbody STRONG
-Nformdiv <strong FORM Oformdiv STRONG
-Oformbody > STRONG Nformbody idem
-Oformdiv > STRONG Nformdiv idem
-Nformbody </strong> STRONG Nformbody e
-Nformdiv </strong> STRONG Nformdiv e
-
 # handle formatting elements (small)
 
 # BUKA tag small di dalam h1
@@ -2971,11 +2947,3 @@ Nthtableformbody </small> SMALL Nthtableformbody e
 Nthtableformdiv </small> SMALL Nthtableformdiv e
 Nthtrtableformbody </small> SMALL Nthtrtableformbody e
 Nthtrtableformdiv </small> SMALL Nthtrtableformdiv e
-
-# BUKA tag small di dalam form
-Nformformbody <small FORM Oformformbody SMALL
-Nformformdiv <small FORM Oformformdiv SMALL
-Oformformbody > SMALL Nformformbody idem
-Oformformdiv > SMALL Nformformdiv idem
-Nformformbody </small> SMALL Nformformbody e
-Nformformdiv </small> SMALL Nformformdiv e
