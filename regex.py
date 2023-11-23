@@ -77,12 +77,14 @@ class Tokenize:
         html_code_cleaned = re.sub(r'"([^"]*)"', lambda m: m.group(0).replace(" ", "").replace("=","").replace("<","").replace(">",""), html_code)
         html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code_cleaned)
         html_code_cleaned = re.sub(r"\s*=\s*", "=", html_code_cleaned)
+        html_code_cleaned = re.sub(r'(?<!<)<!--.*?-->(?!>)', '', html_code_cleaned)
+
+
 
         # Tokenize HTML code with a non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
         print(tags)
-
         # Filter and return tags with attributes based on constraints
         result = []
         stack = []
@@ -99,11 +101,11 @@ class Tokenize:
             elif tag.startswith("<"):
                 # Opening tag encountered
                 tag_name = tag.replace("<", "").replace(">", "").split(" ")
-                name_tag = tag_name[0]
+                name_tag = tag_name[0] 
                 attributes_full = tag_name[1:]
 
                 if self.is_valid_tag(name_tag):
-                    if name_tag not in self.void_elements:
+                    if name_tag not in self.void_elements :
                         # Add non-void opening name_tag to the stack
                         stack.append(name_tag)
                     result.append(f"<{name_tag}")
