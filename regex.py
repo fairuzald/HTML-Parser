@@ -74,15 +74,22 @@ class Tokenize:
 
     def tokenize(self, html_code):
         # Remove comments and unnecessary spaces within quotes
-        html_code_cleaned = re.sub(r'"([^"]*)"', lambda m: m.group(0).replace(" ", "").replace("=","").replace("<","").replace(">",""), html_code)
-        html_code_cleaned = re.sub(r'\s+(?=>)', '', html_code_cleaned)
+        html_code_cleaned = re.sub(
+            r'"([^"]*)"',
+            lambda m: m.group(0)
+            .replace(" ", "")
+            .replace("=", "")
+            .replace("<", "")
+            .replace(">", ""),
+            html_code,
+        )
+        html_code_cleaned = re.sub(r"\s+(?=>)", "", html_code_cleaned)
         html_code_cleaned = re.sub(r"\s*=\s*", "=", html_code_cleaned)
+        html_code_cleaned = re.sub(r"(?<!<)<!--.*?-->(?!>)", "", html_code_cleaned)
 
         # Tokenize HTML code with a non-greedy regex
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
-        print(tags)
-
         # Filter and return tags with attributes based on constraints
         result = []
         stack = []
@@ -116,7 +123,9 @@ class Tokenize:
                                 # Attribute with a value encountered
                                 attribute_name = split_item[0]
                                 isQuoteOpen = split_item[1].startswith('"')
+                                isSingleQuoteOpen = split_item[1].startswith("'")
                                 isQuoteClose = split_item[1].endswith('"')
+                                isSingleQuoteClose = split_item[1].endswith("'")
                                 attribute_value = split_item[1].replace('"', "")
                                 isValid = self.is_valid_attribute(
                                     name_tag, attribute_name
@@ -127,13 +136,30 @@ class Tokenize:
                                     return []
 
                                 # Append attribute name and value to the result
-                                if(not isQuoteOpen and not isQuoteClose):
-                                    result.append(f'{attribute_name}=')
+                                if (not isQuoteOpen and not isQuoteClose) and (
+                                    not isSingleQuoteOpen and not isSingleQuoteClose
+                                ):
+                                    result.append(f"{attribute_name}=")
+                                elif (isQuoteOpen and isSingleQuoteOpen) or (
+                                    len(split_item[1]) > 1
+                                    and isQuoteClose
+                                    and isSingleQuoteClose
+                                ):
+                                    return []
+
                                 else:
                                     result.append(f'{attribute_name}="')
-                                if (((name_tag == "input" or name_tag == "button") and attribute_name == "type") or(name_tag == "form" and attribute_name == "method")):
+                                if (
+                                    (name_tag == "input" or name_tag == "button")
+                                    and attribute_name == "type"
+                                ) or (
+                                    name_tag == "form" and attribute_name == "method"
+                                ):
                                     result.append(attribute_value)
-                                if(len(split_item[1])>1 and isQuoteOpen and isQuoteClose):
+                                if len(split_item[1]) > 1 and (
+                                    (isQuoteOpen and isQuoteClose)
+                                    or (isSingleQuoteOpen and isSingleQuoteClose)
+                                ):
                                     result.append('"')
                         else:
                             return []
