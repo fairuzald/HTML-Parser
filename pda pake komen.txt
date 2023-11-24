@@ -2081,10 +2081,10 @@ Fstylehrformdiv " STYLE Ohrformdiv e
 # BUKA tag div di dalam form
 Nformbody <div FORM Odivformbody DIV
 Nformdiv <div FORM Odivformdiv DIV
-Odivformbody > DIV Ndivformbody idem
-Odivformdiv > DIV Ndivformdiv idem
-Ndivformbody </div> DIV Nformbody e
-Ndivformdiv </div> DIV Nformdiv e
+Odivformbody > DIV Ndiv idem
+Odivformdiv > DIV Ndiv idem
+Ndiv </div> DIV Nformbody e
+Ndiv </div> DIV Nformdiv e
 
 # CLASS Dalem div
 Odivformbody class=" DIV Fclassdivformbody CLASS
@@ -2948,3 +2948,57 @@ Nthtableformbody </small> SMALL Nthtableformbody e
 Nthtableformdiv </small> SMALL Nthtableformdiv e
 Nthtrtableformbody </small> SMALL Nthtrtableformbody e
 Nthtrtableformdiv </small> SMALL Nthtrtableformdiv e
+
+# handle aneh aneh
+Nformdiv </body> BODY Vhtml e
+
+# handle keluar div ke div
+Ndiv <link DIV Olinkdiv LINK
+Ndiv <script DIV Oscriptdiv SCRIPT
+Ndiv <h1 DIV Oh1div H1
+Ndiv <h2 DIV Oh2div H2
+Ndiv <h3 DIV Oh3div H3
+Ndiv <h4 DIV Oh4div H4
+Ndiv <h5 DIV Oh5div H5
+Ndiv <h6 DIV Oh6div H6
+Ndiv <p DIV Opdiv P
+Ndiv <br DIV Obrdiv BR
+Ndiv <em DIV Oemdiv EM
+Ndiv <b DIV Obdiv B
+Ndiv <abbr DIV Oabbrdiv ABBR
+Ndiv <strong DIV Ostrongdiv STRONG
+Ndiv <small DIV Osmalldiv SMALL
+Ndiv <hr DIV Ohrdiv HR
+Ndiv <div DIV Odivdiv DIV
+Ndiv <a DIV Oadiv A
+Ndiv <img DIV Oimgdiv IMG
+Ndiv <button DIV Obuttondiv BUTTON
+Ndiv <form DIV Oformdiv FORM
+Ndiv <input DIV Oinputdiv INPUT
+Ndiv <table DIV Otablediv TABLE
+Ndiv </div> DIV Ndiv e
+
+# handle keluar form ke div
+Ndiv <link FORM Olinkform LINK
+Ndiv <script FORM Oscriptform SCRIPT
+Ndiv <h1 FORM Oh1form H1
+Ndiv <h2 FORM Oh2form H2
+Ndiv <h3 FORM Oh3form H3
+Ndiv <h4 FORM Oh4form H4
+Ndiv <h5 FORM Oh5form H5
+Ndiv <h6 FORM Oh6form H6
+Ndiv <p FORM Opform P
+Ndiv <br FORM Obrform BR
+Ndiv <em FORM Oemform EM
+Ndiv <b FORM Obform B
+Ndiv <abbr FORM Oabbrform ABBR
+Ndiv <strong FORM Ostrongform STRONG
+Ndiv <small FORM Osmallform SMALL
+Ndiv <hr FORM Ohrform HR
+Ndiv <a FORM Oaform A
+Ndiv <img FORM Oimgform IMG
+Ndiv <button FORM Obuttonform BUTTON
+Ndiv <form FORM Oformform FORM
+Ndiv <input FORM Oinputform INPUT
+Ndiv <table FORM Otableform TABLE
+Ndiv </div> FORM Nform e
