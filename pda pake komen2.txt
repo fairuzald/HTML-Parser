@@ -330,6 +330,8 @@ Faction " ACTION Oattr e
 ##### handle formatting #######
 # BUKA TAG EM
 N <em BODY Oattr EM
+N <em DIV Oattr EM
+N <em FORM Oattr EM
 Nh1 <em H1 Oattr EM
 Nh2 <em H2 Oattr EM
 Nh3 <em H3 Oattr EM

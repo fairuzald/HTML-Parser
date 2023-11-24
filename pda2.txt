@@ -236,6 +236,8 @@ Fmethod " METHOD Oattr e
 Oattr action=" FORM Faction ACTION
 Faction " ACTION Oattr e
 N <em BODY Oattr EM
+N <em DIV Oattr EM
+N <em FORM Oattr EM
 Nh1 <em H1 Oattr EM
 Nh2 <em H2 Oattr EM
 Nh3 <em H3 Oattr EM
