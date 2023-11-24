@@ -11,15 +11,15 @@ Ohtml > HTML Nhtml idem
 Vhtml </html> HTML F e
 
 # CLASS Dalem HTML
-Ohtml class=" HTML Aclasshtml CLASS  
+Ohtml class=" HTML Fclasshtml CLASS  
 Fclasshtml " CLASS Ohtml e
 
 # ID Dalem HTML
-Ohtml id=" HTML Aidhtml ID
+Ohtml id=" HTML Fidhtml ID
 Fidhtml " ID Ohtml e
 
 # STYLE Dalem HTML
-Ohtml style=" HTML Astylehtml STYLE 
+Ohtml style=" HTML Fstylehtml STYLE 
 Fstylehtml " STYLE Ohtml e
 
 # BUKA TAG HEAD
@@ -61,32 +61,32 @@ Nhead <link HEAD Olinkhead LINK
 Vlinkhead > LINK Nhead e
 
 # CLASS Dalem link
-Olinkhead class=" LINK Fclasshead CLASS
-Vlinkhead class=" VLINK FVclasshead CLASS 
-Fclasshead " CLASS Olinkhead e
-FVclasshead " CLASS Vlinkhead e
+Olinkhead class=" LINK Fclasslinkhead CLASS
+Vlinkhead class=" VLINK FVclasslinkhead CLASS 
+Fclasslinkhead " CLASS Olinkhead e
+FVclasslinkhead " CLASS Vlinkhead e
 
 # ID Dalem link
-Olinkhead id=" LINK Fidhead ID
-Vlinkhead id=" LINK FVidhead ID
-Fidhead " ID Olinkhead e
-FVidhead " ID Vlinkhead e 
+Olinkhead id=" LINK Fidlinkhead ID
+Vlinkhead id=" LINK FVidlinkhead ID
+Fidlinkhead " ID Olinkhead e
+FVidlinkhead " ID Vlinkhead e 
 
 # STYLE Dalem link
-Olinkhead style=" LINK Fstylehead STYLE
-Vlinkhead style=" LINK FVstylehead STYLE
-Fstylehead " STYLE Olinkhead e
-FVstylehead " STYLE Vlinkhead e 
+Olinkhead style=" LINK Fstylelinkhead STYLE
+Vlinkhead style=" LINK FVstylelinkhead STYLE
+Fstylelinkhead " STYLE Olinkhead e
+FVstylelinkhead " STYLE Vlinkhead e 
 
 # REL Dalem link
-Olinkhead rel=" LINK Frelhead REL
-Frelhead " REL Vlinkhead e
+Olinkhead rel=" LINK Frellinkhead REL
+Frellinkhead " REL Vlinkhead e
 
 # HREF Dalem link
-Olinkhead href=" LINK Fhrefhead HREF
-Vlinkhead href=" LINK FVhrefhead HREF
-Fhrefhead " HREF Olinkhead e
-FVhrefhead " HREF Vlinkhead e
+Olinkhead href=" LINK Fhreflinkhead HREF
+Vlinkhead href=" LINK FVhreflinkhead HREF
+Fhreflinkhead " HREF Olinkhead e
+FVhreflinkhead " HREF Vlinkhead e
 
 # BUKA tag script di dalam Head
 Nhead <script HEAD Oscripthead SCRIPT
@@ -94,20 +94,20 @@ Oscripthead > SCRIPT Nscripthead idem
 Nscripthead </script> SCRIPT Nhead e
 
 # CLASS Dalem script
-Oscripthead class=" SCRIPT Fclasshead CLASS
-Fclasshead " CLASS Oscripthead e
+Oscripthead class=" SCRIPT Fclassscripthead CLASS
+Fclassscripthead " CLASS Oscripthead e
 
 # ID Dalem script
-Oscripthead id=" SCRIPT Fidhead ID
-Fidhead " ID Oscripthead e
+Oscripthead id=" SCRIPT Fidscripthead ID
+Fidscripthead " ID Oscripthead e
 
 # STYLE Dalem script
-Oscripthead style=" SCRIPT Fstylehead STYLE
-Fstylehead " STYLE Oscripthead e
+Oscripthead style=" SCRIPT Fstylescripthead STYLE
+Fstylescripthead " STYLE Oscripthead e
 
 # SRC Dalem script
-Oscripthead src=" SCRIPT Fsrchead SRC
-Fsrchead " SRC Oscripthead e
+Oscripthead src=" SCRIPT Fsrcscripthead SRC
+Fsrcscripthead " SRC Oscripthead e
 
 # BUKA tag body di dalam HTML
 Whtml <body HTML Obody BODY
