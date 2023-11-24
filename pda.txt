@@ -454,6 +454,7 @@ Fclassbrdiv " CLASS Obrdiv e
 Obrdiv id=" BR Fidbrdiv ID
 Fidbrdiv " ID Obrdiv e
 Obrdiv style=" BR Fstylebrdiv STYLE
+Fstylebrdiv " STYLE Obrdiv e
 Ndiv <em DIV Oemdiv EM
 Oemdiv > EM Nemdiv idem
 Nemdiv </em> EM Ndiv e
@@ -555,11 +556,11 @@ Fidinputdiv " ID Oinputdiv e
 Oinputdiv style=" INPUT Fstyleinputdiv STYLE
 Fstyleinputdiv " STYLE Oinputdiv e
 Oinputdiv type=" INPUT Gtypeinputdiv TYPE
-Gtypeinputdiv text TYPE Finputdiv e
-Gtypeinputdiv password TYPE Finputdiv e
-Gtypeinputdiv checkbox TYPE Finputdiv e
-Gtypeinputdiv number TYPE Finputdiv e
-Gtypeinputdiv email TYPE Finputdiv e
+Gtypeinputdiv text TYPE Finputdiv idem
+Gtypeinputdiv password TYPE Finputdiv idem
+Gtypeinputdiv checkbox TYPE Finputdiv idem
+Gtypeinputdiv number TYPE Finputdiv idem
+Gtypeinputdiv email TYPE Finputdiv idem
 Finputdiv " TYPE Oinputdiv e
 Ndiv <table DIV Otablediv TABLE
 Otablediv > TABLE Ntablediv idem
@@ -574,7 +575,7 @@ Ntablediv <tr TABLE Otrtablediv TR
 Otrtablediv > TR Ntrtablediv idem
 Ntrtablediv </tr> TR Ntablediv e
 Otrtablediv class=" TR Fclasstrtablediv CLASS
-Fclassstrtablediv " CLASS Otrtablediv e
+Fclasstrtablediv " CLASS Otrtablediv e
 Otrtablediv id=" TR Fidtrtablediv ID
 Fidtrtablediv " ID Otrtablediv e
 Otrtablediv style=" TR Fstyletrtablediv STYLE

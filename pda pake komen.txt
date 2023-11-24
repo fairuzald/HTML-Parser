@@ -807,6 +807,7 @@ Fidbrdiv " ID Obrdiv e
 
 # STYLE Dalem br
 Obrdiv style=" BR Fstylebrdiv STYLE
+Fstylebrdiv " STYLE Obrdiv e
 
 # BUKA tag em di dalam div
 Ndiv <em DIV Oemdiv EM
@@ -988,11 +989,11 @@ Fstyleinputdiv " STYLE Oinputdiv e
 
 # TYPE Dalem input
 Oinputdiv type=" INPUT Gtypeinputdiv TYPE
-Gtypeinputdiv text TYPE Finputdiv e
-Gtypeinputdiv password TYPE Finputdiv e
-Gtypeinputdiv checkbox TYPE Finputdiv e
-Gtypeinputdiv number TYPE Finputdiv e
-Gtypeinputdiv email TYPE Finputdiv e
+Gtypeinputdiv text TYPE Finputdiv idem
+Gtypeinputdiv password TYPE Finputdiv idem
+Gtypeinputdiv checkbox TYPE Finputdiv idem
+Gtypeinputdiv number TYPE Finputdiv idem
+Gtypeinputdiv email TYPE Finputdiv idem
 Finputdiv " TYPE Oinputdiv e
 
 # BUKA tag table di dalam div
@@ -1019,7 +1020,7 @@ Ntrtablediv </tr> TR Ntablediv e
 
 # CLASS Dalem tr
 Otrtablediv class=" TR Fclasstrtablediv CLASS
-Fclassstrtablediv " CLASS Otrtablediv e
+Fclasstrtablediv " CLASS Otrtablediv e
 
 # ID Dalem tr
 Otrtablediv id=" TR Fidtrtablediv ID
