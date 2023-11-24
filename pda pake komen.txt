@@ -443,10 +443,10 @@ Obuttonbody style=" BUTTON Fstylebuttonbody STYLE
 Fstylebuttonbody " STYLE Obuttonbody e
 
 # TYPE Dalem button
-Obbuttonbody type=" BUTTON Gtypebuttonbody TYPE
-Gtypebuttonbody submit TYPE Ftypebuttonbody e
-Gtypebuttonbody reset TYPE Ftypebuttonbody e
-Gtypebuttonbody button TYPE Ftypebuttonbody e
+Obuttonbody type=" BUTTON Gtypebuttonbody TYPE
+Gtypebuttonbody submit TYPE Ftypebuttonbody idem
+Gtypebuttonbody reset TYPE Ftypebuttonbody idem
+Gtypebuttonbody button TYPE Ftypebuttonbody idem
 Ftypebuttonbody " TYPE Obuttonbody e
 
 # BUKA tag form di dalam body

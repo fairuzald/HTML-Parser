@@ -61,8 +61,8 @@ Oscripthead id=" SCRIPT Fidscripthead ID
 Fidscripthead " ID Oscripthead e
 Oscripthead style=" SCRIPT Fstylescripthead STYLE
 Fstylescripthead " STYLE Oscripthead e
-Oscripthead src=" SCRIPT Fsrchead SRC
-Fsrchead " SRC Oscripthead e
+Oscripthead src=" SCRIPT Fsrcscripthead SRC
+Fsrcscripthead " SRC Oscripthead e
 Whtml <body HTML Obody BODY
 Obody > BODY Nbody idem
 Nbody </body> BODY Vhtml e
@@ -246,10 +246,10 @@ Obuttonbody id=" BUTTON Fidbuttonbody ID
 Fidbuttonbody " ID Obuttonbody e
 Obuttonbody style=" BUTTON Fstylebuttonbody STYLE
 Fstylebuttonbody " STYLE Obuttonbody e
-Obbuttonbody type=" BUTTON Gtypebuttonbody TYPE
-Gtypebuttonbody submit TYPE Ftypebuttonbody e
-Gtypebuttonbody reset TYPE Ftypebuttonbody e
-Gtypebuttonbody button TYPE Ftypebuttonbody e
+Obuttonbody type=" BUTTON Gtypebuttonbody TYPE
+Gtypebuttonbody submit TYPE Ftypebuttonbody idem
+Gtypebuttonbody reset TYPE Ftypebuttonbody idem
+Gtypebuttonbody button TYPE Ftypebuttonbody idem
 Ftypebuttonbody " TYPE Obuttonbody e
 Nbody <form BODY Oformbody FORM
 Oformbody > FORM Nformbody idem
