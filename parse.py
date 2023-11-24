@@ -1,7 +1,7 @@
-with open("pda pake komen.txt", "r") as file:
+with open("pda pake komen2.txt", "r") as file:
     lines = file.readlines()
 
-with open("pda.txt", "w") as file:
+with open("pda2.txt", "w") as file:
     for line in lines:
         if line.strip() and not line.startswith("#"):
             file.write(line)
@@ -57,7 +57,7 @@ with open("pda.txt", "w") as file:
 
 ### PRINT ALL STACK ###
 # states = set()
-# with open("pda pake .txt", "r") as file:
+# with open("pda.txt", "r") as file:
 #     for line in file:
 #         parts = line.split()
 #         if line.startswith("#"):
