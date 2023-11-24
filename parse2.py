@@ -1,12 +1,12 @@
-with open("pda pake komen.txt", "r") as file:
+with open("pda pake komen2.txt", "r") as file:
     lines = file.readlines()
 
-new_lines = []
-for line in lines:
-    if line.startswith("Nformdiv"):
+line_indices = {}
+for i, line in enumerate(lines, start=1):
+    # Skip empty lines
+    if line.strip() == "" or line.startswith("#"):
         continue
-    line = line.replace("Nformbody", "Nform")
-    new_lines.append(line)
-
-with open("pda pake komen2.txt", "w") as file:
-    file.write("".join(new_lines))
+    if line in line_indices:
+        print(f"Duplicate line at lines {line_indices[line]} and {i}: {line.strip()}")
+    else:
+        line_indices[line] = i
