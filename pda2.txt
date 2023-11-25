@@ -1,6 +1,6 @@
-Nformat Gtype Faction Nformat Nformat FVid Vhtml Oattr Fsrc Q Ntable Nhtml Fimgsrc Nstrong Nformat Ntitle Nformat FVclass N Ftype TYPE Vattr Fclass Nformat Nformat Fmethod Nformat Nformat Nscript Nformat FVhref Nsmall FValt FVstyle F Fhref Nformat Whtml Nformat Falt Nem Nb Fstyle Flinkrel Ntr Fid Gmethod method=" Nabbr
-<strong <abbr text <div method=" submit <th <h5 </h6> email <img <small POST </html> <body button </table> action=" <h4 </title> </script> </button> </h5> <b </h2> <button </tr> <em <head type=" rel=" <input <tr id=" " <title password GET <h3 reset <td DIV </h3> <p href=" </em> number alt=" <script <table style=" <h6 src=" </div> </h4> </abbr> checkbox <br Nemformbody </p> </small> <a > <hr <link <h1 </td> </th> <h2 </a> </strong> </b> </head> </form> </h1> <html class=" <form </body>
-STRONG HEAD TYPE FORM HREF DIV METHOD TD HTML LINK SMALL INPUT TABLE REL H4 BR SCRIPT Z H1 Nbformbody BUTTON VLINK IMG ID ABBR B TR H3 TH HR password BODY STYLE CLASS H6 EM H5 P SRC A ALT ACTION H2 TITLE
+Ntable FVstyle Ftype Flinkrel Gtype KomenQ Faction Nabbr Komenbody Nstrong Whtml FVid Nformat KomenWhtml KomenVhtml Oattr Vattr Fimgsrc KomenNformat N Komentr Komentable Vhtml Ntitle Nscript Ntr FVclass Q FVhref Fmethod Komenhtml Nhtml Fclass Fsrc Fid KomenNhtml Nem FValt Komenhead Falt Fhref Komenform F Nb Fstyle Nsmall Komendiv Gmethod
+email </button> checkbox </p> id=" method=" action=" </h5> POST </form> <link <h3 <strong <h5 <abbr <small <b <title <html <hr </h1> <h2 GET </body> " <h1 </title> class=" FORM <script > submit href=" alt=" </th> password </tr> <body <form style=" <br <tr <img </div> </abbr> <th <head <em </small> <h4 <!-- text <input </h3> </h4> </h6> <p </head> <div number FVid <button button <h6 </b> </table> rel=" <a </a> reset <table type=" </td> </html> </em> </strong> </h2> </script> <td --> src="
+KOMENTAR STRONG INPUT METHOD TABLE BR H2 SRC REL Gtype HTML TITLE H6 DIV STYLE SCRIPT HREF SMALL IMG B H4 TH TYPE H5 H1 HEAD TR ACTION Z P A BODY ABBR TD EM BUTTON ID LINK HR FORM Nformat CLASS ALT H3  
 Q
 Z
 F
@@ -414,3 +414,25 @@ Nformat <th TABLE Oattr TH
 Nformat <td TABLE Oattr TD
 Nformat <th TR Oattr TH
 Nformat <td TR Oattr TD
+Q <!-- Z KomenQ KOMENTAR
+KomenQ --> KOMENTAR Q e
+Nhtml <!-- HTML KomenNhtml KOMENTAR
+Komenhtml --> KOMENTAR Nhtml e
+Whtml <!-- HTML KomenWhtml KOMENTAR
+KomenWhtml --> KOMENTAR Whtml e
+Vhtml <!-- HTML KomenVhtml KOMENTAR
+KomenVhtml --> KOMENTAR Vhtml e
+N <!-- HEAD Komenhead KOMENTAR
+Komenhead --> KOMENTAR N e
+N <!-- BODY Komenbody KOMENTAR
+Komenbody --> KOMENTAR N e
+N <!-- DIV Komendiv KOMENTAR
+Komendiv --> KOMENTAR N e
+N <!-- FORM Komenform KOMENTAR
+Komenform --> KOMENTAR N e
+Ntable <!-- TABLE Komentable KOMENTAR
+Komentable --> KOMENTAR Ntable e
+Ntr <!-- TR Komentr KOMENTAR
+Komentr --> KOMENTAR Ntr e
+Nformat <!-- Nformat KomenNformat KOMENTAR
+KomenNformat --> KOMENTAR Nformat e
