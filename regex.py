@@ -1,12 +1,10 @@
 import re
 
-
 class Tokenize:
     def normalize_spaces(self, tag):
         # Replace multiple spaces between attributes with a single space
         tag = re.sub(r"\s+", " ", tag)
         return tag
-
     def get_content_inside_quotes(s):
         # Return the content inside quotes if the string is enclosed in double quotes
         if s.startswith('"') and s.endswith('"'):
@@ -29,9 +27,9 @@ class Tokenize:
         html_code_cleaned = re.sub(r"\s+(?=>)", "", html_code_cleaned)
         html_code_cleaned = re.sub(r"\s*=\s*", "=", html_code_cleaned)
         html_code_cleaned = re.sub(r"(?<!<)<!--.*?-->(?!>)", "", html_code_cleaned)
-
-        # Tokenize HTML code with a non-greedy regex
-        tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
+        
+        
+        tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
         # Filter and return tags with attributes based on constraints
         result = []
@@ -40,8 +38,15 @@ class Tokenize:
                 # Closing tag encountered
                 tag_name = tag.replace("</", "").replace(">", "")
                 result.append(f"</{tag_name}>")
-               
-
+            elif tag.startswith("<!--"):
+                # Comment encountered
+                if tag.endswith("-->"):
+                    # Comment is outside a tag
+                    result.append("<!--")
+                    result.append("-->")
+                else:
+                    # Comment is inside a tag
+                    result.append(tag)
             elif tag.startswith("<"):
                 # Opening tag encountered
                 tag_name = tag.replace("<", "").replace(">", "").split(" ")
@@ -51,7 +56,7 @@ class Tokenize:
                 for item in attributes_full:
                     if "=" in item:
                         split_item = item.split("=")
-
+                     
                         if len(split_item) > 1:
                                 # Attribute with a value encountered
                             attribute_name = split_item[0]
@@ -78,6 +83,4 @@ class Tokenize:
                     else:
                         result.append(f"{item}")
                 result.append(">")
-            
-       
         return result
