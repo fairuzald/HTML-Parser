@@ -27,9 +27,8 @@ class Tokenize:
         html_code_cleaned = re.sub(r"\s+(?=>)", "", html_code_cleaned)
         html_code_cleaned = re.sub(r"\s*=\s*", "=", html_code_cleaned)
         html_code_cleaned = re.sub(r"(?<!<)<!--.*?-->(?!>)", "", html_code_cleaned)
+        tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         
-        
-        tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code)
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
         # Filter and return tags with attributes based on constraints
         result = []
@@ -44,9 +43,7 @@ class Tokenize:
                     # Comment is outside a tag
                     result.append("<!--")
                     result.append("-->")
-                else:
-                    # Comment is inside a tag
-                    result.append(tag)
+                
             elif tag.startswith("<"):
                 # Opening tag encountered
                 tag_name = tag.replace("<", "").replace(">", "").split(" ")

@@ -52,7 +52,7 @@ class PDA:
         self.stack = [self.start_stack]
         for token in tokens:
             self.transition(token)
-            # print(token, self.current_state, self.stack)
+            print(token, self.current_state, self.stack)
             if not self.current_state:
                 return False
         return self.in_accept_state()
