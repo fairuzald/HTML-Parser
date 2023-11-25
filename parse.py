@@ -30,7 +30,7 @@ with open("pda2.txt", "w") as file:
 
 ### PRINT ALL STATES ###
 # states = set()
-# with open("pda.txt", "r") as file:
+# with open("pda2.txt", "r") as file:
 #     for line in file:
 #         if line.startswith("#"):
 #             continue
