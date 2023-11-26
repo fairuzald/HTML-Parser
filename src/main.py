@@ -25,7 +25,7 @@ def main():
 
             try:
                 with open(full_path, "r", encoding="utf-8") as file:
-                    html_code = file.read()
+                    lines = file.readlines()
             except FileNotFoundError:
                 print('\033[91m' + f"File {input_file} not found." + '\033[0m')
                 # Add yellow color
@@ -33,9 +33,12 @@ def main():
                 continue
 
             tokenizer = Tokenize()
-            tokens = tokenizer.tokenize(html_code)
+            tokens_with_line_numbers = []
+            for line_number, line in enumerate(lines, start=1):
+                tokens = tokenizer.tokenize(line)
+                tokens_with_line_numbers.extend((token, line_number) for token in tokens)
 
-            if pda.validate(tokens):
+            if pda.validate(tokens_with_line_numbers):
                 print('\033[92m' + "Accepted" + '\033[0m')
             else:
                 print('\033[91m' + "Syntax Error" + '\033[0m')

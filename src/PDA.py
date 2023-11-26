@@ -20,7 +20,7 @@ class PDA:
                 state, symbol, stack_top, new_state, to_push = line.strip().split()
                 self.transitions[(state, symbol, stack_top)] = (new_state, to_push)
 
-    def transition(self, symbol):
+    def transition(self, symbol, line_number):
         if (
             self.current_state,
             symbol,
@@ -41,18 +41,22 @@ class PDA:
                 self.stack.pop()
         else:
             self.current_state = None
+            raise SyntaxError(f"Syntax error at line {line_number}: unexpected symbol {symbol}")
 
     def in_accept_state(self):
         return self.current_state in self.accept_states and (
             not self.stack or self.accepts_empty_stack
         )
 
-    def validate(self, tokens):
+    def validate(self, tokens_with_line_numbers):
         self.current_state = self.start_state
         self.stack = [self.start_stack]
-        for token in tokens:
-            self.transition(token)
-            # print(token, self.current_state, self.stack)
+        for token, line_number in tokens_with_line_numbers:
+            try:
+                self.transition(token, line_number)
+            except SyntaxError as e:
+                print(e)
+                return False
             if not self.current_state:
                 return False
         return self.in_accept_state()
