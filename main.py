@@ -23,7 +23,7 @@ def main():
     if pda.validate(tokens):
         print("Accepted")
     else:
-        print("Rejected")
+        print("Syntax Error")
 
 if __name__ == "__main__":
     main()
