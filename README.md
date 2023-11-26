@@ -37,7 +37,7 @@ Whether in an interpreted or compiled language, syntax checking is a standard pr
 - Python 3.9.6
 
 ## Features
-- **HTML PDA Parser:**
+**HTML PDA Parser:**
    The HTML PDA (Pushdown Automaton) Parser is a crucial component of the project. It is designed to analyze and process HTML documents using a pushdown automaton model. This parser efficiently handles the hierarchical structure of HTML tags, ensuring accurate parsing and extraction of information from HTML files.
 
    - *Tag Recognition:* The parser recognizes and categorizes HTML tags, allowing for targeted extraction of specific elements within the document.
