@@ -46,6 +46,10 @@ Whether in an interpreted or compiled language, syntax checking is a standard pr
 
    - *Nested Structure Support:* The parser is capable of navigating through nested HTML structures, ensuring comprehensive parsing of complex documents.
 
+   - *Error Handling:* The parser raises a SyntaxError with a detailed message if it encounters a syntax error.
+
+   - *Error Localization:* The parser can pinpoint the line number where a syntax error occurred, aiding in quick debugging.
+
 ## How To Run
 
 ### Prerequisites
