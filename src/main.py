@@ -2,7 +2,7 @@
 import os
 from PDA import PDA
 from tokenizer import Tokenize
-
+import time
 def main():
     # Open and read the asciiArt.txt file
     with open('asciiArt.txt', 'r') as file:
@@ -34,7 +34,7 @@ def main():
                 print('\033[91m' + f"File {input_file} not found." + '\033[0m')
                 print('\033[93m' + "Pastikan file test html ditaruh pada folder test" + '\033[0m')
                 continue
-
+            start = time.time()
             # Create a Tokenize object
             tokenizer = Tokenize()
             tokens_with_line_numbers = []
@@ -48,6 +48,9 @@ def main():
                 print('\033[92m' + "Accepted" + '\033[0m')
             else:
                 print('\033[91m' + "Syntax Error" + '\033[0m')
+            end = time.time()
+            print("\033[93m" + f"Parsing Time: {format(end-start, '.4f')}s" + "\033[0m")
+
 
             # Ask the user if they want to continue
             continue_prompt = input('\033[94m' + "Apakah Anda ingin melanjutkan lagi? (y/n): " + '\033[0m')
