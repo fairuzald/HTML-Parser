@@ -3,6 +3,9 @@ from PDA import PDA
 from tokenizer import Tokenize
 
 def main():
+    with open('asciiArt.txt', 'r') as file:
+        ascii_art = file.read()
+    print(ascii_art)
     while True:
         # Add blue color to the input text
         pda_file = input('\033[94m' + "Masukkan nama file PDA: " + '\033[0m')
