@@ -417,7 +417,7 @@ Nformat <td TR Oattr TD
 Q <!-- Z KomenQ KOMENTAR
 KomenQ --> KOMENTAR Q e
 Nhtml <!-- HTML KomenNhtml KOMENTAR
-Komenhtml --> KOMENTAR Nhtml e
+KomenNhtml --> KOMENTAR Nhtml e
 Whtml <!-- HTML KomenWhtml KOMENTAR
 KomenWhtml --> KOMENTAR Whtml e
 Vhtml <!-- HTML KomenVhtml KOMENTAR
@@ -436,5 +436,8 @@ Ntr <!-- TR Komentr KOMENTAR
 Komentr --> KOMENTAR Ntr e
 Nformat <!-- Nformat KomenNformat KOMENTAR
 KomenNformat --> KOMENTAR Nformat e
+Nformat <!-- BODY Komenbody KOMENTAR
+Nformat <!-- DIV Komendiv KOMENTAR
+Nformat <!-- FORM Komenform KOMENTAR
 F <!-- Z KomenF KOMENTAR
 KomenF --> KOMENTAR F e
