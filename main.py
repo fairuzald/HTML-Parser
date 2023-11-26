@@ -1,9 +1,6 @@
 from PDA import PDA
 from regex import Tokenize
-
-
 import sys
-
 
 def main():
     if len(sys.argv) != 3:
@@ -12,8 +9,12 @@ def main():
 
     pda = PDA(sys.argv[1])
     input_file = sys.argv[2]
-    with open(input_file, "r", encoding="utf-8") as file:
-        html_code = file.read()
+    try:
+        with open(input_file, "r", encoding="utf-8") as file:
+            html_code = file.read()
+    except FileNotFoundError:
+        print(f"File {input_file} not found.")
+        sys.exit(1)
 
     tokenizer = Tokenize()
     tokens = tokenizer.tokenize(html_code)
@@ -23,7 +24,6 @@ def main():
         print("Accepted")
     else:
         print("Rejected")
-
 
 if __name__ == "__main__":
     main()
