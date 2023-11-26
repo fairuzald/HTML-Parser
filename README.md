@@ -2,7 +2,7 @@
 <p align="center">
     <h1 align="center">HTML Parser</h3>
 </p>
-> This program is developed to to fulfill the Major Assignment of IF2124 Formal Language and Automata Theory course. Here we use Python programming languages to develop this program. This program is intended to:
+This program is developed to to fulfill the Major Assignment of IF2124 Formal Language and Automata Theory course. Here we use Python programming languages to develop this program. This program is intended to:
 Evaluate program syntax in HTML.
 
 ## Table of Contents
