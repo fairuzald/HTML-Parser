@@ -2,82 +2,81 @@ import re
 
 class Tokenize:
     def normalize_spaces(self, tag):
-        # Replace multiple spaces between attributes with a single space
-        tag = re.sub(r"\s+", " ", tag)
-        return tag
+        # Replaces multiple spaces between attributes with a single space
+        return re.sub(r"\s+", " ", tag)
+
     def get_content_inside_quotes(s):
-        # Return the content inside quotes if the string is enclosed in double quotes
-        if s.startswith('"') and s.endswith('"'):
+        # Returns the content inside quotes if the string is enclosed in double quotes
+        if re.match(r'^".*"$', s):
             return s[1:-1]
-        else:
-            return None
 
     def tokenize(self, html_code):
-        # Remove = space and open close tag on " "
-        html_code_cleaned = re.sub(
+        # Removes spaces, equals signs
+        formatting_content_quotes = re.sub(
             r'"([^"]*)"',
             lambda m: m.group(0)
             .replace(" ", "")
-            .replace("=", "")
-            .replace("<", "")
-            .replace(">", ""),
+            .replace("=", ""),
             html_code,
         )
-        # 
-        html_code_cleaned = re.sub(r"\s+(?=>)", "", html_code_cleaned)
+        # Removes spaces before closing tags and spaces around equals signs
+        html_code_cleaned = re.sub(r"\s+(?=>)", "", formatting_content_quotes)
         html_code_cleaned = re.sub(r"\s*=\s*", "=", html_code_cleaned)
-        html_code_cleaned = re.sub(r"(?<!<)<!--.*?-->(?!>)", "", html_code_cleaned)
+        
+        # Finds all tags in the cleaned HTML code
         tags = re.findall(r'<[^>]*?(?:"[^"]*?"[^>]*?)*>|<[^>]*>', html_code_cleaned)
         
+        # Normalizes spaces in the tags and filters out empty tags
         tags = [self.normalize_spaces(tag) for tag in tags if tag != "<>"]
-        # Filter and return tags with attributes based on constraints
         result = []
         for tag in tags:
-            if tag.startswith("</"):
-                # Closing tag encountered
-                tag_name = tag.replace("</", "").replace(">", "")
+            if re.match(r'^</.*>$', tag):
+                # If it's a closing tag, it appends the tag to the result
+                tag_name = re.sub(r'</|>', '', tag)
                 result.append(f"</{tag_name}>")
-            elif tag.startswith("<!--"):
-                # Comment encountered
-                if tag.endswith("-->"):
-                    # Comment is outside a tag
-                    result.append("<!--")
-                    result.append("-->")
-                
-            elif tag.startswith("<"):
-                # Opening tag encountered
-                tag_name = tag.replace("<", "").replace(">", "").split(" ")
-                name_tag = tag_name[0]
-                attributes_full = tag_name[1:]
-                result.append(f"<{name_tag}")
-                for item in attributes_full:
-                    if "=" in item:
-                        split_item = item.split("=")
-                     
-                        if len(split_item) > 1:
-                                # Attribute with a value encountered
-                            attribute_name = split_item[0]
-                            isQuoteOpen = split_item[1].startswith('"')
-                            isQuoteClose = split_item[1].endswith('"')
-                            attribute_value = split_item[1].replace('"', "")
-                            if (not isQuoteOpen and not isQuoteClose) :
-                                result.append(f"{attribute_name}=")
-
-
-                            else:
-                                result.append(f'{attribute_name}="')
-                            if (
-                                (name_tag == "input" or name_tag == "button")
-                                and attribute_name == "type"
-                            ) or (
-                                name_tag == "form" and attribute_name == "method"
-                            ):
-                                result.append(attribute_value)
-                            if len(split_item[1]) > 1 and (
-                                (isQuoteOpen and isQuoteClose)
-                            ):
-                                result.append('"')
-                    else:
-                        result.append(f"{item}")
-                result.append(">")
+            elif re.match(r'^<!--.*-->$', tag):
+                # If it's a comment, it appends the comment delimiters to the result
+                result.extend(["<!--", "-->"])
+            elif re.match(r'^<.*>$', tag):
+                # If it's an opening tag, it processes the tag and appends the result
+                self.process_opening_tag(tag, result)
         return result
+
+    def process_opening_tag(self, tag, result):
+        # This function processes an opening tag
+        # It first splits the tag into its name and attributes
+        content_tag = re.sub(r'<|>', '', tag).split(" ")
+        tag_name = content_tag[0]
+        attributes = content_tag[1:]
+        # It appends the opening tag to the result
+        result.append(f"<{tag_name}")
+        # processes each attribute
+        for item in attributes:
+            if re.search(r'.*?=.*', item):
+                # If the attribute has a value, it splits the attribute into its name and value
+                split_item = item.split("=")
+                if len(split_item) > 1:
+                    attribute_name, attribute_value = item.split("=")
+                    
+                    isQuoteOpen = re.match(r'^".*$', attribute_value)
+                    isQuoteClose = re.match(r'^.*"$', attribute_value)
+                    attribute_value = re.sub(r'"', '', attribute_value)
+                    # It appends the attribute name and equals sign to the result
+                    if not isQuoteOpen and not isQuoteClose:
+                        result.append(f"{attribute_name}=")
+                    else:
+                        result.append(f'{attribute_name}="')
+                    # If the tag is an input or button and the attribute is type, or if the tag is a form and the attribute is method, it appends the attribute value to the result
+                    if (
+                    ((tag_name =="input" or tag_name=="button") and attribute_name == "type")
+                    or (tag_name == "form" and attribute_name == "method")
+                ):
+                        result.append(attribute_value)
+                    # If the attribute value is enclosed in quotes, it appends a closing quote to the result
+                    if len(split_item[1]) > 1 and isQuoteOpen and isQuoteClose:
+                        result.append('"')
+            else:
+                # If the attribute doesn't have a value, it appends the attribute to the result
+                result.append(f"{item}")
+        # Finally, it appends a closing tag to the result
+        result.append(">")
