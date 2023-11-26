@@ -78,5 +78,4 @@ class Tokenize:
             else:
                 # If the attribute doesn't have a value, it appends the attribute to the result
                 result.append(f"{item}")
-        # Finally, it appends a closing tag to the result
         result.append(">")

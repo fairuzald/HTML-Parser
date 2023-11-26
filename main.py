@@ -1,5 +1,5 @@
 from PDA import PDA
-from regex import Tokenize
+from tokenizer import Tokenize
 import sys
 
 def main():
@@ -18,7 +18,7 @@ def main():
 
     tokenizer = Tokenize()
     tokens = tokenizer.tokenize(html_code)
-    print(tokens)
+    # print(tokens)
 
     if pda.validate(tokens):
         print("Accepted")
