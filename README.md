@@ -27,11 +27,11 @@ In program development, parsing is a crucial stage where the syntax of the progr
 Whether in an interpreted or compiled language, syntax checking is a standard practice. The difference lies in the subsequent steps after the checking process. In a compiler, after parsing, the program is transformed into an executable form, whereas in an interpreter, syntax checking and execution occur directly without additional compilation steps.
 
 ## Author:
-| NIM      | Nama                      | Tugas         |
-| -------- | ------------------------- | ------------- |
-| 13522015 | Yusuf Ardian Sandi        | Diagram state |
-| 13522032 | Tazkia Nizami             | PDA           |
-| 13522057 | Moh Fairuz Alauddin Yahya | Tokenizer     |
+| NIM      | Nama                      | Tugas            |
+| -------- | ------------------------- | ---------------- |
+| 13522015 | Yusuf Ardian Sandi        | Diagram state    |
+| 13522032 | Tazkia Nizami             | PDA              |
+| 13522057 | Moh Fairuz Alauddin Yahya | Tokenizer, Bonus |
 
 ## Technologies Used
 - Python 3.9.6
