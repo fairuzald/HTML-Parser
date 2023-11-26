@@ -1,29 +1,55 @@
+import os
 from PDA import PDA
 from tokenizer import Tokenize
-import sys
 
 def main():
-    if len(sys.argv) != 3:
-        print("Usage: python script.py pda.txt input_file.html")
-        sys.exit(1)
+    while True:
+        # Add blue color to the input text
+        pda_file = input('\033[94m' + "Masukkan nama file PDA: " + '\033[0m')
+        if os.path.isfile(pda_file):
+            break
+        print('\033[91m' + f"PDA file {pda_file} not found." + '\033[0m')
 
-    pda = PDA(sys.argv[1])
-    input_file = sys.argv[2]
-    try:
-        with open(input_file, "r", encoding="utf-8") as file:
-            html_code = file.read()
-    except FileNotFoundError:
-        print(f"File {input_file} not found.")
-        sys.exit(1)
+    while True:
+        # Add blue color to the input text
+        input_file = input('\033[94m' + "Masukkan nama file HTML: " + '\033[0m')
+        # Dapatkan absolute path sekarang lalu balik ../test/
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        full_path = os.path.join(current_dir, '../test/', input_file)
+        if os.path.isfile(full_path):
+            # Check if pda_file exists
+            pda = PDA(pda_file)
 
-    tokenizer = Tokenize()
-    tokens = tokenizer.tokenize(html_code)
-    # print(tokens)
+            try:
+                with open(full_path, "r", encoding="utf-8") as file:
+                    html_code = file.read()
+            except FileNotFoundError:
+                print('\033[91m' + f"File {input_file} not found." + '\033[0m')
+                # Add yellow color
+                print('\033[93m' + "Pastikan file test html ditaruh pada folder test" + '\033[0m')
+                continue
 
-    if pda.validate(tokens):
-        print("Accepted")
-    else:
-        print("Syntax Error")
+            tokenizer = Tokenize()
+            tokens = tokenizer.tokenize(html_code)
+
+            if pda.validate(tokens):
+                print('\033[92m' + "Accepted" + '\033[0m')
+            else:
+                print('\033[91m' + "Syntax Error" + '\033[0m')
+
+            # Ask the user if they want to continue
+            continue_prompt = input('\033[94m' + "Apakah Anda ingin melanjutkan lagi? (y/n): " + '\033[0m')
+            if continue_prompt.lower() == 'n':
+                break
+            if continue_prompt.lower() == 'y':
+                continue
+            else:
+                print('\033[93m' + "Masukkan tidak valid, program akan berhenti." + '\033[0m')
+                break
+        else:
+            print('\033[91m' + f"Input file {input_file} not found." + '\033[0m')
+            # Add yellow color
+            print('\033[93m' + "Pastikan file test html ditaruh pada folder test" + '\033[0m')
 
 if __name__ == "__main__":
     main()
